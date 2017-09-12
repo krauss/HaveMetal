@@ -1,0 +1,19 @@
+page-welcome {
+    #welcome{
+        background: color($colors,primary);
+        color: color($colors,light);
+        
+        h1{
+            font-size: 36px;
+            margin-top: 10px;
+            color: color($colors,secondary);
+        }
+    }
+    .margintop{
+        margin-top: 50px;
+    }
+    
+    .imgsize{
+        width: 100%;
+    }
+}
