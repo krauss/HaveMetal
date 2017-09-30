@@ -1,9 +1,13 @@
+#
+# HaveMetal Project Dockerfile
+#
+
 FROM node:latest
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
 # Create app directory
-WORKDIR ./ionic_website_protoype
+WORKDIR ./havemetal
 
 # Install app dependencies
 COPY package.json .
