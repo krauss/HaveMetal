@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFireAuth } from 'angularfire2/auth';
+
+import { User } from '../../models/interfaces/user.interface';
+import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the LoginPage page.
@@ -15,11 +19,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user = {} as User;
+
+  constructor(private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  async login(user: User){
+    try {
+      const result = this.afAuth.auth.signInWithEmailAndPassword(user.email, user.passwd);
+      if(result){
+        console.log(result);
+        this.navCtrl.push(TabsPage);
+      }
+    } catch (e){
+      console.error(e);
+    }
+  }
+
+  signin(){
+    this.navCtrl.push('SignInPage');
   }
 
 }

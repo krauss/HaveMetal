@@ -20,21 +20,21 @@
   <ion-list padding>
 
     <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label floating>E-mail</ion-label>
+      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label floating>Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="user.passwd"></ion-input>
     </ion-item>
 
   </ion-list>
 
   <div padding>
-    <button ion-button block color="primary">Login</button>
+    <button ion-button block color="primary" (click)="login(user)">Login</button>
     <br>
-    <button ion-button block color="light">Sig-in</button>
+    <button ion-button block color="light" (click)="signin()">Sig-in</button>
   </div>
 
 </ion-content>

@@ -8,6 +8,10 @@ import { ScannerPage } from '../pages/scanner/scanner';
 import { DashboardPage } from '../pages/dashboard/dashboard';
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FB_HAVEMETAL_CREDENTIALS } from './firebase.credentials';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -21,7 +25,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    // Firebase initialization
+    AngularFireModule.initializeApp(FB_HAVEMETAL_CREDENTIALS),
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
