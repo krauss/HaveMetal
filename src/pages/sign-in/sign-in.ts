@@ -20,7 +20,7 @@ export class SignInPage {
 
   user = {} as User
 
-  constructor(private toastCtrl: ToastController, private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private toast: ToastController, private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
@@ -28,7 +28,7 @@ export class SignInPage {
     try {
         const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.passwd);
         if(result){
-          this.toastCtrl.create({
+          this.toast.create({
             message: 'User was added successfully',
             duration: 2000,
             position: 'bottom'
