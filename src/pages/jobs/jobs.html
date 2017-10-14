@@ -6,8 +6,11 @@
 
 <ion-content padding>
   <ion-fab padding bottom right>
-    <button color="primary" ion-fab (click)="AddNewJob()">
+    <button color="primary" ion-fab (click)="addJob()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
+
+  <!-- Add the card for each job from the firebase db -->
+  <jobs *ngFor="let jlist of job_list | async" [job]="jlist"></jobs>
 </ion-content>

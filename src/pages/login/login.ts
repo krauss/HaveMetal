@@ -32,7 +32,7 @@ export class LoginPage {
         //Show the loader to give the impression of authentication
         this.loadingCtrl.create({
           content: "Please wait...",
-          duration: 2000
+          duration: 1000
         }).present();
 
         //Take the user to the home page

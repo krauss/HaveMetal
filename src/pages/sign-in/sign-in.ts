@@ -29,8 +29,8 @@ export class SignInPage {
         const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.passwd);
         if(result){
           this.toast.create({
-            message: 'User was added successfully',
-            duration: 2000,
+            message: 'User added successfully',
+            duration: 1000,
             position: 'bottom'
           }).present();
         }
