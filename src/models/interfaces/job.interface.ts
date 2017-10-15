@@ -3,7 +3,7 @@
 */
 export interface Job{
 
-  id: number;
+  $key?: string;
   name: string;
   address: string;
   creationDate: Date;

@@ -34,6 +34,7 @@ export class JobCreationPage {
   }
 
 
+  //Function that add new Job
   addNewJob(job: Job){
 
     this.jobRef$.push({
@@ -46,15 +47,16 @@ export class JobCreationPage {
 
     this.toast.create({
       message: 'Job created successfully!',
-      duration: 1000,
+      duration: 1500,
       position: 'bottom'
-    }).present();
+    }).present().then(() => {
 
-    //Reset our job
-    this.job = {} as Job;
+        //Reset our job
+        this.job = {} as Job;
 
-    // Navigate the user back to the Job List
-    this.navCtrl.pop();
+        // Navigate the user back to the Job List
+        this.navCtrl.pop();
+    })
   }
 
 }

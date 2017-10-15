@@ -30,7 +30,7 @@ export class SignInPage {
         if(result){
           this.toast.create({
             message: 'User added successfully',
-            duration: 1000,
+            duration: 1500,
             position: 'bottom'
           }).present();
         }
