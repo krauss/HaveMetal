@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ActionSheetController, AlertController } from 'ionic-angular';
-
 import { AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseListObservable } from 'angularfire2/database';
-import { Observable } from 'rxjs/Observable';
-
 import { Job } from '../../models/interfaces/job.interface';
-import { JobEditPage } from '../job-edit/job-edit';
+
 
 @IonicPage()
 @Component({
