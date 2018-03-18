@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Job } from '../../models/interfaces/job.interface';
 
+
+
 /**
  * Generated class for the JobComponent component.
  *

@@ -15,6 +15,7 @@ import { FB_HAVEMETAL_CREDENTIALS } from './firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { MomentModule } from 'angular2-moment';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     // Firebase initialization
     AngularFireModule.initializeApp(FB_HAVEMETAL_CREDENTIALS),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    MomentModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

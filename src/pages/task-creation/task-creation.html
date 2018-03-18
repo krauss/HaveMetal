@@ -29,20 +29,20 @@
         <ion-option *ngFor="let size of size_list">{{size}}</ion-option>
       </ion-select>
       <ion-select [(ngModel)]="width">
-        <ion-option *ngFor="let size of size_list">x {{size}}</ion-option>
+        <ion-option *ngFor="let size of size_list">{{size}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
-      <ion-label floating>How Much</ion-label>
+      <ion-label floating>How many</ion-label>
       <ion-input type="number" [(ngModel)]="quantity"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>Insulated</ion-label>
-      <ion-toggle checked="false"></ion-toggle>
+      <ion-checkbox color="dark" checked="false"></ion-checkbox>
     </ion-item>
     <ion-item>
       <ion-label>Fire Rated</ion-label>
-      <ion-toggle checked="false"></ion-toggle>
+      <ion-checkbox color="dark" checked="false"></ion-checkbox>
     </ion-item>
 
   </ion-list>

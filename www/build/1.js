@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 414:
+/***/ 406:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TaskCreationPageModule", function() { return TaskCreationPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__task_creation__ = __webpack_require__(415);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__task_creation__ = __webpack_require__(414);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -24,7 +24,7 @@ var TaskCreationPageModule = (function () {
     return TaskCreationPageModule;
 }());
 TaskCreationPageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__task_creation__["a" /* TaskCreationPage */],
         ],
@@ -38,14 +38,14 @@ TaskCreationPageModule = __decorate([
 
 /***/ }),
 
-/***/ 415:
+/***/ 414:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TaskCreationPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(416);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(415);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -81,25 +81,24 @@ var TaskCreationPage = (function () {
 }());
 TaskCreationPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-task-creation',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/task-creation/task-creation.html"*/'<!--\n  Generated template for the TaskCreationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-center>Task Creation Panel</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item padding>\n      <ion-label>Type:</ion-label>\n      <ion-select [(ngModel)]="type">\n        <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item padding>\n      <ion-label>Size:</ion-label>\n      <ion-select [(ngModel)]="height">\n        <ion-option *ngFor="let size of size_list">{{size}}</ion-option>\n      </ion-select>\n      <ion-select [(ngModel)]="width">\n        <ion-option *ngFor="let size of size_list">x {{size}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>How Much</ion-label>\n      <ion-input type="number" [(ngModel)]="quantity"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Insulated</ion-label>\n      <ion-toggle checked="false"></ion-toggle>\n    </ion-item>\n    <ion-item>\n      <ion-label>Fire Rated</ion-label>\n      <ion-toggle checked="false"></ion-toggle>\n    </ion-item>\n\n  </ion-list>\n\n  <div padding>\n    <button ion-button block color="light" (click)="addTask()">Add</button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/task-creation/task-creation.html"*/,
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'page-task-creation',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/task-creation/task-creation.html"*/'<!--\n  Generated template for the TaskCreationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-center>Task Creation Panel</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item padding>\n      <ion-label>Type:</ion-label>\n      <ion-select [(ngModel)]="type">\n        <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item padding>\n      <ion-label>Size:</ion-label>\n      <ion-select [(ngModel)]="height">\n        <ion-option *ngFor="let size of size_list">{{size}}</ion-option>\n      </ion-select>\n      <ion-select [(ngModel)]="width">\n        <ion-option *ngFor="let size of size_list">{{size}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>How many</ion-label>\n      <ion-input type="number" [(ngModel)]="quantity"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Insulated</ion-label>\n      <ion-checkbox color="dark" checked="false"></ion-checkbox>\n    </ion-item>\n    <ion-item>\n      <ion-label>Fire Rated</ion-label>\n      <ion-checkbox color="dark" checked="false"></ion-checkbox>\n    </ion-item>\n\n  </ion-list>\n\n  <div padding>\n    <button ion-button block color="light" (click)="addTask()">Add</button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/task-creation/task-creation.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
 ], TaskCreationPage);
 
-var _a, _b;
 //# sourceMappingURL=task-creation.js.map
 
 /***/ }),
 
-/***/ 416:
+/***/ 415:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TYPES; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SIZES; });
 var TYPES = ["Segment", "Transiction", "Reduction", "Curve"];
-var SIZES = [100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650];
+var SIZES = [150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650];
 //# sourceMappingURL=duct.properties.js.map
 
 /***/ })
