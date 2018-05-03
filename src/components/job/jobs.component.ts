@@ -13,6 +13,7 @@ import { Job } from '../../models/interfaces/job.interface';
   selector: 'jobs',
   templateUrl: 'jobs.component.html'
 })
+
 export class JobsComponent {
 
 

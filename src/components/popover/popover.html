@@ -1,0 +1,30 @@
+<!-- Generated template for the PopoverComponent component -->
+<ion-list radio-group [(ngModel)]="dtype" (ionChange)="changeDuctType()">
+  <ion-row padding>
+    <ion-col>
+      <button (click)="changeBackground('#616a6b')" ion-button small color="popover_gray">gray</button>
+    </ion-col>
+    <ion-col>
+      <button (click)="changeBackground('#000080')" ion-button small color="popover_blue">blue</button>
+    </ion-col>
+    <ion-col>
+      <button (click)="changeBackground('#000000')" ion-button small color="popover_black">black</button>
+    </ion-col>
+  </ion-row>
+  <ion-item >
+    <ion-label>Duct</ion-label>
+    <ion-radio value="Duct"></ion-radio>
+  </ion-item>
+  <ion-item >
+    <ion-label>Curve</ion-label>
+    <ion-radio value="Curve"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Transiction</ion-label>
+    <ion-radio value="Transiction"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Reduction</ion-label>
+    <ion-radio value="Reduction"></ion-radio>
+  </ion-item>
+</ion-list>

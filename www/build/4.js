@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 537:
+/***/ 542:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JobEditPageModule", function() { return JobEditPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScannerPageModule", function() { return ScannerPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__job_edit__ = __webpack_require__(543);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scanner__ = __webpack_require__(557);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var JobEditPageModule = (function () {
-    function JobEditPageModule() {
+var ScannerPageModule = (function () {
+    function ScannerPageModule() {
     }
-    return JobEditPageModule;
+    return ScannerPageModule;
 }());
-JobEditPageModule = __decorate([
+ScannerPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__job_edit__["a" /* JobEditPage */],
+            __WEBPACK_IMPORTED_MODULE_2__scanner__["a" /* ScannerPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__job_edit__["a" /* JobEditPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__scanner__["a" /* ScannerPage */]),
         ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2__scanner__["a" /* ScannerPage */],
+        ]
     })
-], JobEditPageModule);
+], ScannerPageModule);
 
-//# sourceMappingURL=job-edit.module.js.map
+//# sourceMappingURL=scanner.module.js.map
 
 /***/ }),
 
-/***/ 543:
+/***/ 557:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JobEditPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScannerPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(400);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(79);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,54 +59,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-/**
- * Generated class for the JobEditPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var JobEditPage = (function () {
-    function JobEditPage(navCtrl, navParams, db, toast) {
-        var _this = this;
+var ScannerPage = (function () {
+    function ScannerPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.db = db;
-        this.toast = toast;
-        this.job = {};
-        var jobID = this.navParams.get('jobID');
-        console.log(jobID);
-        this.jobRef = this.db.object("job-list/" + jobID);
-        //Subscribe the object and assign the result to this
-        this.jobSubscription = this.jobRef.subscribe(function (job) { return _this.job = job; });
     }
-    JobEditPage.prototype.updateJob = function (job) {
-        var _this = this;
-        //Update Item
-        this.jobRef.update(job);
-        this.toast.create({
-            message: 'Job updated successfully!',
-            duration: 1500,
-            position: 'bottom'
-        }).present().then(function () {
-            // Navigate the user back to the Job List
-            _this.navCtrl.pop();
-        });
-    };
-    JobEditPage.prototype.ionViewWillLeave = function () {
-        this.jobSubscription.unsubscribe();
-    };
-    return JobEditPage;
+    return ScannerPage;
 }());
-JobEditPage = __decorate([
+ScannerPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-job-edit',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/job-edit/job-edit.html"*/'<!--\n  Generated template for the JobEditPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{job.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list padding>\n\n    <ion-item>\n      <ion-label floating>Job Name</ion-label>\n      <ion-input type="text" [(ngModel)]="job.name"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Site Address</ion-label>\n      <ion-input type="text" [(ngModel)]="job.address"></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <div padding>\n    <button ion-button block color="light" (click)="updateJob(job)">Save</button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/job-edit/job-edit.html"*/,
+        selector: 'page-scanner',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/scanner/scanner.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center> Scanner </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list>\n    <ion-list-header>Under construction</ion-list-header>\n    <ion-item>\n      <ion-icon name="construct" item-left></ion-icon>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/scanner/scanner.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]])
-], JobEditPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
+], ScannerPage);
 
-//# sourceMappingURL=job-edit.js.map
+//# sourceMappingURL=scanner.js.map
 
 /***/ })
 

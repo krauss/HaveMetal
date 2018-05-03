@@ -32,11 +32,12 @@ export class LoginPage {
         //Show the loader to give the impression of authentication
         this.loadingCtrl.create({
           content: "Please wait...",
-          duration: 1500
-        }).present().then(() => {          
+          duration: 1200
+        }).present().then(() => {
 
           //Take the user to the home page
           this.navCtrl.push(TabsPage);
+
         });
       }
     } catch (e){

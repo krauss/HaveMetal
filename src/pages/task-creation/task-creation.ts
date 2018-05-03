@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
 import { TYPES, SIZES }  from '../../models/interfaces/duct.properties';
 
 /**
@@ -20,11 +19,13 @@ export class TaskCreationPage {
   type_list = TYPES;
   size_list = SIZES;
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TaskCreationPage');
+
   }
 
   addTask(): void{

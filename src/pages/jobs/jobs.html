@@ -12,5 +12,5 @@
   </ion-fab>
 
   <!-- Add the card for each job from the firebase db -->
-  <jobs *ngFor="let job of job_list | async" [job]="job" (click)="selectJob(job)"></jobs>
+  <jobs *ngFor="let job of job_list | async" [job]="job" (click)="selectJob(job)" padding></jobs>
 </ion-content>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 
 // Firebase imports
@@ -28,7 +28,7 @@ export class JobCreationPage {
   jobRef$: FirebaseListObservable<Job[]>
   toast: ToastController
 
-  constructor(private navCtrl: NavController, private navParams: NavParams, private database: AngularFireDatabase, private _toast: ToastController) {
+  constructor(private navCtrl: NavController, private database: AngularFireDatabase, private _toast: ToastController) {
     this.jobRef$ = database.list('job-list');
     this.toast = _toast;
   }

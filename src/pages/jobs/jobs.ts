@@ -13,7 +13,7 @@ import { Job } from '../../models/interfaces/job.interface';
 export class JobsPage {
 
 
-    job_list: FirebaseListObservable<Job[]>
+  job_list: FirebaseListObservable<Job[]>
 
   constructor(private navCtrl: NavController, private database: AngularFireDatabase, private actionSheetCtrl: ActionSheetController, public alertCtrl: AlertController) {
     this.job_list = database.list('job-list');
@@ -28,7 +28,23 @@ export class JobsPage {
       title: `${job.name}`,
       buttons: [
         {
-          text: 'Add Task',
+          text: 'Upload Mechanical Drawing',
+          icon: 'cloud-upload',
+          handler: () => {
+            //Send the user to the  TaskCreationPage and pass the key as a parameter
+            //this.navCtrl.push('TaskCreationPage', { jobID: job.$key });
+          }
+        },
+        {
+          text: 'Generate 3D Model',
+          icon: 'cube',
+          handler: () => {
+            //Send the user to the  TaskCreationPage and pass the key as a parameter
+            //this.navCtrl.push('TaskCreationPage', { jobID: job.$key });
+          }
+        },
+        {
+          text: 'Add Duct Work',
           icon: 'add',
           handler: () => {
             //Send the user to the  TaskCreationPage and pass the key as a parameter
@@ -50,7 +66,7 @@ export class JobsPage {
           handler: () => {
 
             this.alertCtrl.create({
-              title: 'Are you f*cking serius?',
+              title: 'Are you serious mate?',
               //message: 'Are you f*cking serius?',
               buttons: [
                 {

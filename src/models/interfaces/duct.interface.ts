@@ -1,18 +1,23 @@
 /*
   The most basic entity in which everything else derives from.
 */
-export abstract class Duct{
+export abstract class Duct {
 
-  private _x: number;
-  private _y: number;
-  private _z: number;
-  private _isFireRated: boolean;
-  private _isInsulated: boolean;
-  private _isTDF: boolean;
+  //General properties
+  protected _width: number;
+  protected _height: number;
+  protected _length: number;
+  protected _isFireRated: boolean;
+  protected _isInsulated: boolean;
+  protected _isTDF: boolean;
 
-  constructor(){
+  //WebGL properties
+  protected _material: any;
+  protected _geometry: any;
+  protected _mesh: any;
 
-  }
+
+  constructor(){}
 
   //To be implemented on the derived classes
   abstract draw(): void;
@@ -20,34 +25,34 @@ export abstract class Duct{
   /*
     Duct width accessors
   */
-  get getX(): number {
-    return this._x;
+  get width(): number {
+    return this.width;
   }
 
-  set setX(n : number){
-    this._x = n;
+  set width(n : number){
+    this._width = n;
   }
 
   /*
     Duct height accessors
   */
-  get getY(): number {
-    return this._y;
+  get height(): number {
+    return this._height;
   }
 
-  set setY(n : number){
-    this._y = n;
+  set height(n : number){
+    this._height = n;
   }
 
   /*
     Duct length accessors
   */
-  get getZ(): number {
-    return this._z;
+  get length(): number {
+    return this._length;
   }
 
-  set setZ(n : number){
-    this._z = n;
+  set length(n : number){
+    this._length = n;
   }
 
   /*
@@ -79,8 +84,35 @@ export abstract class Duct{
     return this._isTDF;
   }
 
-  set tdf(o : boolean){
-    this._isTDF = o;
+  set tdf(t : boolean){
+    this._isTDF = t;
+  }
+
+  /*
+    WebGL accessor methods
+  */
+  get material(): any {
+    return this._material;
+  }
+
+  set material(m: any) {
+    this._material = m;
+  }
+
+  get geometry(): any {
+    return this._geometry;
+  }
+
+  set geometry(g: any) {
+    this._geometry = g;
+  }
+
+  get mesh(): any {
+    return this._mesh;
+  }
+
+  set mesh(m: any) {
+    this._mesh = m;
   }
 
 }
