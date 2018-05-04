@@ -18,7 +18,13 @@ RUN npm install -g cordova@latest
 
 RUN npm install -g ionic@latest
 
-RUN npm cache clean -f
+RUN npm uninstall node-sass -g
+
+RUN node cache clean
+
+RUN node install node-sass
+
+# RUN npm cache clean -f
 
 RUN npm install -g n
 
