@@ -14,11 +14,11 @@ COPY package.json .
 # For npm@5 or later, copy package-lock.json as well
 COPY package-lock.json .
 
-RUN npm install -g cordova
+RUN npm install -g cordova@latest
 
-RUN npm install -g ionic
+RUN npm install -g ionic@latest
 
-RUN npm install
+RUN npm install -g
 
 # Bundle app source
 COPY . .
