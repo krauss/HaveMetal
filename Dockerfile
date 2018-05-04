@@ -20,11 +20,9 @@ RUN npm install -g ionic@latest
 
 RUN npm uninstall node-sass -g
 
-RUN node cache clean
+RUN npm cache clean -f
 
-RUN node install node-sass
-
-# RUN npm cache clean -f
+RUN npm install node-sass -g
 
 RUN npm install -g n
 
