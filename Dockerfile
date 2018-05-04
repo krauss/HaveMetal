@@ -20,6 +20,8 @@ RUN npm install -g ionic@latest
 
 RUN npm install -g
 
+RUN npm rebuild node-sass
+
 # Bundle app source
 COPY . .
 
