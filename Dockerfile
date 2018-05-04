@@ -18,13 +18,13 @@ RUN npm install -g cordova@latest
 
 RUN npm install -g ionic@latest
 
-RUN npm install -g
+RUN npm cache clean -f
 
-RUN npm rebuild node-sass
+RUN npm install -g n
 
 # Bundle app source
 COPY . .
 
 EXPOSE 8100 35729
 
-CMD [ "ionic", "serve", "--no-git", "--nobrowser", "--no-interactive" ]
+CMD [ "ionic", "serve", "--no-git", "--no-open", "--no-interactive" ]
