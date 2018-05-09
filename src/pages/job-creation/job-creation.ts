@@ -47,7 +47,7 @@ export class JobCreationPage {
 
     this.toast.create({
       message: 'Job created successfully!',
-      duration: 1500,
+      duration: 1200,
       position: 'bottom'
     }).present().then(() => {
 

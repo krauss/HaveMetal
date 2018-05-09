@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { NavParams } from 'ionic-angular';
 
 import * as THREE from 'three';
+import { TYPES }  from '../../models/interfaces/duct.properties';
+import { Duct }  from '../../models/interfaces/duct.interface';
+import { DuctFactory } from '../../models/objects/factory';
 
 /**
  * Generated class for the PopoverComponent component.
@@ -16,83 +19,73 @@ import * as THREE from 'three';
 
 export class PopoverComponent {
 
-  duct: any;
-  dtype: string;
-
-  colors: any = {
-    'green': {
-      'bg': 'rgb(0, 255, 0)',
-      'fg': 'rgb(0, 0, 0)'
-    },
-    'blue': {
-      'bg': 'rgb(0, 0, 255)',
-      'fg': 'rgb(0, 0, 0)'
-    },
-    'black': {
-      'bg': 'rgb(0, 0, 0)',
-      'fg': 'rgb(0, 0, 0)'
-    },
-  };
-
-  protected _duct: any;
+  type_list = TYPES;
+  protected static duct: Duct;
+  protected static _scene: any;
 
   constructor( private navParams: NavParams ) {
 
   }
 
-
   ngOnInit() {
     if (this.navParams.data) {
-      this._duct = this.navParams.data.duct;
+      PopoverComponent._scene = this.navParams.data.scene;
 
       // this.background = this.getColorName(this.contentEle.style.backgroundColor);
       //this.duct.color = this.getColorName(this.duct.color);
-      console.log(this._duct.geometry.name);
+      //console.log(this._duct.geometry.name);
       // this.setFontFamily();
       //this.setDuctType();
     }
   }
 
   //This method is going to get the duct's color
-  getColorName(background: any) {
-    let colorName = 'white';
-
-    if (!background) return 'white';
-
-    for (var key in this.colors) {
-      if (this.colors[key].bg === background) {
-        colorName = key;
-      }
-    }
-
-    return colorName;
-  }
+  // getColorName(background: any) {
+  //   let colorName = 'white';
+  //
+  //   if (!background) return 'white';
+  //
+  //   for (var key in this.colors) {
+  //     if (this.colors[key].bg === background) {
+  //       colorName = key;
+  //     }
+  //   }
+  //
+  //   return colorName;
+  // }
 
   //TODO implement the method to change the type of the duct
-  setDuctType(){
-    if (this.duct.type) {
-      //TODO
-      this.dtype = this.duct.type;
-    }
-  }
-  // setFontFamily() {
-  //   if (this.textEle.style.fontFamily) {
-  //     this.fontFamily = this.textEle.style.fontFamily.replace(/'/g, '');
+  // setDuctType(){
+  //   if (this.duct.type) {
+  //     //TODO
+  //     this.type_list = this.duct.type;
   //   }
   // }
 
   changeBackground(color: any) {
-    this._duct.material.color = new THREE.Color(color);
+    PopoverComponent.duct.material.color = new THREE.Color(color);
   }
 
-  changeDuctType() {
-    if (this.dtype) {
-      this.duct.type = this.dtype;
+
+  changeDuctType($event) {
+
+    if ($event) {
+
+      if (PopoverComponent.duct != undefined){
+
+        var tmp = PopoverComponent._scene.getObjectByName(PopoverComponent.duct.mesh.name);
+        PopoverComponent._scene.remove(tmp);
+
+      }
+
+      //console.log(PopoverComponent.duct);
+
+      PopoverComponent.duct = DuctFactory.createDuct($event);
+      PopoverComponent.duct.draw();
+      PopoverComponent._scene.add( PopoverComponent.duct.mesh );
+
     }
   }
-  // changeFontFamily() {
-  //   if (this.fontFamily) this.textEle.style.fontFamily = this.fontFamily;
-  // }
 
 
 }

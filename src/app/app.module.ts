@@ -10,7 +10,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FB_HAVEMETAL_CREDENTIALS } from './firebase.credentials';
 //import { ComponentsModule } from '../components/components.module';
 import { PopoverComponent } from '../components/popover/popover';
-import { JobsComponent } from '../components/job/jobs.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';

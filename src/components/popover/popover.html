@@ -1,8 +1,8 @@
 <!-- Generated template for the PopoverComponent component -->
-<ion-list radio-group [(ngModel)]="dtype" (ionChange)="changeDuctType()">
+<ion-list radio-group [(ngModel)]="type" (ionChange)="changeDuctType($event)">
   <ion-row padding>
     <ion-col>
-      <button (click)="changeBackground('#616a6b')" ion-button small color="popover_gray">gray</button>
+      <button (click)="changeBackground('#c4c4c4')" ion-button small color="popover_gray">gray</button>
     </ion-col>
     <ion-col>
       <button (click)="changeBackground('#000080')" ion-button small color="popover_blue">blue</button>
@@ -11,9 +11,13 @@
       <button (click)="changeBackground('#000000')" ion-button small color="popover_black">black</button>
     </ion-col>
   </ion-row>
-  <ion-item >
-    <ion-label>Duct</ion-label>
-    <ion-radio value="Duct"></ion-radio>
+  <ion-item *ngFor="let type of type_list">
+    <ion-label>{{type}}</ion-label>
+    <ion-radio value={{type}}></ion-radio>
+  </ion-item>
+  <!-- <ion-item >
+    <ion-label>Duct Segment</ion-label>
+    <ion-radio value="Segment"></ion-radio>
   </ion-item>
   <ion-item >
     <ion-label>Curve</ion-label>
@@ -27,4 +31,7 @@
     <ion-label>Reduction</ion-label>
     <ion-radio value="Reduction"></ion-radio>
   </ion-item>
+  <ion-select [(ngModel)]="type">
+    <ion-option *ngFor="let type of type_list">{{type}}</ion-option>
+  </ion-select> -->
 </ion-list>
