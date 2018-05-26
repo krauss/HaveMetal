@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 548:
+/***/ 550:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SamplesPageModule", function() { return SamplesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__samples__ = __webpack_require__(559);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__samples__ = __webpack_require__(561);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,16 +42,16 @@ SamplesPageModule = __decorate([
 
 /***/ }),
 
-/***/ 559:
+/***/ 561:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SamplesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_popover_popover__ = __webpack_require__(404);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_three__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_orbit_controls_es6__ = __webpack_require__(560);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_orbit_controls_es6__ = __webpack_require__(562);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -83,35 +83,20 @@ var SamplesPage = SamplesPage_1 = (function () {
         });
     };
     SamplesPage.prototype.ionViewDidLoad = function () {
-        //console.log('ionViewDidLoad TaskCreationPage');
         this.initialiseWebGLObjectAndEnvironment();
-        //this.addDuct();
         this.renderAnimation();
     };
-    // public addDuct(): void{
-    //   SamplesPage._DUCT = new Transiction();
-    //   SamplesPage._SCENE.add( SamplesPage._DUCT._mesh );
-    // }
     SamplesPage.prototype.initialiseWebGLObjectAndEnvironment = function () {
         // Reference the DOM element that the WebGL generated object
         // will be assigned to
         SamplesPage_1._ELEMENT = this.canvasEl.nativeElement;
         // Define a new ThreeJS scene
         SamplesPage_1._SCENE = new __WEBPACK_IMPORTED_MODULE_3_three__["p" /* Scene */]();
-        // Define a new ThreeJS camera from the following types:
-        /*
-           1. CubeCamera				(Creates 6 cameras - one for each face of a cube)
-           2. OrthographicCamera		(Creates a camera using orthographic projection - object size stays constant
-                         regardless of distance from the camera)
-           3. PerspectiveCamera		(Creates a camera using perspective projection - most common projection type
-                         for 3D rendering [designed to mimic the way the human eye sees])
-           4. StereoCamera			(Dual PerspectiveCameras - used for 3D effects such as parallax barrier)
-        */
         SamplesPage_1._CAMERA = new __WEBPACK_IMPORTED_MODULE_3_three__["l" /* PerspectiveCamera */](75, window.innerWidth / window.innerHeight, 0.1, 1000);
         // Define an object to manage display of ThreeJS scene
         SamplesPage_1._RENDERER = new __WEBPACK_IMPORTED_MODULE_3_three__["t" /* WebGLRenderer */]({ antialias: true });
         //It sets the background color
-        SamplesPage_1._RENDERER.setClearColor(0xF7F7F7, 1);
+        SamplesPage_1._RENDERER.setClearColor(0xDCDCDC, 1);
         // Resizes the output canvas to match the supplied width/height parameters
         SamplesPage_1._RENDERER.setSize(window.innerWidth, window.innerHeight);
         // Attach the canvas, where the renderer draws the scene, to the specified DOM element
@@ -159,26 +144,26 @@ var SamplesPage = SamplesPage_1 = (function () {
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('domObj'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
 ], SamplesPage.prototype, "canvasEl", void 0);
 SamplesPage = SamplesPage_1 = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'page-samples',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/samples/samples.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center> Samples </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="presentPopover($event)">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <!-- Three.js DOM object -->\n  <ion-item>\n    <div #domObj></div>\n  </ion-item>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/samples/samples.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* PopoverController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* PopoverController */]) === "function" && _d || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* PopoverController */]])
 ], SamplesPage);
 
-var SamplesPage_1, _a, _b, _c, _d;
+var SamplesPage_1;
 //# sourceMappingURL=samples.js.map
 
 /***/ }),
 
-/***/ 560:
+/***/ 562:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_three__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_three__ = __webpack_require__(42);
 /**
  * @author qiao / https://github.com/qiao
  * @author mrdoob / http://mrdoob.com

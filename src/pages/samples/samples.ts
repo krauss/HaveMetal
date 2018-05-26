@@ -51,16 +51,11 @@ export class SamplesPage {
   }
 
   ionViewDidLoad() {
-    //console.log('ionViewDidLoad TaskCreationPage');
-    this.initialiseWebGLObjectAndEnvironment();
-    //this.addDuct();
-    this.renderAnimation();
-  }
 
-  // public addDuct(): void{
-  //   SamplesPage._DUCT = new Transiction();
-  //   SamplesPage._SCENE.add( SamplesPage._DUCT._mesh );
-  // }
+    this.initialiseWebGLObjectAndEnvironment();
+    this.renderAnimation();
+
+  }
 
   initialiseWebGLObjectAndEnvironment() : void
   {
@@ -69,29 +64,18 @@ export class SamplesPage {
      // will be assigned to
      SamplesPage._ELEMENT = this.canvasEl.nativeElement;
 
-
      // Define a new ThreeJS scene
      SamplesPage._SCENE = new THREE.Scene();
 
-
-     // Define a new ThreeJS camera from the following types:
-     /*
-        1. CubeCamera				(Creates 6 cameras - one for each face of a cube)
-        2. OrthographicCamera		(Creates a camera using orthographic projection - object size stays constant
-                      regardless of distance from the camera)
-        3. PerspectiveCamera		(Creates a camera using perspective projection - most common projection type
-                      for 3D rendering [designed to mimic the way the human eye sees])
-        4. StereoCamera			(Dual PerspectiveCameras - used for 3D effects such as parallax barrier)
-     */
      SamplesPage._CAMERA = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
 
      // Define an object to manage display of ThreeJS scene
      SamplesPage._RENDERER = new THREE.WebGLRenderer({ antialias: true });
      //It sets the background color
-     SamplesPage._RENDERER.setClearColor(0xF7F7F7, 1);
+     SamplesPage._RENDERER.setClearColor(0xDCDCDC, 1);
 
-    // Resizes the output canvas to match the supplied width/height parameters
-    SamplesPage._RENDERER.setSize( window.innerWidth, window.innerHeight );
+     // Resizes the output canvas to match the supplied width/height parameters
+     SamplesPage._RENDERER.setSize( window.innerWidth, window.innerHeight );
 
 
      // Attach the canvas, where the renderer draws the scene, to the specified DOM element
@@ -101,12 +85,12 @@ export class SamplesPage {
      SamplesPage._AXIS = new THREE.AxesHelper(35);
 
      var pointLight = new THREE.PointLight( 0xf2f2f2, 1, 100 );
-    pointLight.position.set( 0, 20, 0 );
-    SamplesPage._SCENE.add( pointLight );
+     pointLight.position.set( 0, 20, 0 );
+     SamplesPage._SCENE.add( pointLight );
 
-    var sphereSize = 1;
-    var pointLightHelper = new THREE.PointLightHelper( pointLight, sphereSize );
-    SamplesPage._SCENE.add( pointLightHelper );
+     var sphereSize = 1;
+     var pointLightHelper = new THREE.PointLightHelper( pointLight, sphereSize );
+     SamplesPage._SCENE.add( pointLightHelper );
 
 
      SamplesPage._LIGHT  = new THREE.AmbientLight( 0x404040 ); // soft white light

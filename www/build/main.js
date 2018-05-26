@@ -1,15 +1,239 @@
 webpackJsonp([9],{
 
-/***/ 117:
+/***/ 147:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 147;
+
+/***/ }),
+
+/***/ 188:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/dashboard/dashboard.module": [
+		545,
+		8
+	],
+	"../pages/job-creation/job-creation.module": [
+		546,
+		7
+	],
+	"../pages/job-edit/job-edit.module": [
+		547,
+		6
+	],
+	"../pages/jobs/jobs.module": [
+		548,
+		0
+	],
+	"../pages/login/login.module": [
+		549,
+		5
+	],
+	"../pages/samples/samples.module": [
+		550,
+		1
+	],
+	"../pages/scanner/scanner.module": [
+		551,
+		4
+	],
+	"../pages/sign-in/sign-in.module": [
+		552,
+		3
+	],
+	"../pages/task-creation/task-creation.module": [
+		553,
+		2
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 188;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 403:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Duct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var TabsPage = (function () {
+    function TabsPage() {
+        this.tab1Root = 'DashboardPage';
+        this.tab2Root = 'JobsPage';
+        this.tab3Root = 'ScannerPage';
+        this.tab4Root = 'SamplesPage';
+    }
+    return TabsPage;
+}());
+TabsPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/tabs/tabs.html"*/'<ion-tabs color="s_light">\n  <ion-tab [root]="tab1Root" tabTitle="Dashboard" tabIcon="stats"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Jobs" tabIcon="construct"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Scanner" tabIcon="barcode"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Samples" tabIcon="cube"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/tabs/tabs.html"*/
+    })
+], TabsPage);
+
+//# sourceMappingURL=tabs.js.map
+
+/***/ }),
+
+/***/ 404:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PopoverComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__ = __webpack_require__(512);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the PopoverComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var PopoverComponent = PopoverComponent_1 = (function () {
+    function PopoverComponent(navParams) {
+        this.navParams = navParams;
+        this.type_list = __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__["b" /* TYPES */];
+    }
+    PopoverComponent.prototype.ngOnInit = function () {
+        if (this.navParams.data) {
+            PopoverComponent_1._scene = this.navParams.data.scene;
+            //this.setPreviousSelected();
+            // this.background = this.getColorName(this.contentEle.style.backgroundColor);
+            //this.duct.color = this.getColorName(this.duct.color);
+            //console.log(this._duct.geometry.name);
+            // this.setFontFamily();
+            //this.setDuctType();
+        }
+    };
+    PopoverComponent.prototype.setPreviousSelected = function () {
+        console.log(this.dtype);
+    };
+    //TODO implement the method to change the type of the duct
+    // setDuctType(){
+    //   if (this.duct.type) {
+    //     //TODO
+    //     this.type_list = this.duct.type;
+    //   }
+    // }
+    PopoverComponent.prototype.changeBackground = function (color) {
+        PopoverComponent_1.duct.material.color = new __WEBPACK_IMPORTED_MODULE_2_three__["c" /* Color */](color);
+    };
+    PopoverComponent.prototype.changeDuctType = function ($event) {
+        if ($event) {
+            console.log(this.dtype);
+            if (PopoverComponent_1.duct != undefined) {
+                var tmp = PopoverComponent_1._scene.getObjectByName(PopoverComponent_1.duct.mesh.name);
+                PopoverComponent_1._scene.remove(tmp);
+            }
+            PopoverComponent_1.duct = __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__["a" /* DuctFactory */].createDuct($event);
+            PopoverComponent_1.duct.draw();
+            PopoverComponent_1._scene.add(PopoverComponent_1.duct.mesh);
+        }
+    };
+    return PopoverComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fuckList'),
+    __metadata("design:type", Object)
+], PopoverComponent.prototype, "something", void 0);
+PopoverComponent = PopoverComponent_1 = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'popover',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/popover/popover.html"*/'<!-- Generated template for the PopoverComponent component -->\n<ion-list #fuckList radio-group [(ngModel)]="dtype" (ionChange)="changeDuctType($event)">\n  <ion-row padding>\n    <ion-col>\n      <button (click)="changeBackground(\'#c4c4c4\')" ion-button small color="popover_gray">gray</button>\n    </ion-col>\n    <ion-col>\n      <button (click)="changeBackground(\'#000080\')" ion-button small color="popover_blue">blue</button>\n    </ion-col>\n    <ion-col>\n      <button (click)="changeBackground(\'#000000\')" ion-button small color="popover_black">black</button>\n    </ion-col>\n  </ion-row>\n  <ion-item *ngFor="let type of type_list">\n    <ion-label>{{type}}</ion-label>\n    <ion-radio value={{type}}></ion-radio>\n  </ion-item>\n</ion-list>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/popover/popover.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+], PopoverComponent);
+
+var PopoverComponent_1;
+//# sourceMappingURL=popover.js.map
+
+/***/ }),
+
+/***/ 405:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TYPES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SIZES; });
+var TYPES = ['Segment', 'Transiction', 'Reduction', 'Offset', 'Curve', 'Half-Curve', 'Turn', 'Cap'];
+var SIZES = [150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650];
+//# sourceMappingURL=duct.properties.js.map
+
+/***/ }),
+
+/***/ 406:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(423);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 41:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Duct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return FlatSide; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Direction; });
 /*
   The most basic entity in which everything else derives from.
 */
 var Duct = (function () {
-    function Duct() {
+    function Duct(width, height) {
+        this._width = width;
+        this._height = height;
     }
     Object.defineProperty(Duct.prototype, "width", {
         /*
@@ -125,233 +349,21 @@ var Duct = (function () {
     return Duct;
 }());
 
+var FlatSide;
+(function (FlatSide) {
+    FlatSide[FlatSide["LEFT"] = 0] = "LEFT";
+    FlatSide[FlatSide["RIGHT"] = 1] = "RIGHT";
+    FlatSide[FlatSide["TOP"] = 2] = "TOP";
+    FlatSide[FlatSide["BOTTOM"] = 3] = "BOTTOM";
+})(FlatSide || (FlatSide = {}));
+var Direction;
+(function (Direction) {
+    Direction[Direction["LEFT"] = 0] = "LEFT";
+    Direction[Direction["RIGHT"] = 1] = "RIGHT";
+    Direction[Direction["UP"] = 2] = "UP";
+    Direction[Direction["DOWN"] = 3] = "DOWN";
+})(Direction || (Direction = {}));
 //# sourceMappingURL=duct.interface.js.map
-
-/***/ }),
-
-/***/ 147:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 147;
-
-/***/ }),
-
-/***/ 188:
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"../pages/dashboard/dashboard.module": [
-		543,
-		8
-	],
-	"../pages/job-creation/job-creation.module": [
-		544,
-		7
-	],
-	"../pages/job-edit/job-edit.module": [
-		545,
-		6
-	],
-	"../pages/jobs/jobs.module": [
-		546,
-		0
-	],
-	"../pages/login/login.module": [
-		547,
-		5
-	],
-	"../pages/samples/samples.module": [
-		548,
-		1
-	],
-	"../pages/scanner/scanner.module": [
-		549,
-		4
-	],
-	"../pages/sign-in/sign-in.module": [
-		550,
-		3
-	],
-	"../pages/task-creation/task-creation.module": [
-		551,
-		2
-	]
-};
-function webpackAsyncContext(req) {
-	var ids = map[req];
-	if(!ids)
-		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__(ids[0]);
-	});
-};
-webpackAsyncContext.keys = function webpackAsyncContextKeys() {
-	return Object.keys(map);
-};
-webpackAsyncContext.id = 188;
-module.exports = webpackAsyncContext;
-
-/***/ }),
-
-/***/ 403:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var TabsPage = (function () {
-    function TabsPage() {
-        this.tab1Root = 'DashboardPage';
-        this.tab2Root = 'JobsPage';
-        this.tab3Root = 'ScannerPage';
-        this.tab4Root = 'SamplesPage';
-    }
-    return TabsPage;
-}());
-TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/tabs/tabs.html"*/'<ion-tabs color="s_light">\n  <ion-tab [root]="tab1Root" tabTitle="Dashboard" tabIcon="stats"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Jobs" tabIcon="construct"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Scanner" tabIcon="barcode"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Samples" tabIcon="cube"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/tabs/tabs.html"*/
-    })
-], TabsPage);
-
-//# sourceMappingURL=tabs.js.map
-
-/***/ }),
-
-/***/ 404:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PopoverComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(61);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__ = __webpack_require__(512);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the PopoverComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
-var PopoverComponent = PopoverComponent_1 = (function () {
-    function PopoverComponent(navParams) {
-        this.navParams = navParams;
-        this.type_list = __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__["b" /* TYPES */];
-    }
-    PopoverComponent.prototype.ngOnInit = function () {
-        if (this.navParams.data) {
-            PopoverComponent_1._scene = this.navParams.data.scene;
-            // this.background = this.getColorName(this.contentEle.style.backgroundColor);
-            //this.duct.color = this.getColorName(this.duct.color);
-            //console.log(this._duct.geometry.name);
-            // this.setFontFamily();
-            //this.setDuctType();
-        }
-    };
-    //This method is going to get the duct's color
-    // getColorName(background: any) {
-    //   let colorName = 'white';
-    //
-    //   if (!background) return 'white';
-    //
-    //   for (var key in this.colors) {
-    //     if (this.colors[key].bg === background) {
-    //       colorName = key;
-    //     }
-    //   }
-    //
-    //   return colorName;
-    // }
-    //TODO implement the method to change the type of the duct
-    // setDuctType(){
-    //   if (this.duct.type) {
-    //     //TODO
-    //     this.type_list = this.duct.type;
-    //   }
-    // }
-    PopoverComponent.prototype.changeBackground = function (color) {
-        PopoverComponent_1.duct.material.color = new __WEBPACK_IMPORTED_MODULE_2_three__["c" /* Color */](color);
-    };
-    PopoverComponent.prototype.changeDuctType = function ($event) {
-        if ($event) {
-            if (PopoverComponent_1.duct != undefined) {
-                var tmp = PopoverComponent_1._scene.getObjectByName(PopoverComponent_1.duct.mesh.name);
-                PopoverComponent_1._scene.remove(tmp);
-            }
-            //console.log(PopoverComponent.duct);
-            PopoverComponent_1.duct = __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__["a" /* DuctFactory */].createDuct($event);
-            PopoverComponent_1.duct.draw();
-            PopoverComponent_1._scene.add(PopoverComponent_1.duct.mesh);
-        }
-    };
-    return PopoverComponent;
-}());
-PopoverComponent = PopoverComponent_1 = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'popover',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/popover/popover.html"*/'<!-- Generated template for the PopoverComponent component -->\n<ion-list radio-group [(ngModel)]="type" (ionChange)="changeDuctType($event)">\n  <ion-row padding>\n    <ion-col>\n      <button (click)="changeBackground(\'#c4c4c4\')" ion-button small color="popover_gray">gray</button>\n    </ion-col>\n    <ion-col>\n      <button (click)="changeBackground(\'#000080\')" ion-button small color="popover_blue">blue</button>\n    </ion-col>\n    <ion-col>\n      <button (click)="changeBackground(\'#000000\')" ion-button small color="popover_black">black</button>\n    </ion-col>\n  </ion-row>\n  <ion-item *ngFor="let type of type_list">\n    <ion-label>{{type}}</ion-label>\n    <ion-radio value={{type}}></ion-radio>\n  </ion-item>\n  <!-- <ion-item >\n    <ion-label>Duct Segment</ion-label>\n    <ion-radio value="Segment"></ion-radio>\n  </ion-item>\n  <ion-item >\n    <ion-label>Curve</ion-label>\n    <ion-radio value="Curve"></ion-radio>\n  </ion-item>\n  <ion-item>\n    <ion-label>Transiction</ion-label>\n    <ion-radio value="Transiction"></ion-radio>\n  </ion-item>\n  <ion-item>\n    <ion-label>Reduction</ion-label>\n    <ion-radio value="Reduction"></ion-radio>\n  </ion-item>\n  <ion-select [(ngModel)]="type">\n    <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n  </ion-select> -->\n</ion-list>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/popover/popover.html"*/
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _a || Object])
-], PopoverComponent);
-
-var PopoverComponent_1, _a;
-//# sourceMappingURL=popover.js.map
-
-/***/ }),
-
-/***/ 405:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TYPES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SIZES; });
-var TYPES = ['Segment', 'Transiction', 'Reduction', 'Curve', 'Half-Curve', 'Square-Curve', 'End-Cap'];
-var SIZES = [150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650];
-//# sourceMappingURL=duct.properties.js.map
-
-/***/ }),
-
-/***/ 406:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(423);
-
-
-Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
-//# sourceMappingURL=main.js.map
 
 /***/ }),
 
@@ -361,14 +373,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(533);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(535);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(403);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__ = __webpack_require__(401);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__firebase_credentials__ = __webpack_require__(542);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__firebase_credentials__ = __webpack_require__(544);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__ = __webpack_require__(404);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(396);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(399);
@@ -709,9 +721,16 @@ webpackContext.id = 507;
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctFactory; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__segment__ = __webpack_require__(513);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__reduction__ = __webpack_require__(514);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__transiction__ = __webpack_require__(515);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__segment__ = __webpack_require__(513);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reduction__ = __webpack_require__(514);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transiction__ = __webpack_require__(515);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__offset__ = __webpack_require__(516);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cap__ = __webpack_require__(517);
+
+
+
+
 
 
 
@@ -721,9 +740,11 @@ var DuctFactory = (function () {
     }
     DuctFactory.createDuct = function (duct_type) {
         switch (duct_type) {
-            case "Segment": return new __WEBPACK_IMPORTED_MODULE_0__segment__["a" /* Segment */]();
-            case "Reduction": return new __WEBPACK_IMPORTED_MODULE_1__reduction__["a" /* Reduction */]();
-            case "Transiction": return new __WEBPACK_IMPORTED_MODULE_2__transiction__["a" /* Transiction */]();
+            case "Segment": return new __WEBPACK_IMPORTED_MODULE_1__segment__["a" /* Segment */](7, 4);
+            case "Reduction": return new __WEBPACK_IMPORTED_MODULE_2__reduction__["a" /* Reduction */](8, 3, 8, 2, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].TOP);
+            case "Transiction": return new __WEBPACK_IMPORTED_MODULE_3__transiction__["a" /* Transiction */](8, 4, 5, 2.5, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].LEFT);
+            case "Offset": return new __WEBPACK_IMPORTED_MODULE_4__offset__["a" /* Offset */](8, 3, 1.5, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Direction */].UP);
+            case "Cap": return new __WEBPACK_IMPORTED_MODULE_5__cap__["a" /* Cap */](7, 4);
         }
     };
     return DuctFactory;
@@ -738,8 +759,8 @@ var DuctFactory = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Segment; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -754,11 +775,9 @@ var __extends = (this && this.__extends) || (function () {
 
 var Segment = (function (_super) {
     __extends(Segment, _super);
-    function Segment() {
-        var _this = _super.call(this) || this;
-        _this._width = 8;
-        _this._height = 4;
-        _this._length = 11; //default measurement
+    function Segment(w, h) {
+        var _this = _super.call(this, w, h) || this;
+        _this._length = 11; //default measurement for a single duct segment 
         return _this;
     }
     Segment.prototype.draw = function () {
@@ -784,7 +803,7 @@ var Segment = (function (_super) {
         this._mesh.name = "segment";
     };
     return Segment;
-}(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Duct */]));
+}(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
 
 //# sourceMappingURL=segment.js.map
 
@@ -795,8 +814,8 @@ var Segment = (function (_super) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Reduction; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -809,13 +828,30 @@ var __extends = (this && this.__extends) || (function () {
 })();
 
 
+
 var Reduction = (function (_super) {
     __extends(Reduction, _super);
-    function Reduction() {
-        var _this = _super.call(this) || this;
-        _this._width = 8;
-        _this._height = 4;
-        _this._length = 5; //default measurement
+    /**
+    * Parameters:
+    *
+    * fromWidth = original width
+    * fromHeight = original height
+    * toWidth = changing width
+    * toHeight = changing heigth
+    *
+    */
+    function Reduction(fromWidth, fromHeight, toWidth, toHeight, direct) {
+        var _this = _super.call(this, fromWidth, fromHeight) || this;
+        _this._horizonDiff = 0;
+        _this._vertDiff = 0;
+        _this._direction = direct;
+        _this._length = 5; //default lenght for a single reduction piece
+        if (fromWidth === toWidth) {
+            _this._vertDiff = fromHeight - toHeight; //adjust vertices V2 and V7 to reduz the bottom
+        }
+        else if (fromHeight === toHeight) {
+            _this._horizonDiff = fromWidth - toWidth; //adjust the vertices V6 and v7 to reduces the side
+        }
         return _this;
     }
     Reduction.prototype.draw = function () {
@@ -826,9 +862,30 @@ var Reduction = (function (_super) {
         new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, 0), //Vertex 3
         new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, 0), //Vertex 4
         new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width - 2, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width - 2, 0, this._length) //Vertex 7
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, this._length) //Vertex 7
         );
+        //add the reduction difference on the width or height, depending on the parameters
+        if (this._horizonDiff === 0) {
+            if (this._direction.valueOf() === __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].TOP) {
+                this._geometry.vertices[2].y += this._vertDiff;
+                this._geometry.vertices[7].y += this._vertDiff;
+            }
+            else if (this._direction.valueOf() === __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].BOTTOM) {
+                this._geometry.vertices[5].y -= this._vertDiff;
+                this._geometry.vertices[6].y -= this._vertDiff;
+            }
+        }
+        else {
+            if (this._direction.valueOf() === __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].RIGHT) {
+                this._geometry.vertices[2].x += this._horizonDiff;
+                this._geometry.vertices[5].x += this._horizonDiff;
+            }
+            else if (this._direction.valueOf() === __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].LEFT) {
+                this._geometry.vertices[6].x -= this._horizonDiff;
+                this._geometry.vertices[7].x -= this._horizonDiff;
+            }
+        }
         this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 0, 3));
         this._geometry.computeFaceNormals();
         this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["k" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["d" /* DoubleSide */] });
@@ -838,7 +895,7 @@ var Reduction = (function (_super) {
         this._mesh.name = "reduction";
     };
     return Reduction;
-}(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Duct */]));
+}(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
 
 //# sourceMappingURL=reduction.js.map
 
@@ -849,8 +906,8 @@ var Reduction = (function (_super) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Transiction; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -863,47 +920,206 @@ var __extends = (this && this.__extends) || (function () {
 })();
 
 
+
 var Transiction = (function (_super) {
     __extends(Transiction, _super);
-    function Transiction() {
-        var _this = _super.call(this) || this;
-        _this._width = 8;
-        _this._height = 4;
-        _this._length = 5; //default measurement
+    function Transiction(fromWidth, fromHeight, toWidth, toHeight, flat) {
+        var _this = _super.call(this, fromWidth, fromHeight) || this;
+        _this._horizonDiff = 0;
+        _this._vertDiff = 0;
+        _this._flat = flat;
+        _this._length = 5; //default length for a single transiction piece
+        //calculate the width and height difference
+        _this._horizonDiff = fromWidth - toWidth;
+        _this._vertDiff = fromHeight - toHeight;
         return _this;
     }
     Transiction.prototype.draw = function () {
         this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["g" /* Geometry */]();
         this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, 0), //Vertex 0
         new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 1, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, this._length), //Vertex 2
         new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, 0), //Vertex 3
         new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, 0), //Vertex 4
         new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width - 2, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width - 2, 1, this._length) //Vertex 7
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, this._length) //Vertex 7
         );
+        //add the reduction difference on the width or height, depending on the parameters
+        switch (this._flat) {
+            case __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].LEFT:
+                this._horizonDiff != 0 ? this._geometry.vertices[6].x -= this._horizonDiff : null;
+                this._horizonDiff != 0 ? this._geometry.vertices[7].x -= this._horizonDiff : null;
+                break;
+            default:
+                this._horizonDiff != 0 ? this._geometry.vertices[5].x += this._horizonDiff : null;
+                this._horizonDiff != 0 ? this._geometry.vertices[2].x += this._horizonDiff : null;
+                break;
+        }
+        ;
+        this._vertDiff != 0 ? this._geometry.vertices[7].y += this._vertDiff : null;
+        this._vertDiff != 0 ? this._geometry.vertices[2].y += this._vertDiff : null;
         this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 0, 3));
         this._geometry.computeFaceNormals();
         this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["k" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["d" /* DoubleSide */] });
-        //this._material = new THREE.MeshStandardMaterial( { color: 0xb3b3b3, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: THREE.DoubleSide } );
+        this._material.castShadow = true;
+        this._material.receiveShadow = true;
         this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* Mesh */](this._geometry, this._material);
         this._mesh.name = "transiction";
     };
     return Transiction;
-}(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Duct */]));
+}(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
 
 //# sourceMappingURL=transiction.js.map
 
 /***/ }),
 
-/***/ 533:
+/***/ 516:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Offset; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+
+var Offset = (function (_super) {
+    __extends(Offset, _super);
+    function Offset(w, h, os, direct) {
+        var _this = _super.call(this, w, h) || this;
+        _this._direct = direct;
+        _this._length = 5; //default lenght for a single offset piece
+        _this._offset = os;
+        return _this;
+    }
+    Offset.prototype.draw = function () {
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["g" /* Geometry */]();
+        //It crates the geometry
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["g" /* Geometry */]();
+        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        );
+        //add the reduction difference on the width or height, depending on the parameters
+        switch (this._direct) {
+            case __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Direction */].UP:
+                this._geometry.vertices[5].y += this._offset;
+                this._geometry.vertices[6].y += this._offset;
+                this._geometry.vertices[2].y += this._offset;
+                this._geometry.vertices[7].y += this._offset;
+                break;
+            case __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Direction */].DOWN:
+                this._geometry.vertices[5].y -= this._offset;
+                this._geometry.vertices[6].y -= this._offset;
+                this._geometry.vertices[2].y -= this._offset;
+                this._geometry.vertices[7].y -= this._offset;
+                break;
+            case __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Direction */].LEFT:
+                this._geometry.vertices[5].x -= this._offset;
+                this._geometry.vertices[6].x -= this._offset;
+                this._geometry.vertices[2].x -= this._offset;
+                this._geometry.vertices[7].x -= this._offset;
+                break;
+            default:
+                this._geometry.vertices[5].x += this._offset;
+                this._geometry.vertices[6].x += this._offset;
+                this._geometry.vertices[2].x += this._offset;
+                this._geometry.vertices[7].x += this._offset;
+                break;
+        }
+        ;
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 0, 3));
+        this._geometry.computeFaceNormals();
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["k" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["d" /* DoubleSide */] });
+        this._material.castShadow = true;
+        this._material.receiveShadow = true;
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* Mesh */](this._geometry, this._material);
+        this._mesh.name = "offset";
+    };
+    return Offset;
+}(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
+
+//# sourceMappingURL=offset.js.map
+
+/***/ }),
+
+/***/ 517:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Cap; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+var Cap = (function (_super) {
+    __extends(Cap, _super);
+    function Cap(w, h) {
+        var _this = _super.call(this, w, h) || this;
+        _this._length = 0.5; //default length for a single cap
+        return _this;
+    }
+    Cap.prototype.draw = function () {
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["g" /* Geometry */]();
+        this._geometry.vertices.push(
+        //               ( X            Y             Z )
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        );
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 0, 3), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 3), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 3, 4));
+        this._geometry.computeFaceNormals();
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["k" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["d" /* DoubleSide */] });
+        this._material.castShadow = true;
+        this._material.receiveShadow = true;
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* Mesh */](this._geometry, this._material);
+        this._mesh.name = "cap";
+    };
+    return Cap;
+}(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
+
+//# sourceMappingURL=cap.js.map
+
+/***/ }),
+
+/***/ 535:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(396);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(399);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -941,7 +1157,7 @@ MyApp = __decorate([
 
 /***/ }),
 
-/***/ 542:
+/***/ 544:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

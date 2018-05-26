@@ -17,7 +17,10 @@ export abstract class Duct {
   protected _mesh: any;
 
 
-  constructor(){}
+  constructor(width:number, height:number){
+    this._width = width;
+    this._height = height;
+  }
 
   //To be implemented on the derived classes
   abstract draw(): void;
@@ -115,4 +118,19 @@ export abstract class Duct {
     this._mesh = m;
   }
 
+}
+
+
+export enum FlatSide {
+  LEFT,
+  RIGHT,
+  TOP,
+  BOTTOM,
+}
+
+export enum Direction {
+  LEFT,
+  RIGHT,
+  UP,
+  DOWN,
 }

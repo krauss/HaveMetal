@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavParams } from 'ionic-angular';
 
 import * as THREE from 'three';
@@ -12,6 +12,7 @@ import { DuctFactory } from '../../models/objects/factory';
  * See https://angular.io/api/core/Component for more info on Angular
  * Components.
  */
+
 @Component({
   selector: 'popover',
   templateUrl: 'popover.html'
@@ -19,7 +20,11 @@ import { DuctFactory } from '../../models/objects/factory';
 
 export class PopoverComponent {
 
+
+  @ViewChild('fuckList') something;
+
   type_list = TYPES;
+  dtype: any;
   protected static duct: Duct;
   protected static _scene: any;
 
@@ -31,6 +36,7 @@ export class PopoverComponent {
     if (this.navParams.data) {
       PopoverComponent._scene = this.navParams.data.scene;
 
+      //this.setPreviousSelected();
       // this.background = this.getColorName(this.contentEle.style.backgroundColor);
       //this.duct.color = this.getColorName(this.duct.color);
       //console.log(this._duct.geometry.name);
@@ -39,20 +45,10 @@ export class PopoverComponent {
     }
   }
 
-  //This method is going to get the duct's color
-  // getColorName(background: any) {
-  //   let colorName = 'white';
-  //
-  //   if (!background) return 'white';
-  //
-  //   for (var key in this.colors) {
-  //     if (this.colors[key].bg === background) {
-  //       colorName = key;
-  //     }
-  //   }
-  //
-  //   return colorName;
-  // }
+
+  setPreviousSelected(){
+    console.log(this.dtype);
+  }
 
   //TODO implement the method to change the type of the duct
   // setDuctType(){
@@ -71,14 +67,14 @@ export class PopoverComponent {
 
     if ($event) {
 
+      console.log(this.dtype);
+      
       if (PopoverComponent.duct != undefined){
 
         var tmp = PopoverComponent._scene.getObjectByName(PopoverComponent.duct.mesh.name);
         PopoverComponent._scene.remove(tmp);
 
       }
-
-      //console.log(PopoverComponent.duct);
 
       PopoverComponent.duct = DuctFactory.createDuct($event);
       PopoverComponent.duct.draw();

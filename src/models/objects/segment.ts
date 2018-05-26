@@ -3,11 +3,9 @@ import * as THREE from 'three';
 
 export class Segment extends Duct {
 
-  constructor(){
-    super();
-    this._width = 8;
-    this._height = 4;
-    this._length = 11; //default measurement
+  constructor(w:number, h:number){
+    super(w, h);
+    this._length = 11; //default measurement for a single duct segment 
   }
 
   draw(): void {
