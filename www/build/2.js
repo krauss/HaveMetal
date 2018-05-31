@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 553:
+/***/ 578:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TaskCreationPageModule", function() { return TaskCreationPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DuctCreationPageModule", function() { return DuctCreationPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__task_creation__ = __webpack_require__(565);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__duct_list__ = __webpack_require__(579);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TaskCreationPageModule = (function () {
-    function TaskCreationPageModule() {
+var DuctCreationPageModule = (function () {
+    function DuctCreationPageModule() {
     }
-    return TaskCreationPageModule;
+    return DuctCreationPageModule;
 }());
-TaskCreationPageModule = __decorate([
+DuctCreationPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__task_creation__["a" /* TaskCreationPage */],
+            __WEBPACK_IMPORTED_MODULE_2__duct_list__["a" /* DuctListPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__task_creation__["a" /* TaskCreationPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__duct_list__["a" /* DuctListPage */]),
         ],
     })
-], TaskCreationPageModule);
+], DuctCreationPageModule);
 
-//# sourceMappingURL=task-creation.module.js.map
+//# sourceMappingURL=duct-list.module.js.map
 
 /***/ }),
 
-/***/ 565:
+/***/ 579:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TaskCreationPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_duct_creation_duct_creation_modal__ = __webpack_require__(575);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -64,30 +64,84 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var TaskCreationPage = (function () {
-    function TaskCreationPage(navCtrl, navParams) {
+var DuctListPage = (function () {
+    function DuctListPage(navCtrl, navParams, modalCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.type_list = __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__["b" /* TYPES */];
-        this.size_list = __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__["a" /* SIZES */];
+        this.modalCtrl = modalCtrl;
+        this.duct_list = [];
     }
-    TaskCreationPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TaskCreationPage');
+    DuctListPage.prototype.addDuct = function () {
+        var contactModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_2__components_duct_creation_duct_creation_modal__["a" /* DuctCreationComponent */]);
+        contactModal.present();
+        // let prompt = this.alertCtrl.create({
+        //     title: 'New Duct',
+        //     inputs: [{
+        //         name: 'title'
+        //     }],
+        //     buttons: [
+        //         {
+        //             text: 'Cancel'
+        //         },
+        //         {
+        //             text: 'Add',
+        //             handler: data => {
+        //                 this.duct_list.push(data);
+        //             }
+        //         }
+        //     ]
+        // });
+        //
+        // prompt.present();
     };
-    TaskCreationPage.prototype.addTask = function () {
-        console.log("Fuck that");
+    // editDuct(duct){
+    //
+    //     let prompt = this.alertCtrl.create({
+    //         title: 'Edit Duct',
+    //         inputs: [{
+    //             name: 'title'
+    //         }],
+    //         buttons: [
+    //             {
+    //                 text: 'Cancel'
+    //             },
+    //             {
+    //                 text: 'Save',
+    //                 handler: data => {
+    //                     let index = this.duct_list.indexOf(duct);
+    //
+    //                     if(index > -1){
+    //                       this.duct_list[index] = data;
+    //                     }
+    //                 }
+    //             }
+    //         ]
+    //     });
+    //
+    //     prompt.present();
+    //
+    // }
+    DuctListPage.prototype.deleteDuct = function (duct) {
+        var index = this.duct_list.indexOf(duct);
+        if (index > -1) {
+            this.duct_list.splice(index, 1);
+        }
     };
-    return TaskCreationPage;
+    DuctListPage.prototype.reorderItems = function (indexes) {
+        this.duct_list = Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* reorderArray */])(this.duct_list, indexes);
+    };
+    return DuctListPage;
 }());
-TaskCreationPage = __decorate([
+DuctListPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-task-creation',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/task-creation/task-creation.html"*/'<!--\n  Generated template for the TaskCreationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-center>New Duct Work</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list>\n    <!-- <ion-item padding>\n      <div #domObj></div>\n    </ion-item> -->\n    <ion-item padding>\n      <ion-label>Type:</ion-label>\n      <ion-select [(ngModel)]="type">\n        <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item padding>\n      <ion-label>Size:</ion-label>\n      <ion-select [(ngModel)]="height">\n        <ion-option *ngFor="let size of size_list">{{size}}</ion-option>\n      </ion-select>\n      <ion-select [(ngModel)]="width">\n        <ion-option *ngFor="let size of size_list">{{size}}</ion-option>\n      </ion-select>\n    </ion-item>\n    <ion-item>\n      <ion-label floating>Quantity:</ion-label>\n      <ion-input type="number" [(ngModel)]="quantity"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Insulated</ion-label>\n      <ion-checkbox color="dark" checked="false"></ion-checkbox>\n    </ion-item>\n    <ion-item>\n      <ion-label>Fire Rated</ion-label>\n      <ion-checkbox color="dark" checked="false"></ion-checkbox>\n    </ion-item>\n\n  </ion-list>\n\n  <div padding>\n    <button ion-button block color="light" (click)="addTask()">Add</button>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/task-creation/task-creation.html"*/,
+        selector: 'page-duct-list',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/duct-list/duct-list.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-center>Duct List</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="addDuct()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n    <ion-list padding reorder="true" (ionItemReorder)="reorderItems($event)">\n\n        <ion-item-sliding *ngFor="let duct of duct_list; let i = index;">\n\n            <ion-item>{{i+1}}- {{duct.title}}</ion-item>\n\n            <ion-item-options>\n                <button ion-button icon-only (click)="editDuct(duct)" color="p_light">\n                    <ion-icon name="paper"></ion-icon>\n                </button>\n                <button ion-button icon-only (click)="deleteDuct(duct)" color="danger">\n                    <ion-icon name="trash"></ion-icon>\n                </button>\n            </ion-item-options>\n\n        </ion-item-sliding>\n\n    </ion-list>\n\n    <div padding>\n      <button ion-button hidden block color="s_light" (click)="addTask()">Save List</button>\n    </div>\n\n</ion-content>\n\n<!-- <ion-content padding>\n\n  <ion-col align-self-start>\n    <ion-row nowrap padding>\n      <ion-list>\n        <ion-item padding>\n          <ion-label>Type:</ion-label>\n          <ion-select [(ngModel)]="type">\n            <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n          </ion-select>\n        </ion-item>\n        <ion-item padding>\n          <ion-label>Size:</ion-label>\n          <ion-select [(ngModel)]="height">\n            <ion-option *ngFor="let size of size_list">{{size}}</ion-option>\n          </ion-select>\n          <ion-select [(ngModel)]="width">\n            <ion-option *ngFor="let size of size_list">{{size}}</ion-option>\n          </ion-select>\n        </ion-item>\n        <ion-item>\n          <ion-label floating>Quantity:</ion-label>\n          <ion-input type="number" [(ngModel)]="quantity"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label>Insulated</ion-label>\n          <ion-checkbox color="dark" checked="false"></ion-checkbox>\n        </ion-item>\n        <ion-item>\n          <ion-label>Fire Rated</ion-label>\n          <ion-checkbox color="dark" checked="false"></ion-checkbox>\n        </ion-item>\n\n      </ion-list>\n      <ion-img width="170" height="170" src="/img/offset.png"></ion-img>\n    </ion-row>\n  </ion-col>\n\n\n\n</ion-content> -->\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/duct-list/duct-list.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
-], TaskCreationPage);
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]) === "function" && _c || Object])
+], DuctListPage);
 
-//# sourceMappingURL=task-creation.js.map
+var _a, _b, _c;
+//# sourceMappingURL=duct-list.js.map
 
 /***/ })
 

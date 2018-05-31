@@ -7,10 +7,10 @@ import { Job } from '../../models/interfaces/job.interface';
 
 @IonicPage()
 @Component({
-  selector: 'page-jobs',
-  templateUrl: 'jobs.html'
+  selector: 'page-jobs-list',
+  templateUrl: 'jobs-list.html'
 })
-export class JobsPage {
+export class JobsListPage {
 
 
   job_list: FirebaseListObservable<Job[]>
@@ -48,7 +48,7 @@ export class JobsPage {
           icon: 'add',
           handler: () => {
             //Send the user to the  TaskCreationPage and pass the key as a parameter
-            this.navCtrl.push('TaskCreationPage', { jobID: job.$key });
+            this.navCtrl.push('DuctListPage', { jobID: job.$key });
           }
         },
         {

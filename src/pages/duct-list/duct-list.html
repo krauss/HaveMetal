@@ -1,0 +1,83 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>Duct List</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addDuct()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <ion-list padding reorder="true" (ionItemReorder)="reorderItems($event)">
+
+        <ion-item-sliding *ngFor="let duct of duct_list; let i = index;">
+
+            <ion-item>{{i+1}}- {{duct.title}}</ion-item>
+
+            <ion-item-options>
+                <button ion-button icon-only (click)="editDuct(duct)" color="p_light">
+                    <ion-icon name="paper"></ion-icon>
+                </button>
+                <button ion-button icon-only (click)="deleteDuct(duct)" color="danger">
+                    <ion-icon name="trash"></ion-icon>
+                </button>
+            </ion-item-options>
+
+        </ion-item-sliding>
+
+    </ion-list>
+
+    <div padding>
+      <button ion-button hidden block color="s_light" (click)="addTask()">Save List</button>
+    </div>
+
+</ion-content>
+
+<!-- <ion-content padding>
+
+  <ion-col align-self-start>
+    <ion-row nowrap padding>
+      <ion-list>
+        <ion-item padding>
+          <ion-label>Type:</ion-label>
+          <ion-select [(ngModel)]="type">
+            <ion-option *ngFor="let type of type_list">{{type}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item padding>
+          <ion-label>Size:</ion-label>
+          <ion-select [(ngModel)]="height">
+            <ion-option *ngFor="let size of size_list">{{size}}</ion-option>
+          </ion-select>
+          <ion-select [(ngModel)]="width">
+            <ion-option *ngFor="let size of size_list">{{size}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Quantity:</ion-label>
+          <ion-input type="number" [(ngModel)]="quantity"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Insulated</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Fire Rated</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+
+      </ion-list>
+      <ion-img width="170" height="170" src="/img/offset.png"></ion-img>
+    </ion-row>
+  </ion-col>
+
+
+
+</ion-content> -->

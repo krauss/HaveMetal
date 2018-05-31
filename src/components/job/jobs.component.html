@@ -1,13 +1,13 @@
 <!-- Generated template for the JobComponent component -->
 <ion-card>
   <ion-card-header>
-    <ion-card-title>{{job.name}}</ion-card-title>
-    <p ion-text color="p_light">Created on {{job.creationDate | amDateFormat:'DD/MM/YYYY' }}</p>
+    <ion-card-title color="primary">{{job.name}}</ion-card-title>
+    <p ion-text color="secondary">Created on {{job.creationDate | amDateFormat:'DD/MM/YYYY' }}</p>
   </ion-card-header>
   <ion-card-content>
-    <p ion-text color="primary">Mechanical drawings:</p>
-    <p ion-text color="primary">3D model:</p>
-    <p ion-text color="primary">Duct work:</p>
+    <p ion-text>Mechanical drawings:</p>
+    <p ion-text>3D model:</p>
+    <p ion-text>Duct work:</p>
     <br>
     <ion-icon name="pin"></ion-icon> {{job.address}}
   </ion-card-content>
