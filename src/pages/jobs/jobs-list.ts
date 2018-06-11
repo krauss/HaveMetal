@@ -72,13 +72,11 @@ export class JobsListPage {
                 {
                   text: 'No',
                   handler: () => {
-                    console.log('Disagree clicked');
                   }
                 },
                 {
                   text: 'Yes',
                   handler: () => {
-                    console.log('Agree clicked');
                     //Delete the current ShoppingItem
                     this.job_list.remove(job.$key);
                   }

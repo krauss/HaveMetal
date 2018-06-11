@@ -81,4 +81,8 @@ export class Offset extends Duct {
 
   }
 
+  getParameters(): string[]{
+    return ['Width', 'Height', 'Offset', 'Length', 'Direction'];
+  }
+
 }

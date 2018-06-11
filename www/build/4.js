@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 552:
+/***/ 553:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignInPageModule", function() { return SignInPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SamplesPageModule", function() { return SamplesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_in__ = __webpack_require__(564);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__samples__ = __webpack_require__(565);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,34 +18,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SignInPageModule = (function () {
-    function SignInPageModule() {
+//import { ComponentsModule } from '../../components/components.module';
+var SamplesPageModule = (function () {
+    function SamplesPageModule() {
     }
-    return SignInPageModule;
+    return SamplesPageModule;
 }());
-SignInPageModule = __decorate([
+SamplesPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__sign_in__["a" /* SignInPage */],
+            __WEBPACK_IMPORTED_MODULE_2__samples__["a" /* SamplesPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sign_in__["a" /* SignInPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__samples__["a" /* SamplesPage */]),
         ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2__samples__["a" /* SamplesPage */],
+        ]
     })
-], SignInPageModule);
+], SamplesPageModule);
 
-//# sourceMappingURL=sign-in.module.js.map
+//# sourceMappingURL=samples.module.js.map
 
 /***/ }),
 
-/***/ 564:
+/***/ 565:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignInPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SamplesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_popover_popover__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_three__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_orbit_controls_es6__ = __webpack_require__(407);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -55,97 +61,96 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __generator = (this && this.__generator) || function (thisArg, body) {
-    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v) { return step([n, v]); }; }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
-            switch (op[0]) {
-                case 0: case 1: t = op; break;
-                case 4: _.label++; return { value: op[1], done: false };
-                case 5: _.label++; y = op[1]; op = [0]; continue;
-                case 7: op = _.ops.pop(); _.trys.pop(); continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop(); continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-    }
-};
 
 
 
 
-/**
- * Generated class for the SignInPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var SignInPage = (function () {
-    function SignInPage(toast, afAuth, navCtrl, navParams) {
-        this.toast = toast;
-        this.afAuth = afAuth;
+
+var SamplesPage = SamplesPage_1 = (function () {
+    function SamplesPage(navCtrl, navParams, popoverCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.user = {};
+        this.popoverCtrl = popoverCtrl;
+        // If we navigated to this page, we will have an item available as a nav param
+        this.selectedItem = navParams.get('item');
     }
-    SignInPage.prototype.register = function (user) {
-        return __awaiter(this, void 0, void 0, function () {
-            var result, e_1;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.passwd)];
-                    case 1:
-                        result = _a.sent();
-                        if (result) {
-                            this.toast.create({
-                                message: 'User added successfully',
-                                duration: 1000,
-                                position: 'bottom'
-                            }).present();
-                        }
-                        return [3 /*break*/, 3];
-                    case 2:
-                        e_1 = _a.sent();
-                        console.error(e_1);
-                        return [3 /*break*/, 3];
-                    case 3: return [2 /*return*/];
-                }
-            });
+    SamplesPage.prototype.presentPopover = function (myevent) {
+        var popover = this.popoverCtrl.create(__WEBPACK_IMPORTED_MODULE_2__components_popover_popover__["a" /* PopoverComponent */], {
+            scene: SamplesPage_1._SCENE
+        });
+        popover.present({
+            ev: myevent
         });
     };
-    return SignInPage;
+    SamplesPage.prototype.ionViewDidLoad = function () {
+        this.initialiseWebGLObjectAndEnvironment();
+        this.renderAnimation();
+    };
+    SamplesPage.prototype.initialiseWebGLObjectAndEnvironment = function () {
+        // Reference the DOM element that the WebGL generated object
+        // will be assigned to
+        SamplesPage_1._ELEMENT = this.canvasEl.nativeElement;
+        // Define a new ThreeJS scene
+        SamplesPage_1._SCENE = new __WEBPACK_IMPORTED_MODULE_3_three__["n" /* Scene */]();
+        SamplesPage_1._CAMERA = new __WEBPACK_IMPORTED_MODULE_3_three__["k" /* PerspectiveCamera */](75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        // Define an object to manage display of ThreeJS scene
+        SamplesPage_1._RENDERER = new __WEBPACK_IMPORTED_MODULE_3_three__["r" /* WebGLRenderer */]({ antialias: true });
+        //It sets the background color
+        SamplesPage_1._RENDERER.setClearColor(0xF5F5F5, 1);
+        // Resizes the output canvas to match the supplied width/height parameters
+        SamplesPage_1._RENDERER.setSize(window.innerWidth, window.innerHeight);
+        // Attach the canvas, where the renderer draws the scene, to the specified DOM element
+        SamplesPage_1._ELEMENT.appendChild(SamplesPage_1._RENDERER.domElement);
+        SamplesPage_1._GRID = new __WEBPACK_IMPORTED_MODULE_3_three__["g" /* GridHelper */](70, 70, 0xE0E0E0, 0xE0E0E0);
+        SamplesPage_1._AXIS = new __WEBPACK_IMPORTED_MODULE_3_three__["a" /* AxesHelper */](30);
+        var pointLight = new __WEBPACK_IMPORTED_MODULE_3_three__["l" /* PointLight */](0xf2f2f2, 1, 100);
+        pointLight.position.set(0, 30, 0);
+        SamplesPage_1._SCENE.add(pointLight);
+        // Add the object to the scene
+        SamplesPage_1._SCENE.add(SamplesPage_1._GRID);
+        SamplesPage_1._SCENE.add(SamplesPage_1._AXIS);
+        //Add the mouse controlls into the scene
+        SamplesPage_1._CONTROLS = new __WEBPACK_IMPORTED_MODULE_4_orbit_controls_es6__["a" /* default */](SamplesPage_1._CAMERA, SamplesPage_1._RENDERER.domElement);
+        SamplesPage_1._CONTROLS.enabled = true;
+        SamplesPage_1._CONTROLS.maxDistance = 1500;
+        SamplesPage_1._CONTROLS.minDistance = 0;
+        SamplesPage_1._CAMERA.position.set(0, 20, 55);
+        SamplesPage_1._CONTROLS.update();
+    };
+    /**
+      * Define the animation properties for the WebGL object rendered in the DOM element, using the requestAnimationFrame
+      * method to animate the object
+      *
+      */
+    SamplesPage.prototype._animate = function () {
+        var _this = this;
+        requestAnimationFrame(function () {
+            _this._animate();
+        });
+        SamplesPage_1._CONTROLS.update();
+        // Render the scene (will be called using the requestAnimationFrame method to ensure the cube is constantly animated)
+        SamplesPage_1._RENDERER.render(SamplesPage_1._SCENE, SamplesPage_1._CAMERA);
+    };
+    ;
+    SamplesPage.prototype.renderAnimation = function () {
+        this._animate();
+    };
+    return SamplesPage;
 }());
-SignInPage = __decorate([
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('domObj'),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+], SamplesPage.prototype, "canvasEl", void 0);
+SamplesPage = SamplesPage_1 = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-sign-in',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/sign-in/sign-in.html"*/'<!--\n  Generated template for the SignInPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-center>Sign-In</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list padding>\n\n    <ion-item>\n      <ion-label floating>Name</ion-label>\n      <ion-input type="text" [(ngModel)]="user.name"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>E-mail</ion-label>\n      <ion-input type="email" [(ngModel)]="user.email"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Password</ion-label>\n      <ion-input type="password" [(ngModel)]="user.passwd"></ion-input>\n    </ion-item>\n\n  </ion-list>\n\n  <div padding>\n    <button ion-button block color="light" (click)="register(user)">Register</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/sign-in/sign-in.html"*/,
+        selector: 'page-samples',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/samples/samples.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center> Samples </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="presentPopover($event)">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <!-- Three.js DOM object -->\n  <ion-item>\n    <div #domObj></div>\n  </ion-item>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/samples/samples.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
-], SignInPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* PopoverController */]])
+], SamplesPage);
 
-//# sourceMappingURL=sign-in.js.map
+var SamplesPage_1;
+//# sourceMappingURL=samples.js.map
 
 /***/ })
 

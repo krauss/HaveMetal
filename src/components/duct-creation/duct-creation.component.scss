@@ -1,0 +1,26 @@
+duct-creation {
+
+  .modal-panel {
+    height: 100%;
+    display: flex;
+    background-color: rgba(0,0,0,0.45);
+  }
+
+  .modal-panel-div {
+    background-color: #fafafa;
+    border-radius: 5px;
+    height: 85%;
+    width: 85%;
+    margin: auto;
+    padding: 3px;
+  }
+
+  .modal-panel-div-canvas {
+    border-radius: 7px;
+    height: 40%;
+    width: 100%;
+    margin: auto;
+  }
+
+
+}

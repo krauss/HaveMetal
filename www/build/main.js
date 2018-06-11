@@ -22,40 +22,40 @@ webpackEmptyAsyncContext.id = 147;
 
 var map = {
 	"../pages/dashboard/dashboard.module": [
-		545,
+		547,
 		8
 	],
 	"../pages/duct-list/duct-list.module": [
-		578,
-		2
+		548,
+		1
 	],
 	"../pages/job-creation/job-creation.module": [
-		546,
+		549,
 		7
 	],
 	"../pages/job-edit/job-edit.module": [
-		547,
+		550,
 		6
 	],
 	"../pages/jobs/jobs-list.module": [
-		573,
-		3
-	],
-	"../pages/login/login.module": [
-		549,
+		551,
 		0
 	],
-	"../pages/samples/samples.module": [
-		550,
+	"../pages/login/login.module": [
+		552,
 		5
 	],
+	"../pages/samples/samples.module": [
+		553,
+		4
+	],
 	"../pages/scanner/scanner.module": [
-		551,
-		1
+		554,
+		3
 	],
 	"../pages/sign-in/sign-in.module": [
-		552,
-		4
+		555,
+		2
 	]
 };
 function webpackAsyncContext(req) {
@@ -74,7 +74,57 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 27:
+/***/ 189:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TYPES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SIZES; });
+var TYPES = ['Segment', 'Transiction', 'Reduction', 'Offset', 'Curve', 'Half-Curve', 'Turn', 'Cap'];
+var SIZES = [150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650];
+//# sourceMappingURL=duct.properties.js.map
+
+/***/ }),
+
+/***/ 190:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctFactory; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__segment__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reduction__ = __webpack_require__(450);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transiction__ = __webpack_require__(451);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__offset__ = __webpack_require__(452);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cap__ = __webpack_require__(453);
+
+
+
+
+
+
+
+// ductfactory.ts
+var DuctFactory = (function () {
+    function DuctFactory() {
+    }
+    DuctFactory.createDuct = function (duct_type) {
+        switch (duct_type) {
+            case "Segment": return new __WEBPACK_IMPORTED_MODULE_1__segment__["a" /* Segment */](7, 4);
+            case "Reduction": return new __WEBPACK_IMPORTED_MODULE_2__reduction__["a" /* Reduction */](8, 3, 8, 2, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].TOP);
+            case "Transiction": return new __WEBPACK_IMPORTED_MODULE_3__transiction__["a" /* Transiction */](8, 4, 5, 2.5, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].LEFT);
+            case "Offset": return new __WEBPACK_IMPORTED_MODULE_4__offset__["a" /* Offset */](8, 3, 1.5, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Direction */].UP);
+            case "Cap": return new __WEBPACK_IMPORTED_MODULE_5__cap__["a" /* Cap */](7, 4);
+        }
+    };
+    return DuctFactory;
+}());
+
+//# sourceMappingURL=factory.js.map
+
+/***/ }),
+
+/***/ 26:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -89,117 +139,6 @@ var Duct = (function () {
         this._width = width;
         this._height = height;
     }
-    Object.defineProperty(Duct.prototype, "width", {
-        /*
-          Duct width accessors
-        */
-        get: function () {
-            return this.width;
-        },
-        set: function (n) {
-            this._width = n;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Duct.prototype, "height", {
-        /*
-          Duct height accessors
-        */
-        get: function () {
-            return this._height;
-        },
-        set: function (n) {
-            this._height = n;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Duct.prototype, "length", {
-        /*
-          Duct length accessors
-        */
-        get: function () {
-            return this._length;
-        },
-        set: function (n) {
-            this._length = n;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Duct.prototype, "fireRated", {
-        /*
-          Duct fireRated property accessors
-        */
-        get: function () {
-            return this._isFireRated;
-        },
-        set: function (o) {
-            this._isFireRated = o;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Duct.prototype, "insulated", {
-        /*
-          Duct insulation property accessors
-        */
-        get: function () {
-            return this._isInsulated;
-        },
-        set: function (o) {
-            this._isInsulated = o;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Duct.prototype, "tdf", {
-        /*
-          Duct TDF property accessors
-        */
-        get: function () {
-            return this._isTDF;
-        },
-        set: function (t) {
-            this._isTDF = t;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Duct.prototype, "material", {
-        /*
-          WebGL accessor methods
-        */
-        get: function () {
-            return this._material;
-        },
-        set: function (m) {
-            this._material = m;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Duct.prototype, "geometry", {
-        get: function () {
-            return this._geometry;
-        },
-        set: function (g) {
-            this._geometry = g;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(Duct.prototype, "mesh", {
-        get: function () {
-            return this._mesh;
-        },
-        set: function (m) {
-            this._mesh = m;
-        },
-        enumerable: true,
-        configurable: true
-    });
     return Duct;
 }());
 
@@ -222,6 +161,202 @@ var Direction;
 /***/ }),
 
 /***/ 403:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Segment; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(30);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+
+var Segment = (function (_super) {
+    __extends(Segment, _super);
+    function Segment(w, h) {
+        var _this = _super.call(this, w, h) || this;
+        _this._length = 11; //default measurement for a single duct segment
+        return _this;
+    }
+    Segment.prototype.draw = function () {
+        //It crates the geometry
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
+        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        );
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 0, 3));
+        this._geometry.computeFaceNormals();
+        //It crates the material
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["c" /* DoubleSide */] });
+        this._material.castShadow = true;
+        this._material.receiveShadow = true;
+        //It crates the mesh to join everything together
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["i" /* Mesh */](this._geometry, this._material);
+        this._mesh.name = "segment";
+    };
+    Segment.prototype.getParameters = function () {
+        return ['width', 'height', 'length'];
+    };
+    return Segment;
+}(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
+
+//# sourceMappingURL=segment.js.map
+
+/***/ }),
+
+/***/ 406:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctCreationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_objects_factory__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_three__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__ = __webpack_require__(407);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+/**
+ * Generated class for the DuctCreationComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var DuctCreationComponent = (function () {
+    function DuctCreationComponent(viewCtrl, params) {
+        this.viewCtrl = viewCtrl;
+        this.type_list = __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__["b" /* TYPES */];
+        this.size_list = __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__["a" /* SIZES */];
+        this.others = {
+            insulated: false,
+            fire: false
+        };
+    }
+    DuctCreationComponent.prototype.ionViewDidLoad = function () {
+        this.initialiseWebGLObjectAndEnvironment();
+        this.renderAnimation();
+    };
+    DuctCreationComponent.prototype.dismiss = function () {
+        this.viewCtrl.dismiss();
+    };
+    DuctCreationComponent.prototype.selectDuctType = function ($event) {
+        if ($event) {
+            //Remove the previously created duct
+            if (this._DUCT != undefined) {
+                var tmp = this._SCENE.getObjectByName(this._DUCT._mesh.name);
+                this._SCENE.remove(tmp);
+            }
+            //Creates the new duct selected on the <ion-select> using DuctFactory class
+            this._DUCT = __WEBPACK_IMPORTED_MODULE_3__models_objects_factory__["a" /* DuctFactory */].createDuct($event);
+            //Calls its method draw() that does the WebGL creation and rendering
+            this._DUCT.draw();
+            //Brings its parameters list to be added on to the <ion-card>
+            this.parameters = this._DUCT.getParameters();
+            //Adds the duct in the scene
+            this._SCENE.add(this._DUCT._mesh);
+        }
+    };
+    DuctCreationComponent.prototype.getParams = function () {
+        return this.parameters;
+    };
+    // WebGL settings below
+    DuctCreationComponent.prototype.initialiseWebGLObjectAndEnvironment = function () {
+        // Reference the DOM element that the WebGL generated object
+        // will be assigned to
+        this._ELEMENT = this.canvasEl.nativeElement;
+        // Define a new ThreeJS scene
+        this._SCENE = new __WEBPACK_IMPORTED_MODULE_4_three__["n" /* Scene */]();
+        //DuctCreationComponent._CAMERA = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+        // Define an object to manage display of ThreeJS scene
+        this._RENDERER = new __WEBPACK_IMPORTED_MODULE_4_three__["r" /* WebGLRenderer */]({ antialias: true });
+        //It sets the background color
+        this._RENDERER.setClearColor(0xF5F5F5, 1);
+        // Resizes the output canvas to match the supplied width/height parameters
+        this._RENDERER.setSize(270, 170);
+        //DuctCreationComponent._RENDERER.setSize( this.modal_div_panel.nativeElement.domElement.width, this.modal_div_panel.nativeElement.domElement.height );
+        // Attach the canvas, where the renderer draws the scene, to the specified DOM element
+        this._ELEMENT.appendChild(this._RENDERER.domElement);
+        this._GRID = new __WEBPACK_IMPORTED_MODULE_4_three__["g" /* GridHelper */](70, 70, 0xE0E0E0, 0xE0E0E0);
+        this._AXIS = new __WEBPACK_IMPORTED_MODULE_4_three__["a" /* AxesHelper */](30);
+        var pointLight = new __WEBPACK_IMPORTED_MODULE_4_three__["l" /* PointLight */](0xf2f2f2, 1, 100);
+        pointLight.position.set(0, 30, 0);
+        this._SCENE.add(pointLight);
+        // Add the object to the scene
+        this._SCENE.add(this._GRID);
+        this._SCENE.add(this._AXIS);
+        this._SCENE.add(this._LIGHT);
+        //Add the mouse controlls into the scene
+        this._CAMERA = new __WEBPACK_IMPORTED_MODULE_4_three__["k" /* PerspectiveCamera */](45, 300 / 200, 0.1, 1000);
+        this._CONTROLS = new __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__["a" /* default */](this._CAMERA, this._RENDERER.domElement);
+        this._CONTROLS.enabled = true;
+        this._CONTROLS.maxDistance = 1500;
+        this._CONTROLS.minDistance = 0;
+        this._CAMERA.position.set(20, 17, 20);
+        this._CONTROLS.update();
+    };
+    /**
+      * Define the animation properties for the WebGL object rendered in the DOM element, using the requestAnimationFrame
+      * method to animate the object
+      *
+      */
+    DuctCreationComponent.prototype._animate = function () {
+        var _this = this;
+        requestAnimationFrame(function () {
+            _this._animate();
+        });
+        this._CONTROLS.update();
+        this._RENDERER.render(this._SCENE, this._CAMERA);
+    };
+    ;
+    DuctCreationComponent.prototype.renderAnimation = function () {
+        this._animate();
+    };
+    return DuctCreationComponent;
+}());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('domObj'),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+], DuctCreationComponent.prototype, "canvasEl", void 0);
+DuctCreationComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'duct-creation',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/duct-creation/duct-creation.component.html"*/'<!-- Generated template for the DuctCreationComponent component -->\n\n<div class="modal-panel">\n  <div class="modal-panel-div">\n      <ion-content padding>\n        <ion-title>New Duct</ion-title>\n\n        <ion-col align-self-start>\n          <ion-row nowrap padding>\n            <ion-list>\n              <ion-item>\n                <ion-label>Type:</ion-label>\n                <ion-select [(ngModel)]="type" (ionChange)="selectDuctType($event)">\n                  <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n                </ion-select>\n              </ion-item>\n\n              <!-- Three.js DOM object -->\n              <ion-item>\n                <div class="modal-panel-div-canvas" #domObj></div>\n              </ion-item>\n\n\n              <ion-card *ngIf="_DUCT != undefined">\n                <ion-card-content>\n                  <ion-list>\n                    <ion-input type="number" min="150" max="3000" *ngFor="let parameter of getParams()" placeholder="{{ parameter }}"></ion-input>\n                  </ion-list>\n                </ion-card-content>\n              </ion-card>\n\n              <ion-card *ngIf="_DUCT != undefined">\n                <ion-card-content>\n                  <ion-list>\n                    <ion-item>\n                      <ion-input type="number" placeholder="Quantity"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-checkbox [(ngModel)]="others.insulated"></ion-checkbox>\n                      <ion-label>Insulated</ion-label>\n                    </ion-item>\n                    <ion-item>\n                      <ion-checkbox [(ngModel)]="others.fire"></ion-checkbox>\n                      <ion-label>Fire Rated</ion-label>\n                    </ion-item>\n                  </ion-list>\n                </ion-card-content>\n              </ion-card>\n\n            </ion-list>\n          </ion-row>\n          <ion-row justify-content-center>\n            <button ion-button disabled color="primary" (click)="addDuct()">Add</button>\n            <button ion-button color="secondary" (click)="dismiss()">Cancel</button>\n          </ion-row>\n        </ion-col>\n      </ion-content>\n  </div>\n</div>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/duct-creation/duct-creation.component.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+], DuctCreationComponent);
+
+//# sourceMappingURL=duct-creation.component.js.map
+
+/***/ }),
+
+/***/ 408:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -252,16 +387,16 @@ TabsPage = __decorate([
 
 /***/ }),
 
-/***/ 404:
+/***/ 409:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PopoverComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__ = __webpack_require__(512);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__ = __webpack_require__(190);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -309,18 +444,18 @@ var PopoverComponent = PopoverComponent_1 = (function () {
     //   }
     // }
     PopoverComponent.prototype.changeBackground = function (color) {
-        PopoverComponent_1.duct.material.color = new __WEBPACK_IMPORTED_MODULE_2_three__["c" /* Color */](color);
+        PopoverComponent_1.duct._material.color = new __WEBPACK_IMPORTED_MODULE_2_three__["b" /* Color */](color);
     };
     PopoverComponent.prototype.changeDuctType = function ($event) {
         if ($event) {
             console.log(this.dtype);
             if (PopoverComponent_1.duct != undefined) {
-                var tmp = PopoverComponent_1._scene.getObjectByName(PopoverComponent_1.duct.mesh.name);
+                var tmp = PopoverComponent_1._scene.getObjectByName(PopoverComponent_1.duct._mesh.name);
                 PopoverComponent_1._scene.remove(tmp);
             }
             PopoverComponent_1.duct = __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__["a" /* DuctFactory */].createDuct($event);
             PopoverComponent_1.duct.draw();
-            PopoverComponent_1._scene.add(PopoverComponent_1.duct.mesh);
+            PopoverComponent_1._scene.add(PopoverComponent_1.duct._mesh);
         }
     };
     return PopoverComponent;
@@ -341,25 +476,13 @@ var PopoverComponent_1;
 
 /***/ }),
 
-/***/ 405:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TYPES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SIZES; });
-var TYPES = ['Segment', 'Transiction', 'Reduction', 'Offset', 'Curve', 'Half-Curve', 'Turn', 'Cap'];
-var SIZES = [150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650];
-//# sourceMappingURL=duct.properties.js.map
-
-/***/ }),
-
-/***/ 406:
+/***/ 410:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(423);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(411);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(427);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -367,25 +490,25 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 423:
+/***/ 427:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(535);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__ = __webpack_require__(401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__firebase_credentials__ = __webpack_require__(544);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__ = __webpack_require__(404);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_modal__ = __webpack_require__(575);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(399);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_moment__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(537);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__firebase_credentials__ = __webpack_require__(546);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(398);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_moment__ = __webpack_require__(404);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_angular2_moment__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -405,6 +528,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 //import { ComponentsModule } from '../components/components.module';
 
 
+//import { SegmentComponent } from '../components/segment/segment.component';
 
 
 
@@ -419,21 +543,22 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
             __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */],
             __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__["a" /* PopoverComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_modal__["a" /* DuctCreationComponent */]
+            __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__["a" /* DuctCreationComponent */]
+            //SegmentComponent
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                 links: [
                     { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/duct-list/duct-list.module#DuctCreationPageModule', name: 'DuctListPage', segment: 'duct-list', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/job-creation/job-creation.module#JobCreationPageModule', name: 'JobCreationPage', segment: 'job-creation', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/job-edit/job-edit.module#JobEditPageModule', name: 'JobEditPage', segment: 'job-edit', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/jobs/jobs-list.module#JobsPageModule', name: 'JobsListPage', segment: 'jobs-list', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/samples/samples.module#SamplesPageModule', name: 'SamplesPage', segment: 'samples', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/scanner/scanner.module#ScannerPageModule', name: 'ScannerPage', segment: 'scanner', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/sign-in/sign-in.module#SignInPageModule', name: 'SignInPage', segment: 'sign-in', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/jobs/jobs-list.module#JobsPageModule', name: 'JobsListPage', segment: 'jobs-list', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/duct-list/duct-list.module#DuctCreationPageModule', name: 'DuctListPage', segment: 'duct-list', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/sign-in/sign-in.module#SignInPageModule', name: 'SignInPage', segment: 'sign-in', priority: 'low', defaultHistory: [] }
                 ]
             }),
             // Firebase initialization
@@ -447,7 +572,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
             __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */],
             __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__["a" /* PopoverComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_modal__["a" /* DuctCreationComponent */]
+            __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__["a" /* DuctCreationComponent */]
+            //SegmentComponent
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
@@ -461,365 +587,13 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 507:
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./af": 226,
-	"./af.js": 226,
-	"./ar": 227,
-	"./ar-dz": 228,
-	"./ar-dz.js": 228,
-	"./ar-kw": 229,
-	"./ar-kw.js": 229,
-	"./ar-ly": 230,
-	"./ar-ly.js": 230,
-	"./ar-ma": 231,
-	"./ar-ma.js": 231,
-	"./ar-sa": 232,
-	"./ar-sa.js": 232,
-	"./ar-tn": 233,
-	"./ar-tn.js": 233,
-	"./ar.js": 227,
-	"./az": 234,
-	"./az.js": 234,
-	"./be": 235,
-	"./be.js": 235,
-	"./bg": 236,
-	"./bg.js": 236,
-	"./bm": 237,
-	"./bm.js": 237,
-	"./bn": 238,
-	"./bn.js": 238,
-	"./bo": 239,
-	"./bo.js": 239,
-	"./br": 240,
-	"./br.js": 240,
-	"./bs": 241,
-	"./bs.js": 241,
-	"./ca": 242,
-	"./ca.js": 242,
-	"./cs": 243,
-	"./cs.js": 243,
-	"./cv": 244,
-	"./cv.js": 244,
-	"./cy": 245,
-	"./cy.js": 245,
-	"./da": 246,
-	"./da.js": 246,
-	"./de": 247,
-	"./de-at": 248,
-	"./de-at.js": 248,
-	"./de-ch": 249,
-	"./de-ch.js": 249,
-	"./de.js": 247,
-	"./dv": 250,
-	"./dv.js": 250,
-	"./el": 251,
-	"./el.js": 251,
-	"./en-au": 252,
-	"./en-au.js": 252,
-	"./en-ca": 253,
-	"./en-ca.js": 253,
-	"./en-gb": 254,
-	"./en-gb.js": 254,
-	"./en-ie": 255,
-	"./en-ie.js": 255,
-	"./en-nz": 256,
-	"./en-nz.js": 256,
-	"./eo": 257,
-	"./eo.js": 257,
-	"./es": 258,
-	"./es-do": 259,
-	"./es-do.js": 259,
-	"./es-us": 260,
-	"./es-us.js": 260,
-	"./es.js": 258,
-	"./et": 261,
-	"./et.js": 261,
-	"./eu": 262,
-	"./eu.js": 262,
-	"./fa": 263,
-	"./fa.js": 263,
-	"./fi": 264,
-	"./fi.js": 264,
-	"./fo": 265,
-	"./fo.js": 265,
-	"./fr": 266,
-	"./fr-ca": 267,
-	"./fr-ca.js": 267,
-	"./fr-ch": 268,
-	"./fr-ch.js": 268,
-	"./fr.js": 266,
-	"./fy": 269,
-	"./fy.js": 269,
-	"./gd": 270,
-	"./gd.js": 270,
-	"./gl": 271,
-	"./gl.js": 271,
-	"./gom-latn": 272,
-	"./gom-latn.js": 272,
-	"./gu": 273,
-	"./gu.js": 273,
-	"./he": 274,
-	"./he.js": 274,
-	"./hi": 275,
-	"./hi.js": 275,
-	"./hr": 276,
-	"./hr.js": 276,
-	"./hu": 277,
-	"./hu.js": 277,
-	"./hy-am": 278,
-	"./hy-am.js": 278,
-	"./id": 279,
-	"./id.js": 279,
-	"./is": 280,
-	"./is.js": 280,
-	"./it": 281,
-	"./it.js": 281,
-	"./ja": 282,
-	"./ja.js": 282,
-	"./jv": 283,
-	"./jv.js": 283,
-	"./ka": 284,
-	"./ka.js": 284,
-	"./kk": 285,
-	"./kk.js": 285,
-	"./km": 286,
-	"./km.js": 286,
-	"./kn": 287,
-	"./kn.js": 287,
-	"./ko": 288,
-	"./ko.js": 288,
-	"./ky": 289,
-	"./ky.js": 289,
-	"./lb": 290,
-	"./lb.js": 290,
-	"./lo": 291,
-	"./lo.js": 291,
-	"./lt": 292,
-	"./lt.js": 292,
-	"./lv": 293,
-	"./lv.js": 293,
-	"./me": 294,
-	"./me.js": 294,
-	"./mi": 295,
-	"./mi.js": 295,
-	"./mk": 296,
-	"./mk.js": 296,
-	"./ml": 297,
-	"./ml.js": 297,
-	"./mr": 298,
-	"./mr.js": 298,
-	"./ms": 299,
-	"./ms-my": 300,
-	"./ms-my.js": 300,
-	"./ms.js": 299,
-	"./my": 301,
-	"./my.js": 301,
-	"./nb": 302,
-	"./nb.js": 302,
-	"./ne": 303,
-	"./ne.js": 303,
-	"./nl": 304,
-	"./nl-be": 305,
-	"./nl-be.js": 305,
-	"./nl.js": 304,
-	"./nn": 306,
-	"./nn.js": 306,
-	"./pa-in": 307,
-	"./pa-in.js": 307,
-	"./pl": 308,
-	"./pl.js": 308,
-	"./pt": 309,
-	"./pt-br": 310,
-	"./pt-br.js": 310,
-	"./pt.js": 309,
-	"./ro": 311,
-	"./ro.js": 311,
-	"./ru": 312,
-	"./ru.js": 312,
-	"./sd": 313,
-	"./sd.js": 313,
-	"./se": 314,
-	"./se.js": 314,
-	"./si": 315,
-	"./si.js": 315,
-	"./sk": 316,
-	"./sk.js": 316,
-	"./sl": 317,
-	"./sl.js": 317,
-	"./sq": 318,
-	"./sq.js": 318,
-	"./sr": 319,
-	"./sr-cyrl": 320,
-	"./sr-cyrl.js": 320,
-	"./sr.js": 319,
-	"./ss": 321,
-	"./ss.js": 321,
-	"./sv": 322,
-	"./sv.js": 322,
-	"./sw": 323,
-	"./sw.js": 323,
-	"./ta": 324,
-	"./ta.js": 324,
-	"./te": 325,
-	"./te.js": 325,
-	"./tet": 326,
-	"./tet.js": 326,
-	"./th": 327,
-	"./th.js": 327,
-	"./tl-ph": 328,
-	"./tl-ph.js": 328,
-	"./tlh": 329,
-	"./tlh.js": 329,
-	"./tr": 330,
-	"./tr.js": 330,
-	"./tzl": 331,
-	"./tzl.js": 331,
-	"./tzm": 332,
-	"./tzm-latn": 333,
-	"./tzm-latn.js": 333,
-	"./tzm.js": 332,
-	"./uk": 334,
-	"./uk.js": 334,
-	"./ur": 335,
-	"./ur.js": 335,
-	"./uz": 336,
-	"./uz-latn": 337,
-	"./uz-latn.js": 337,
-	"./uz.js": 336,
-	"./vi": 338,
-	"./vi.js": 338,
-	"./x-pseudo": 339,
-	"./x-pseudo.js": 339,
-	"./yo": 340,
-	"./yo.js": 340,
-	"./zh-cn": 341,
-	"./zh-cn.js": 341,
-	"./zh-hk": 342,
-	"./zh-hk.js": 342,
-	"./zh-tw": 343,
-	"./zh-tw.js": 343
-};
-function webpackContext(req) {
-	return __webpack_require__(webpackContextResolve(req));
-};
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) // check for number or string
-		throw new Error("Cannot find module '" + req + "'.");
-	return id;
-};
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 507;
-
-/***/ }),
-
-/***/ 512:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctFactory; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__segment__ = __webpack_require__(513);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reduction__ = __webpack_require__(514);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transiction__ = __webpack_require__(515);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__offset__ = __webpack_require__(516);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cap__ = __webpack_require__(517);
-
-
-
-
-
-
-
-// ductfactory.ts
-var DuctFactory = (function () {
-    function DuctFactory() {
-    }
-    DuctFactory.createDuct = function (duct_type) {
-        switch (duct_type) {
-            case "Segment": return new __WEBPACK_IMPORTED_MODULE_1__segment__["a" /* Segment */](7, 4);
-            case "Reduction": return new __WEBPACK_IMPORTED_MODULE_2__reduction__["a" /* Reduction */](8, 3, 8, 2, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].TOP);
-            case "Transiction": return new __WEBPACK_IMPORTED_MODULE_3__transiction__["a" /* Transiction */](8, 4, 5, 2.5, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].LEFT);
-            case "Offset": return new __WEBPACK_IMPORTED_MODULE_4__offset__["a" /* Offset */](8, 3, 1.5, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Direction */].UP);
-            case "Cap": return new __WEBPACK_IMPORTED_MODULE_5__cap__["a" /* Cap */](7, 4);
-        }
-    };
-    return DuctFactory;
-}());
-
-//# sourceMappingURL=factory.js.map
-
-/***/ }),
-
-/***/ 513:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Segment; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-
-
-var Segment = (function (_super) {
-    __extends(Segment, _super);
-    function Segment(w, h) {
-        var _this = _super.call(this, w, h) || this;
-        _this._length = 11; //default measurement for a single duct segment 
-        return _this;
-    }
-    Segment.prototype.draw = function () {
-        //It crates the geometry
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["g" /* Geometry */]();
-        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, 0), //Vertex 0
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, this._length), //Vertex 2
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, 0), //Vertex 3
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, 0), //Vertex 4
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, this._length) //Vertex 7
-        );
-        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 0, 3));
-        this._geometry.computeFaceNormals();
-        //It crates the material
-        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["k" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["d" /* DoubleSide */] });
-        this._material.castShadow = true;
-        this._material.receiveShadow = true;
-        //It crates the mesh to join everything together
-        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* Mesh */](this._geometry, this._material);
-        this._mesh.name = "segment";
-    };
-    return Segment;
-}(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
-
-//# sourceMappingURL=segment.js.map
-
-/***/ }),
-
-/***/ 514:
+/***/ 450:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Reduction; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(30);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -859,15 +633,15 @@ var Reduction = (function (_super) {
         return _this;
     }
     Reduction.prototype.draw = function () {
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["g" /* Geometry */]();
-        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, 0), //Vertex 0
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, this._length), //Vertex 2
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, 0), //Vertex 3
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, 0), //Vertex 4
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
+        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, this._length) //Vertex 7
         );
         //add the reduction difference on the width or height, depending on the parameters
         if (this._horizonDiff === 0) {
@@ -890,13 +664,16 @@ var Reduction = (function (_super) {
                 this._geometry.vertices[7].x -= this._horizonDiff;
             }
         }
-        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 0, 3));
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 0, 3));
         this._geometry.computeFaceNormals();
-        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["k" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["d" /* DoubleSide */] });
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["c" /* DoubleSide */] });
         this._material.castShadow = true;
         this._material.receiveShadow = true;
-        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* Mesh */](this._geometry, this._material);
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["i" /* Mesh */](this._geometry, this._material);
         this._mesh.name = "reduction";
+    };
+    Reduction.prototype.getParameters = function () {
+        return ['From-Width', 'From-Height', 'To-Width', 'To-Height', 'Flat-Side', 'Length'];
     };
     return Reduction;
 }(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
@@ -905,13 +682,13 @@ var Reduction = (function (_super) {
 
 /***/ }),
 
-/***/ 515:
+/***/ 451:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Transiction; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(30);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -939,15 +716,15 @@ var Transiction = (function (_super) {
         return _this;
     }
     Transiction.prototype.draw = function () {
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["g" /* Geometry */]();
-        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, 0), //Vertex 0
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, this._length), //Vertex 2
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, 0), //Vertex 3
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, 0), //Vertex 4
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
+        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, this._length) //Vertex 7
         );
         //add the reduction difference on the width or height, depending on the parameters
         switch (this._flat) {
@@ -963,13 +740,16 @@ var Transiction = (function (_super) {
         ;
         this._vertDiff != 0 ? this._geometry.vertices[7].y += this._vertDiff : null;
         this._vertDiff != 0 ? this._geometry.vertices[2].y += this._vertDiff : null;
-        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 0, 3));
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 0, 3));
         this._geometry.computeFaceNormals();
-        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["k" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["d" /* DoubleSide */] });
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["c" /* DoubleSide */] });
         this._material.castShadow = true;
         this._material.receiveShadow = true;
-        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* Mesh */](this._geometry, this._material);
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["i" /* Mesh */](this._geometry, this._material);
         this._mesh.name = "transiction";
+    };
+    Transiction.prototype.getParameters = function () {
+        return ['From-Width', 'From-Height', 'To-Width', 'To-Height', 'Flat-Side', 'Length'];
     };
     return Transiction;
 }(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
@@ -978,13 +758,13 @@ var Transiction = (function (_super) {
 
 /***/ }),
 
-/***/ 516:
+/***/ 452:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Offset; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(30);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1008,17 +788,17 @@ var Offset = (function (_super) {
         return _this;
     }
     Offset.prototype.draw = function () {
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["g" /* Geometry */]();
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
         //It crates the geometry
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["g" /* Geometry */]();
-        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, 0), //Vertex 0
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, this._length), //Vertex 2
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, 0), //Vertex 3
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, 0), //Vertex 4
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
+        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, this._length) //Vertex 7
         );
         //add the reduction difference on the width or height, depending on the parameters
         switch (this._direct) {
@@ -1048,13 +828,16 @@ var Offset = (function (_super) {
                 break;
         }
         ;
-        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 0, 3));
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 0, 3));
         this._geometry.computeFaceNormals();
-        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["k" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["d" /* DoubleSide */] });
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["c" /* DoubleSide */] });
         this._material.castShadow = true;
         this._material.receiveShadow = true;
-        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* Mesh */](this._geometry, this._material);
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["i" /* Mesh */](this._geometry, this._material);
         this._mesh.name = "offset";
+    };
+    Offset.prototype.getParameters = function () {
+        return ['Width', 'Height', 'Offset', 'Length', 'Direction'];
     };
     return Offset;
 }(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
@@ -1063,13 +846,13 @@ var Offset = (function (_super) {
 
 /***/ }),
 
-/***/ 517:
+/***/ 453:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Cap; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(30);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1090,25 +873,28 @@ var Cap = (function (_super) {
         return _this;
     }
     Cap.prototype.draw = function () {
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["g" /* Geometry */]();
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
         this._geometry.vertices.push(
         //               ( X            Y             Z )
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, 0), //Vertex 0
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, 0, this._length), //Vertex 2
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, 0), //Vertex 3
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, 0), //Vertex 4
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["s" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, this._length) //Vertex 7
         );
-        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](2, 0, 3), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](0, 1, 3), new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Face3 */](1, 3, 4));
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 0, 3), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 3), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 3, 4));
         this._geometry.computeFaceNormals();
-        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["k" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["d" /* DoubleSide */] });
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["c" /* DoubleSide */] });
         this._material.castShadow = true;
         this._material.receiveShadow = true;
-        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* Mesh */](this._geometry, this._material);
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["i" /* Mesh */](this._geometry, this._material);
         this._mesh.name = "cap";
+    };
+    Cap.prototype.getParameters = function () {
+        return ['Width', 'Height', 'Length'];
     };
     return Cap;
 }(__WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["b" /* Duct */]));
@@ -1117,15 +903,274 @@ var Cap = (function (_super) {
 
 /***/ }),
 
-/***/ 535:
+/***/ 455:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": 192,
+	"./af.js": 192,
+	"./ar": 193,
+	"./ar-dz": 194,
+	"./ar-dz.js": 194,
+	"./ar-kw": 195,
+	"./ar-kw.js": 195,
+	"./ar-ly": 196,
+	"./ar-ly.js": 196,
+	"./ar-ma": 197,
+	"./ar-ma.js": 197,
+	"./ar-sa": 198,
+	"./ar-sa.js": 198,
+	"./ar-tn": 199,
+	"./ar-tn.js": 199,
+	"./ar.js": 193,
+	"./az": 200,
+	"./az.js": 200,
+	"./be": 201,
+	"./be.js": 201,
+	"./bg": 202,
+	"./bg.js": 202,
+	"./bm": 203,
+	"./bm.js": 203,
+	"./bn": 204,
+	"./bn.js": 204,
+	"./bo": 205,
+	"./bo.js": 205,
+	"./br": 206,
+	"./br.js": 206,
+	"./bs": 207,
+	"./bs.js": 207,
+	"./ca": 208,
+	"./ca.js": 208,
+	"./cs": 209,
+	"./cs.js": 209,
+	"./cv": 210,
+	"./cv.js": 210,
+	"./cy": 211,
+	"./cy.js": 211,
+	"./da": 212,
+	"./da.js": 212,
+	"./de": 213,
+	"./de-at": 214,
+	"./de-at.js": 214,
+	"./de-ch": 215,
+	"./de-ch.js": 215,
+	"./de.js": 213,
+	"./dv": 216,
+	"./dv.js": 216,
+	"./el": 217,
+	"./el.js": 217,
+	"./en-au": 218,
+	"./en-au.js": 218,
+	"./en-ca": 219,
+	"./en-ca.js": 219,
+	"./en-gb": 220,
+	"./en-gb.js": 220,
+	"./en-ie": 221,
+	"./en-ie.js": 221,
+	"./en-nz": 222,
+	"./en-nz.js": 222,
+	"./eo": 223,
+	"./eo.js": 223,
+	"./es": 224,
+	"./es-do": 225,
+	"./es-do.js": 225,
+	"./es-us": 226,
+	"./es-us.js": 226,
+	"./es.js": 224,
+	"./et": 227,
+	"./et.js": 227,
+	"./eu": 228,
+	"./eu.js": 228,
+	"./fa": 229,
+	"./fa.js": 229,
+	"./fi": 230,
+	"./fi.js": 230,
+	"./fo": 231,
+	"./fo.js": 231,
+	"./fr": 232,
+	"./fr-ca": 233,
+	"./fr-ca.js": 233,
+	"./fr-ch": 234,
+	"./fr-ch.js": 234,
+	"./fr.js": 232,
+	"./fy": 235,
+	"./fy.js": 235,
+	"./gd": 236,
+	"./gd.js": 236,
+	"./gl": 237,
+	"./gl.js": 237,
+	"./gom-latn": 238,
+	"./gom-latn.js": 238,
+	"./gu": 239,
+	"./gu.js": 239,
+	"./he": 240,
+	"./he.js": 240,
+	"./hi": 241,
+	"./hi.js": 241,
+	"./hr": 242,
+	"./hr.js": 242,
+	"./hu": 243,
+	"./hu.js": 243,
+	"./hy-am": 244,
+	"./hy-am.js": 244,
+	"./id": 245,
+	"./id.js": 245,
+	"./is": 246,
+	"./is.js": 246,
+	"./it": 247,
+	"./it.js": 247,
+	"./ja": 248,
+	"./ja.js": 248,
+	"./jv": 249,
+	"./jv.js": 249,
+	"./ka": 250,
+	"./ka.js": 250,
+	"./kk": 251,
+	"./kk.js": 251,
+	"./km": 252,
+	"./km.js": 252,
+	"./kn": 253,
+	"./kn.js": 253,
+	"./ko": 254,
+	"./ko.js": 254,
+	"./ky": 255,
+	"./ky.js": 255,
+	"./lb": 256,
+	"./lb.js": 256,
+	"./lo": 257,
+	"./lo.js": 257,
+	"./lt": 258,
+	"./lt.js": 258,
+	"./lv": 259,
+	"./lv.js": 259,
+	"./me": 260,
+	"./me.js": 260,
+	"./mi": 261,
+	"./mi.js": 261,
+	"./mk": 262,
+	"./mk.js": 262,
+	"./ml": 263,
+	"./ml.js": 263,
+	"./mr": 264,
+	"./mr.js": 264,
+	"./ms": 265,
+	"./ms-my": 266,
+	"./ms-my.js": 266,
+	"./ms.js": 265,
+	"./my": 267,
+	"./my.js": 267,
+	"./nb": 268,
+	"./nb.js": 268,
+	"./ne": 269,
+	"./ne.js": 269,
+	"./nl": 270,
+	"./nl-be": 271,
+	"./nl-be.js": 271,
+	"./nl.js": 270,
+	"./nn": 272,
+	"./nn.js": 272,
+	"./pa-in": 273,
+	"./pa-in.js": 273,
+	"./pl": 274,
+	"./pl.js": 274,
+	"./pt": 275,
+	"./pt-br": 276,
+	"./pt-br.js": 276,
+	"./pt.js": 275,
+	"./ro": 277,
+	"./ro.js": 277,
+	"./ru": 278,
+	"./ru.js": 278,
+	"./sd": 279,
+	"./sd.js": 279,
+	"./se": 280,
+	"./se.js": 280,
+	"./si": 281,
+	"./si.js": 281,
+	"./sk": 282,
+	"./sk.js": 282,
+	"./sl": 283,
+	"./sl.js": 283,
+	"./sq": 284,
+	"./sq.js": 284,
+	"./sr": 285,
+	"./sr-cyrl": 286,
+	"./sr-cyrl.js": 286,
+	"./sr.js": 285,
+	"./ss": 287,
+	"./ss.js": 287,
+	"./sv": 288,
+	"./sv.js": 288,
+	"./sw": 289,
+	"./sw.js": 289,
+	"./ta": 290,
+	"./ta.js": 290,
+	"./te": 291,
+	"./te.js": 291,
+	"./tet": 292,
+	"./tet.js": 292,
+	"./th": 293,
+	"./th.js": 293,
+	"./tl-ph": 294,
+	"./tl-ph.js": 294,
+	"./tlh": 295,
+	"./tlh.js": 295,
+	"./tr": 296,
+	"./tr.js": 296,
+	"./tzl": 297,
+	"./tzl.js": 297,
+	"./tzm": 298,
+	"./tzm-latn": 299,
+	"./tzm-latn.js": 299,
+	"./tzm.js": 298,
+	"./uk": 300,
+	"./uk.js": 300,
+	"./ur": 301,
+	"./ur.js": 301,
+	"./uz": 302,
+	"./uz-latn": 303,
+	"./uz-latn.js": 303,
+	"./uz.js": 302,
+	"./vi": 304,
+	"./vi.js": 304,
+	"./x-pseudo": 305,
+	"./x-pseudo.js": 305,
+	"./yo": 306,
+	"./yo.js": 306,
+	"./zh-cn": 307,
+	"./zh-cn.js": 307,
+	"./zh-hk": 308,
+	"./zh-hk.js": 308,
+	"./zh-tw": 309,
+	"./zh-tw.js": 309
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 455;
+
+/***/ }),
+
+/***/ 537:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(399);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(398);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(401);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1161,7 +1206,7 @@ MyApp = __decorate([
 
 /***/ }),
 
-/***/ 544:
+/***/ 546:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1176,56 +1221,7 @@ var FB_HAVEMETAL_CREDENTIALS = {
 };
 //# sourceMappingURL=firebase.credentials.js.map
 
-/***/ }),
-
-/***/ 575:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctCreationComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(405);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/**
- * Generated class for the DuctCreationComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
-var DuctCreationComponent = (function () {
-    function DuctCreationComponent(viewCtrl, params) {
-        this.viewCtrl = viewCtrl;
-        this.type_list = __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__["b" /* TYPES */];
-        this.size_list = __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__["a" /* SIZES */];
-    }
-    DuctCreationComponent.prototype.dismiss = function () {
-        this.viewCtrl.dismiss();
-    };
-    return DuctCreationComponent;
-}());
-DuctCreationComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'duct-creation',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/duct-creation/duct-creation.modal.html"*/'<!-- Generated template for the DuctCreationComponent component -->\n<!-- <div padding class="def">\n  {{text}}\n</div> -->\n<div class="modal-panel">\n  <div class="modal-div-panel">\n      <ion-content padding>\n        <ion-title>New Duct</ion-title>\n\n        <ion-col align-self-start>\n          <ion-row nowrap padding>\n            <ion-list>\n              <ion-item padding>\n                <ion-label>Type:</ion-label>\n                <ion-select [(ngModel)]="type">\n                  <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n                </ion-select>\n              </ion-item>\n              <ion-item padding>\n                <ion-label>Size:</ion-label>\n                <ion-select [(ngModel)]="height">\n                  <ion-option *ngFor="let size of size_list">{{size}}</ion-option>\n                </ion-select>\n                <ion-select [(ngModel)]="width">\n                  <ion-option *ngFor="let size of size_list">{{size}}</ion-option>\n                </ion-select>\n              </ion-item>\n              <ion-item>\n                <ion-label floating>Quantity:</ion-label>\n                <ion-input type="number" [(ngModel)]="quantity"></ion-input>\n              </ion-item>\n              <ion-item>\n                <ion-label>Insulated</ion-label>\n                <ion-checkbox color="dark" checked="false"></ion-checkbox>\n              </ion-item>\n              <ion-item>\n                <ion-label>Fire Rated</ion-label>\n                <ion-checkbox color="dark" checked="false"></ion-checkbox>\n              </ion-item>\n\n            </ion-list>\n            <ion-img width="170" height="170" src="/img/offset.png"></ion-img>\n          </ion-row>\n          <ion-row justify-content-center>\n            <button ion-button color="primary" (click)="addDuct()">Add</button>\n            <button ion-button color="secondary" (click)="dismiss()">Cancel</button>\n          </ion-row>\n        </ion-col>\n      </ion-content>\n  </div>\n</div>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/duct-creation/duct-creation.modal.html"*/
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _b || Object])
-], DuctCreationComponent);
-
-var _a, _b;
-//# sourceMappingURL=duct-creation.modal.js.map
-
 /***/ })
 
-},[406]);
+},[410]);
 //# sourceMappingURL=main.js.map

@@ -19,7 +19,7 @@
 
         <ion-item-sliding *ngFor="let duct of duct_list; let i = index;">
 
-            <ion-item>{{i+1}}- {{duct.title}}</ion-item>
+            <ion-item>{{i+1}}- {{duct._mesh.name}}</ion-item>
 
             <ion-item-options>
                 <button ion-button icon-only (click)="editDuct(duct)" color="p_light">

@@ -16,7 +16,7 @@ import { Transiction } from '../../models/objects/transiction';
 
 export class SamplesPage {
 
-  /**
+    /**
     ********************* THREE.JS SESSION *****************************
     */
 
@@ -72,7 +72,7 @@ export class SamplesPage {
      // Define an object to manage display of ThreeJS scene
      SamplesPage._RENDERER = new THREE.WebGLRenderer({ antialias: true });
      //It sets the background color
-     SamplesPage._RENDERER.setClearColor(0xDCDCDC, 1);
+     SamplesPage._RENDERER.setClearColor(0xF5F5F5, 1);
 
      // Resizes the output canvas to match the supplied width/height parameters
      SamplesPage._RENDERER.setSize( window.innerWidth, window.innerHeight );
@@ -81,24 +81,19 @@ export class SamplesPage {
      // Attach the canvas, where the renderer draws the scene, to the specified DOM element
      SamplesPage._ELEMENT.appendChild( SamplesPage._RENDERER.domElement );
 
-     SamplesPage._GRID = new THREE.GridHelper(60, 60);
-     SamplesPage._AXIS = new THREE.AxesHelper(35);
+     SamplesPage._GRID = new THREE.GridHelper(70, 70, 0xE0E0E0, 0xE0E0E0);
+     SamplesPage._AXIS = new THREE.AxesHelper(30);
+
 
      var pointLight = new THREE.PointLight( 0xf2f2f2, 1, 100 );
-     pointLight.position.set( 0, 20, 0 );
+     pointLight.position.set( 0, 30, 0 );
      SamplesPage._SCENE.add( pointLight );
 
-     var sphereSize = 1;
-     var pointLightHelper = new THREE.PointLightHelper( pointLight, sphereSize );
-     SamplesPage._SCENE.add( pointLightHelper );
 
-
-     SamplesPage._LIGHT  = new THREE.AmbientLight( 0x404040 ); // soft white light
 
      // Add the object to the scene
      SamplesPage._SCENE.add( SamplesPage._GRID );
      SamplesPage._SCENE.add( SamplesPage._AXIS );
-     SamplesPage._SCENE.add( SamplesPage._LIGHT );
 
      //Add the mouse controlls into the scene
      SamplesPage._CONTROLS  = new OrbitControls(SamplesPage._CAMERA, SamplesPage._RENDERER.domElement);

@@ -10,8 +10,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FB_HAVEMETAL_CREDENTIALS } from './firebase.credentials';
 //import { ComponentsModule } from '../components/components.module';
 import { PopoverComponent } from '../components/popover/popover';
-import { DuctCreationComponent } from '../components/duct-creation/duct-creation.modal';
-
+import { DuctCreationComponent } from '../components/duct-creation/duct-creation.component';
+//import { SegmentComponent } from '../components/segment/segment.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MomentModule } from 'angular2-moment';
@@ -22,6 +22,7 @@ import { MomentModule } from 'angular2-moment';
     TabsPage,
     PopoverComponent,
     DuctCreationComponent
+    //SegmentComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +39,7 @@ import { MomentModule } from 'angular2-moment';
     TabsPage,
     PopoverComponent,
     DuctCreationComponent
+    //SegmentComponent
   ],
   providers: [
     StatusBar,

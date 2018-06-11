@@ -16,7 +16,6 @@ import { Job } from '../../models/interfaces/job.interface';
 
 export class JobsComponent {
 
-
   @Input() job: Job;
 
 }

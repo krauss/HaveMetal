@@ -39318,13 +39318,20 @@ duct-creation .modal-panel {
   background-color: rgba(0, 0, 0, 0.45);
 }
 
-duct-creation .modal-div-panel {
+duct-creation .modal-panel-div {
   background-color: #fafafa;
   border-radius: 5px;
-  height: 80%;
-  width: 80%;
+  height: 85%;
+  width: 85%;
   margin: auto;
-  padding: 5px;
+  padding: 3px;
+}
+
+duct-creation .modal-panel-div-canvas {
+  border-radius: 7px;
+  height: 40%;
+  width: 100%;
+  margin: auto;
 }
 
 page-login .transparent_bkg {

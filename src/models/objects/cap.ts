@@ -48,4 +48,8 @@ export class Cap extends Duct {
 
   }
 
+  getParameters(): string[]{
+    return ['Width', 'Height', 'Length'];
+  }
+
 }

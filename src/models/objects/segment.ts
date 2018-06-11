@@ -5,7 +5,7 @@ export class Segment extends Duct {
 
   constructor(w:number, h:number){
     super(w, h);
-    this._length = 11; //default measurement for a single duct segment 
+    this._length = 11; //default measurement for a single duct segment
   }
 
   draw(): void {
@@ -43,6 +43,10 @@ export class Segment extends Duct {
     this._mesh = new THREE.Mesh( this._geometry, this._material );
     this._mesh.name = "segment";
 
+  }
+
+  getParameters(): string[]{
+    return ['width', 'height', 'length'];
   }
 
 }

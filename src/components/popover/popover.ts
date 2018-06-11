@@ -59,7 +59,7 @@ export class PopoverComponent {
   // }
 
   changeBackground(color: any) {
-    PopoverComponent.duct.material.color = new THREE.Color(color);
+    PopoverComponent.duct._material.color = new THREE.Color(color);
   }
 
 
@@ -68,17 +68,17 @@ export class PopoverComponent {
     if ($event) {
 
       console.log(this.dtype);
-      
+
       if (PopoverComponent.duct != undefined){
 
-        var tmp = PopoverComponent._scene.getObjectByName(PopoverComponent.duct.mesh.name);
+        var tmp = PopoverComponent._scene.getObjectByName(PopoverComponent.duct._mesh.name);
         PopoverComponent._scene.remove(tmp);
 
       }
 
       PopoverComponent.duct = DuctFactory.createDuct($event);
       PopoverComponent.duct.draw();
-      PopoverComponent._scene.add( PopoverComponent.duct.mesh );
+      PopoverComponent._scene.add( PopoverComponent.duct._mesh );
 
     }
   }

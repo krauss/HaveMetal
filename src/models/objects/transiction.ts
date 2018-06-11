@@ -69,4 +69,8 @@ export class Transiction extends Duct {
 
   }
 
+  getParameters(): string[]{
+    return ['From-Width', 'From-Height', 'To-Width', 'To-Height', 'Flat-Side', 'Length'];
+  }
+
 }
