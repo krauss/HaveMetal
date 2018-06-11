@@ -24,7 +24,7 @@
               <ion-card *ngIf="_DUCT != undefined">
                 <ion-card-content>
                   <ion-list>
-                    <ion-input type="number" min="150" max="3000" *ngFor="let parameter of getParams()" placeholder="{{ parameter }}"></ion-input>
+                    <ion-input type="number" min="150" max="3000" *ngFor="let parameter of getParams()" placeholder="{{ parameter }}" (ionChange)="setDimension(parameter)"></ion-input>
                   </ion-list>
                 </ion-card-content>
               </ion-card>

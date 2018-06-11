@@ -79,6 +79,21 @@ export class DuctCreationComponent {
     }
   }
 
+  setDimension(ev, value){
+    console.log(ev);
+    console.log(value);
+    switch(ev.name){
+      case "width":
+        this._DUCT._width = value;
+        break;
+      case "height":
+        this._DUCT._height = value;
+        break;
+      case "length":
+        this._DUCT._length = value;
+        break;
+    }
+  }
 
   getParams() {
    return this.parameters;
