@@ -39334,6 +39334,10 @@ duct-creation .modal-panel-div-canvas {
   margin: auto;
 }
 
+duct-creation .radio-param {
+  font-size: 10px;
+}
+
 page-login .transparent_bkg {
   background-color: transparent;
 }

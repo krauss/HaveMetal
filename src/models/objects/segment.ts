@@ -3,9 +3,9 @@ import * as THREE from 'three';
 
 export class Segment extends Duct {
 
-  constructor(w:number, h:number){
+  constructor(w:number, h:number) {
     super(w, h);
-    this._length = 11; //default measurement for a single duct segment
+    this._length = 14; //default measurement for a single duct segment
   }
 
   draw(): void {
@@ -45,8 +45,35 @@ export class Segment extends Duct {
 
   }
 
-  getParameters(): string[]{
-    return ['width', 'height', 'length'];
+
+  setWidth(): void {
+    if(this._width >= 1){
+      this._geometry.vertices[1].x = this._width;
+      this._geometry.vertices[4].x = this._width;
+      this._geometry.vertices[6].x = this._width;
+      this._geometry.vertices[7].x = this._width;
+      this._geometry.verticesNeedUpdate = true;
+    }
+  }
+
+  setHeigth(): void {
+    if(this._height >= 1){
+      this._geometry.vertices[3].y = this._height;
+      this._geometry.vertices[4].y = this._height;
+      this._geometry.vertices[5].y = this._height;
+      this._geometry.vertices[6].y = this._height;
+      this._geometry.verticesNeedUpdate = true;
+    }
+  }
+
+  setLength(): void {
+    if(this._length >= 1){
+      this._geometry.vertices[2].z = this._length;
+      this._geometry.vertices[5].z = this._length;
+      this._geometry.vertices[6].z = this._length;
+      this._geometry.vertices[7].z = this._length;
+      this._geometry.verticesNeedUpdate = true;
+    }
   }
 
 }

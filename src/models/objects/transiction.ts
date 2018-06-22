@@ -1,22 +1,33 @@
 import { Duct } from '../interfaces/duct.interface';
-import { FlatSide } from '../interfaces/duct.interface';
+import { FLATSIDES } from '../interfaces/duct.properties';
 import * as THREE from 'three';
 
 export class Transiction extends Duct {
 
-  protected _flat:FlatSide;
-  protected _horizonDiff: number = 0;
-  protected _vertDiff: number = 0;
+  _frontWidth: number;
+  _frontHeight: number;
+  _flat:string;
+  _horizonDiff: number = 0;
+  _vertDiff: number = 0
 
-  constructor(fromWidth:number, fromHeight:number, toWidth:number, toHeight:number, flat:FlatSide){
-    super(fromWidth, fromHeight);
+  sides = FLATSIDES;
+
+
+  constructor(backWidth:number, backHeight:number, frontWidth:number, frontHeight:number, flat:string){
+    super(backWidth, backHeight);
+    this._frontWidth = frontWidth;
+    this._frontHeight = frontHeight;
     this._flat = flat;
     this._length = 5; //default length for a single transiction piece
 
     //calculate the width and height difference
-    this._horizonDiff = fromWidth - toWidth;
-    this._vertDiff = fromHeight - toHeight;
+    this.calcDiffHoriVert();
 
+  }
+
+  private calcDiffHoriVert(): void{
+    this._horizonDiff = this._width - this._frontWidth;
+    this._vertDiff = this._height - this._frontHeight;
   }
 
   draw(): void {
@@ -35,7 +46,7 @@ export class Transiction extends Duct {
 
     //add the reduction difference on the width or height, depending on the parameters
     switch(this._flat){
-      case FlatSide.LEFT:
+      case 'LEFT':
         this._horizonDiff != 0 ? this._geometry.vertices[6].x -= this._horizonDiff : null;
         this._horizonDiff != 0 ? this._geometry.vertices[7].x -= this._horizonDiff : null;
         break;
@@ -69,8 +80,70 @@ export class Transiction extends Duct {
 
   }
 
-  getParameters(): string[]{
-    return ['From-Width', 'From-Height', 'To-Width', 'To-Height', 'Flat-Side', 'Length'];
+  setFlatSide(): void {
+    switch(this._flat){
+      case 'LEFT':
+        this._horizonDiff != 0 ? this._geometry.vertices[6].x -= this._horizonDiff : null;
+        this._horizonDiff != 0 ? this._geometry.vertices[7].x -= this._horizonDiff : null;
+        break;
+      default:
+        this._horizonDiff != 0 ? this._geometry.vertices[5].x += this._horizonDiff : null;
+        this._horizonDiff != 0 ? this._geometry.vertices[2].x += this._horizonDiff : null;
+        break;
+    };
+    this._vertDiff != 0 ? this._geometry.vertices[7].y += this._vertDiff : null;
+    this._vertDiff != 0 ? this._geometry.vertices[2].y += this._vertDiff : null;
+    this.calcDiffHoriVert();
+    this._geometry.verticesNeedUpdate = true;
   }
+
+  setBackWidth(): void {
+    //In this case width is actually the backWidth
+    if(this._width >= 1){
+      this._geometry.vertices[1].x = this._width;
+      this._geometry.vertices[4].x = this._width;
+      this._geometry.verticesNeedUpdate = true;
+      this.calcDiffHoriVert();
+    }
+  }
+
+  setBackHeigth(): void {
+    if(this._height >= 1){
+      this._geometry.vertices[3].y = this._height;
+      this._geometry.vertices[4].y = this._height;
+      this._geometry.verticesNeedUpdate = true;
+      this.calcDiffHoriVert();
+    }
+  }
+
+  setFrontWidth(): void{
+    if(this._frontWidth >= 1){
+      this._geometry.vertices[6].x = this._frontWidth;
+      this._geometry.vertices[7].x = this._frontWidth;
+      this._geometry.verticesNeedUpdate = true;
+      this.calcDiffHoriVert();
+    }
+  }
+
+  setFrontHeigth(): void{
+    if(this._frontHeight >= 1){
+      this._geometry.vertices[6].y = this._frontHeight;
+      this._geometry.vertices[5].y = this._frontHeight;
+      this._geometry.verticesNeedUpdate = true;
+      this.calcDiffHoriVert();
+    }
+  }
+
+  setLength(): void {
+    if(this._length >= 1){
+      this._geometry.vertices[2].z = this._length;
+      this._geometry.vertices[5].z = this._length;
+      this._geometry.vertices[6].z = this._length;
+      this._geometry.vertices[7].z = this._length;
+      this._geometry.verticesNeedUpdate = true;
+    }
+  }
+
+
 
 }

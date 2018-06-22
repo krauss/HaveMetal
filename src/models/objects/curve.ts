@@ -67,8 +67,5 @@ export class Curve extends Duct {
 
   }
 
-  getParameters(): string[]{
-    return ['Width', 'Height', 'Inner-Radius'];
-  }
 
 }

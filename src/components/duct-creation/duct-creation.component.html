@@ -20,11 +20,73 @@
                 <div class="modal-panel-div-canvas" #domObj></div>
               </ion-item>
 
-
               <ion-card *ngIf="_DUCT != undefined">
                 <ion-card-content>
-                  <ion-list>
-                    <ion-input type="number" min="150" max="3000" *ngFor="let parameter of getParams()" placeholder="{{ parameter }}" (ionChange)="setDimension(parameter)"></ion-input>
+                  <!-- Parameters list for Segment duct selection -->
+                  <ion-list padding *ngIf="_DUCT._mesh.name === 'segment'">
+                    <ion-item>
+                      <ion-label float-left>Width:</ion-label>
+                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._width" (ionChange)="_DUCT.setWidth()"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label>Height:</ion-label>
+                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._height" (ionChange)="_DUCT.setHeigth()"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label>Length:</ion-label>
+                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._length" (ionChange)="_DUCT.setLength()"></ion-input>
+                    </ion-item>
+                  </ion-list>
+                  <!-- Parameters list for Transiction duct selection -->
+                  <ion-list padding *ngIf="_DUCT._mesh.name === 'transiction'">
+                      <ion-item>
+                        <ion-label>Flat Sides:</ion-label>
+                        <!-- <ion-select [(ngModel)]="_DUCT._flat" interface="popover" (ionChange)="_DUCT.setFlatSide()">
+                          <ion-option *ngFor="let s of _DUCT.sides">{{s}}</ion-option>
+                        </ion-select> -->
+                        <ion-list radio-group [(ngModel)]="topBottom">
+                          <ion-item>
+                            <ion-label>Top</ion-label>
+                            <ion-radio value="top" checked></ion-radio>
+                          </ion-item>
+                          <ion-item>
+                            <ion-label>Bottom</ion-label>
+                            <ion-radio value="bottom"></ion-radio>
+                          </ion-item>
+                        </ion-list>
+
+                        <ion-list radio-group [(ngModel)]="rightLeft">
+                          <ion-item>
+                            <ion-label>Right</ion-label>
+                            <ion-radio value="right" checked></ion-radio>
+                          </ion-item>
+                          <ion-item>
+                            <ion-label>Left</ion-label>
+                            <ion-radio value="left"></ion-radio>
+                          </ion-item>
+                        </ion-list>
+                      </ion-item>
+
+                      <ion-item>
+                        <ion-label>Back Width:</ion-label>
+                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._width" (ionChange)="_DUCT.setBackWidth()"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label>Back Height:</ion-label>
+                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._height" (ionChange)="_DUCT.setBackHeigth()"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label>Front Width:</ion-label>
+                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._frontWidth" (ionChange)="_DUCT.setFrontWidth()"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label>Front Height:</ion-label>
+                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._frontHeight" (ionChange)="_DUCT.setFrontHeigth()"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label>Length:</ion-label>
+                        <ion-input type="number" min="1" max="20" [(ngModel)]="_DUCT._length" (ionChange)="_DUCT.setLength()"></ion-input>
+                      </ion-item>
                   </ion-list>
                 </ion-card-content>
               </ion-card>

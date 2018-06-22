@@ -1,6 +1,7 @@
 import { Component,  ViewChild, ElementRef, ContentChild } from '@angular/core';
 import { ViewController, NavParams } from 'ionic-angular';
-import { TYPES, SIZES }  from '../../models/interfaces/duct.properties';
+import { TYPES, FLATSIDES }  from '../../models/interfaces/duct.properties';
+import { Duct }  from '../../models/interfaces/duct.interface';
 import { DuctFactory }  from '../../models/objects/factory';
 import * as THREE from 'three';
 import OrbitControls from 'orbit-controls-es6';
@@ -19,9 +20,7 @@ import OrbitControls from 'orbit-controls-es6';
 export class DuctCreationComponent {
 
   type_list = TYPES;
-  size_list = SIZES;
 
-  parameters: any[];
   others = {
     insulated: false,
     fire: false
@@ -72,32 +71,9 @@ export class DuctCreationComponent {
       this._DUCT = DuctFactory.createDuct($event);
       //Calls its method draw() that does the WebGL creation and rendering
       this._DUCT.draw();
-      //Brings its parameters list to be added on to the <ion-card>
-      this.parameters = this._DUCT.getParameters();
       //Adds the duct in the scene
       this._SCENE.add( this._DUCT._mesh );
     }
-  }
-
-  setDimension(ev, value){
-    console.log(ev);
-    console.log(value);
-    switch(ev.name){
-      case "width":
-        this._DUCT._width = value;
-        break;
-      case "height":
-        this._DUCT._height = value;
-        break;
-      case "length":
-        this._DUCT._length = value;
-        break;
-    }
-  }
-
-  getParams() {
-   return this.parameters;
-
   }
 
 

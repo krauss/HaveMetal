@@ -16,7 +16,7 @@ export class DuctFactory {
     switch(duct_type){
       case "Segment": return new Segment(7, 4);
       case "Reduction": return new Reduction(8, 3, 8, 2, FlatSide.TOP);
-      case "Transiction": return new Transiction(8, 4, 5, 2.5, FlatSide.LEFT);
+      case "Transiction": return new Transiction(8, 5, 5, 3, 'RIGHT');
       case "Offset": return new Offset(8, 3, 1.5, Direction.UP);
       case "Cap": return new Cap(7, 4);
     }

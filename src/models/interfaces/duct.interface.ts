@@ -25,8 +25,6 @@ export abstract class Duct {
   //To be implemented on the derived classes
   abstract draw(): void;
 
-  abstract getParameters(): string[];
-
 }
 
 
