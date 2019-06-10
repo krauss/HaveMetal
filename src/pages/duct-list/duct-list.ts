@@ -4,12 +4,6 @@ import { Duct } from '../../models/interfaces/duct.interface';
 import { DuctFactory } from '../../models/objects/factory';
 import { DuctCreationComponent } from '../../components/duct-creation/duct-creation.component';
 
-/**
- * Generated class for the TaskCreationPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({

@@ -48,7 +48,7 @@ var JobCreationPageModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JobCreationPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_services_firebase_service__ = __webpack_require__(488);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_services_firebase_service__ = __webpack_require__(485);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,6 +61,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+// Firebase imports
 
 /**
  * Generated class for the JobCreationPage page.
@@ -80,7 +81,7 @@ var JobCreationPage = /** @class */ (function () {
     //Function that add new Job
     JobCreationPage.prototype.addNewJob = function (job) {
         var _this = this;
-        this.job_list.addItem({
+        this.job_list.addJob({
             //TODO get the next available id from the Firebase db
             //_id: this.job.id,
             name: this.job.name,

@@ -3,11 +3,8 @@ import { IonicPage, NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 
 // Firebase imports
-import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireList } from 'angularfire2/database';
 import { JobListService } from '../../models/services/firebase.service';
 import { Job } from '../../models/interfaces/job.interface';
-import { Observable } from 'rxjs/Observable';
 
 /**
  * Generated class for the JobCreationPage page.
@@ -36,7 +33,7 @@ export class JobCreationPage {
   //Function that add new Job
   addNewJob(job: Job){
 
-    this.job_list.addItem({
+    this.job_list.addJob({
       //TODO get the next available id from the Firebase db
       //_id: this.job.id,
       name: this.job.name,

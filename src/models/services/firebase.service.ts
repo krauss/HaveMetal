@@ -14,11 +14,15 @@ export class JobListService {
         return this.jobListRef;
     }
 
-    addItem(job: Job){
+    addJob(job: Job){
         return this.jobListRef.push(job);
     }
 
-    /*removeItem(job: Job){
-        this.jobListRef.remove(job);
-    }*/
+    removeJob(job: Job){
+        this.jobListRef.remove(job.key);
+    }
+
+    editJob(job: Job){
+        return this.jobListRef.update(job.key, job);
+    }
 }

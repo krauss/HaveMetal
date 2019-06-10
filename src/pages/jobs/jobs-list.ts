@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ActionSheetController, AlertController } from 'ionic-angular';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireList } from 'angularfire2/database';
 import { Job } from '../../models/interfaces/job.interface';
 import { Observable } from 'rxjs/Observable';
 import { JobListService } from '../../models/services/firebase.service';
@@ -66,7 +64,7 @@ export class JobsListPage {
           icon: 'create',
           handler: () => {
             //Send the user to the JobEditPage and pass the key as a parameter
-            this.navCtrl.push('JobEditPage', { jobID: job.key });
+            this.navCtrl.push('JobEditPage', { job: job });
           }
         },
         {
@@ -77,8 +75,7 @@ export class JobsListPage {
 
             console.log(job.key);
             this.alertCtrl.create({
-              title: 'Are you serious mate?',
-              //message: 'Are you f*cking serius?',
+              title: 'Mate, are you serious?',
               buttons: [
                 {
                   text: 'No',
@@ -89,7 +86,7 @@ export class JobsListPage {
                   text: 'Yes',
                   handler: () => {
                     //Delete the current ShoppingItem
-                    //this.job_list$.remove(job);
+                    this.job.removeJob(job);
                   }
                 }
               ]
