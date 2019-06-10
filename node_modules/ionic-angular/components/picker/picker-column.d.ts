@@ -9,6 +9,7 @@ import { UIEventManager } from '../../gestures/ui-event-manager';
  * @hidden
  */
 export declare class PickerColumnCmp {
+    private config;
     private _plt;
     private elementRef;
     private _zone;

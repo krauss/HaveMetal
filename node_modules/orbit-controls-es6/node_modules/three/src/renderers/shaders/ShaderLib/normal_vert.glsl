@@ -1,6 +1,6 @@
 #define NORMAL
 
-#if defined( FLAT_SHADED  ) || defined( USE_BUMPMAP ) || defined( USE_NORMALMAP )
+#if defined( FLAT_SHADED ) || defined( USE_BUMPMAP ) || ( defined( USE_NORMALMAP ) && ! defined( OBJECTSPACE_NORMALMAP ) )
 
 	varying vec3 vViewPosition;
 
@@ -35,13 +35,13 @@ void main() {
 #endif
 
 	#include <begin_vertex>
-	#include <displacementmap_vertex>
 	#include <morphtarget_vertex>
 	#include <skinning_vertex>
+	#include <displacementmap_vertex>
 	#include <project_vertex>
 	#include <logdepthbuf_vertex>
 
-#if defined( FLAT_SHADED  ) || defined( USE_BUMPMAP ) || defined( USE_NORMALMAP )
+#if defined( FLAT_SHADED ) || defined( USE_BUMPMAP ) || ( defined( USE_NORMALMAP ) && ! defined( OBJECTSPACE_NORMALMAP ) )
 
 	vViewPosition = - mvPosition.xyz;
 

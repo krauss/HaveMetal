@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 553:
+/***/ 766:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SamplesPageModule", function() { return SamplesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__samples__ = __webpack_require__(564);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__samples__ = __webpack_require__(777);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,39 +19,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 //import { ComponentsModule } from '../../components/components.module';
-var SamplesPageModule = (function () {
+var SamplesPageModule = /** @class */ (function () {
     function SamplesPageModule() {
     }
+    SamplesPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__samples__["a" /* SamplesPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__samples__["a" /* SamplesPage */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__samples__["a" /* SamplesPage */],
+            ]
+        })
+    ], SamplesPageModule);
     return SamplesPageModule;
 }());
-SamplesPageModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__samples__["a" /* SamplesPage */],
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__samples__["a" /* SamplesPage */]),
-        ],
-        exports: [
-            __WEBPACK_IMPORTED_MODULE_2__samples__["a" /* SamplesPage */],
-        ]
-    })
-], SamplesPageModule);
 
 //# sourceMappingURL=samples.module.js.map
 
 /***/ }),
 
-/***/ 564:
+/***/ 777:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SamplesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_popover_popover__ = __webpack_require__(408);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_three__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_orbit_controls_es6__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_popover_popover__ = __webpack_require__(490);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_orbit_controls_es6__ = __webpack_require__(487);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_orbit_controls_es6___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_orbit_controls_es6__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -66,7 +67,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SamplesPage = SamplesPage_1 = (function () {
+var SamplesPage = /** @class */ (function () {
     function SamplesPage(navCtrl, navParams, popoverCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -74,6 +75,7 @@ var SamplesPage = SamplesPage_1 = (function () {
         // If we navigated to this page, we will have an item available as a nav param
         this.selectedItem = navParams.get('item');
     }
+    SamplesPage_1 = SamplesPage;
     SamplesPage.prototype.presentPopover = function (myevent) {
         var popover = this.popoverCtrl.create(__WEBPACK_IMPORTED_MODULE_2__components_popover_popover__["a" /* PopoverComponent */], {
             scene: SamplesPage_1._SCENE
@@ -91,26 +93,26 @@ var SamplesPage = SamplesPage_1 = (function () {
         // will be assigned to
         SamplesPage_1._ELEMENT = this.canvasEl.nativeElement;
         // Define a new ThreeJS scene
-        SamplesPage_1._SCENE = new __WEBPACK_IMPORTED_MODULE_3_three__["n" /* Scene */]();
-        SamplesPage_1._CAMERA = new __WEBPACK_IMPORTED_MODULE_3_three__["k" /* PerspectiveCamera */](75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        SamplesPage_1._SCENE = new __WEBPACK_IMPORTED_MODULE_3_three__["Scene"]();
+        SamplesPage_1._CAMERA = new __WEBPACK_IMPORTED_MODULE_3_three__["PerspectiveCamera"](75, window.innerWidth / window.innerHeight, 0.1, 1000);
         // Define an object to manage display of ThreeJS scene
-        SamplesPage_1._RENDERER = new __WEBPACK_IMPORTED_MODULE_3_three__["r" /* WebGLRenderer */]({ antialias: true });
+        SamplesPage_1._RENDERER = new __WEBPACK_IMPORTED_MODULE_3_three__["WebGLRenderer"]({ antialias: true });
         //It sets the background color
         SamplesPage_1._RENDERER.setClearColor(0xF5F5F5, 1);
         // Resizes the output canvas to match the supplied width/height parameters
         SamplesPage_1._RENDERER.setSize(window.innerWidth, window.innerHeight);
         // Attach the canvas, where the renderer draws the scene, to the specified DOM element
         SamplesPage_1._ELEMENT.appendChild(SamplesPage_1._RENDERER.domElement);
-        SamplesPage_1._GRID = new __WEBPACK_IMPORTED_MODULE_3_three__["g" /* GridHelper */](70, 70, 0xE0E0E0, 0xE0E0E0);
-        SamplesPage_1._AXIS = new __WEBPACK_IMPORTED_MODULE_3_three__["a" /* AxesHelper */](30);
-        var pointLight = new __WEBPACK_IMPORTED_MODULE_3_three__["l" /* PointLight */](0xf2f2f2, 1, 100);
+        SamplesPage_1._GRID = new __WEBPACK_IMPORTED_MODULE_3_three__["GridHelper"](70, 70, 0xE0E0E0, 0xE0E0E0);
+        SamplesPage_1._AXIS = new __WEBPACK_IMPORTED_MODULE_3_three__["AxesHelper"](30);
+        var pointLight = new __WEBPACK_IMPORTED_MODULE_3_three__["PointLight"](0xf2f2f2, 1, 100);
         pointLight.position.set(0, 30, 0);
         SamplesPage_1._SCENE.add(pointLight);
         // Add the object to the scene
         SamplesPage_1._SCENE.add(SamplesPage_1._GRID);
         SamplesPage_1._SCENE.add(SamplesPage_1._AXIS);
         //Add the mouse controlls into the scene
-        SamplesPage_1._CONTROLS = new __WEBPACK_IMPORTED_MODULE_4_orbit_controls_es6__["a" /* default */](SamplesPage_1._CAMERA, SamplesPage_1._RENDERER.domElement);
+        SamplesPage_1._CONTROLS = new __WEBPACK_IMPORTED_MODULE_4_orbit_controls_es6___default.a(SamplesPage_1._CAMERA, SamplesPage_1._RENDERER.domElement);
         SamplesPage_1._CONTROLS.enabled = true;
         SamplesPage_1._CONTROLS.maxDistance = 1500;
         SamplesPage_1._CONTROLS.minDistance = 0;
@@ -135,21 +137,21 @@ var SamplesPage = SamplesPage_1 = (function () {
     SamplesPage.prototype.renderAnimation = function () {
         this._animate();
     };
+    var SamplesPage_1;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('domObj'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+    ], SamplesPage.prototype, "canvasEl", void 0);
+    SamplesPage = SamplesPage_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-samples',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/samples/samples.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center> Samples </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="presentPopover($event)">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <!-- Three.js DOM object -->\n  <ion-item>\n    <div #domObj></div>\n  </ion-item>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/samples/samples.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* PopoverController */]])
+    ], SamplesPage);
     return SamplesPage;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('domObj'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-], SamplesPage.prototype, "canvasEl", void 0);
-SamplesPage = SamplesPage_1 = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'page-samples',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/samples/samples.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center> Samples </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="presentPopover($event)">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <!-- Three.js DOM object -->\n  <ion-item>\n    <div #domObj></div>\n  </ion-item>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/samples/samples.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* PopoverController */]])
-], SamplesPage);
 
-var SamplesPage_1;
 //# sourceMappingURL=samples.js.map
 
 /***/ })

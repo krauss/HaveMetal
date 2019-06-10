@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ActionSheetController, AlertController } from 'ionic-angular';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireList } from 'angularfire2/database';
 import { Job } from '../../models/interfaces/job.interface';
-
+import { Observable } from 'rxjs/Observable';
+import { JobListService } from '../../models/services/firebase.service';
 
 @IonicPage()
 @Component({
@@ -12,11 +13,20 @@ import { Job } from '../../models/interfaces/job.interface';
 })
 export class JobsListPage {
 
+  job_list$: Observable<Job[]>
 
-  job_list: FirebaseListObservable<Job[]>
-
-  constructor(private navCtrl: NavController, private database: AngularFireDatabase, private actionSheetCtrl: ActionSheetController, public alertCtrl: AlertController) {
-    this.job_list = database.list('job-list');
+  constructor(private navCtrl: NavController, private actionSheetCtrl: ActionSheetController, public alertCtrl: AlertController, private job: JobListService) {
+    this.job_list$ = this.job
+    .getJobList()
+    .snapshotChanges()
+    .map(
+      changes => {
+        return changes.map(c => ({
+          key: c.payload.key, 
+          ...c.payload.val()
+        }))
+      }
+    )
   }
 
   addJob(): void{
@@ -48,7 +58,7 @@ export class JobsListPage {
           icon: 'add',
           handler: () => {
             //Send the user to the  TaskCreationPage and pass the key as a parameter
-            this.navCtrl.push('DuctListPage', { jobID: job.$key });
+            this.navCtrl.push('DuctListPage', { jobID: job.key });
           }
         },
         {
@@ -56,7 +66,7 @@ export class JobsListPage {
           icon: 'create',
           handler: () => {
             //Send the user to the JobEditPage and pass the key as a parameter
-            this.navCtrl.push('JobEditPage', { jobID: job.$key });
+            this.navCtrl.push('JobEditPage', { jobID: job.key });
           }
         },
         {
@@ -65,6 +75,7 @@ export class JobsListPage {
           role: 'destructive',
           handler: () => {
 
+            console.log(job.key);
             this.alertCtrl.create({
               title: 'Are you serious mate?',
               //message: 'Are you f*cking serius?',
@@ -78,7 +89,7 @@ export class JobsListPage {
                   text: 'Yes',
                   handler: () => {
                     //Delete the current ShoppingItem
-                    this.job_list.remove(job.$key);
+                    //this.job_list$.remove(job);
                   }
                 }
               ]

@@ -1,11 +1,11 @@
 /*
-  Abstract class that represent a user within the system.
+  Abstract class that represents a user within the system.
 */
 export interface Job{
 
-  $key?: string;
+  key?: string;
   name: string;
   address: string;
-  creationDate: Date;
+  creationDate: string;
 
 }

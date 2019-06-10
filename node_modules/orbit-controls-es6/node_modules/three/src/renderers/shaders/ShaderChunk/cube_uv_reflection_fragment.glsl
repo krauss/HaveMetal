@@ -63,32 +63,32 @@ vec2 getCubeUV(vec3 direction, float roughnessLevel, float mipLevel) {
 	if( face == 0) {
 		r = vec3(direction.x, -direction.z, direction.y);
 		offset = vec2(0.0+mipOffset,0.75 * rcpPowScale);
-		offset.y = bRes && (offset.y < 2.0*a) ?  a : offset.y;
+		offset.y = bRes && (offset.y < 2.0*a) ? a : offset.y;
 	}
 	else if( face == 1) {
 		r = vec3(direction.y, direction.x, direction.z);
 		offset = vec2(scale+mipOffset, 0.75 * rcpPowScale);
-		offset.y = bRes && (offset.y < 2.0*a) ?  a : offset.y;
+		offset.y = bRes && (offset.y < 2.0*a) ? a : offset.y;
 	}
 	else if( face == 2) {
 		r = vec3(direction.z, direction.x, direction.y);
 		offset = vec2(2.0*scale+mipOffset, 0.75 * rcpPowScale);
-		offset.y = bRes && (offset.y < 2.0*a) ?  a : offset.y;
+		offset.y = bRes && (offset.y < 2.0*a) ? a : offset.y;
 	}
 	else if( face == 3) {
 		r = vec3(direction.x, direction.z, direction.y);
 		offset = vec2(0.0+mipOffset,0.5 * rcpPowScale);
-		offset.y = bRes && (offset.y < 2.0*a) ?  0.0 : offset.y;
+		offset.y = bRes && (offset.y < 2.0*a) ? 0.0 : offset.y;
 	}
 	else if( face == 4) {
 		r = vec3(direction.y, direction.x, -direction.z);
 		offset = vec2(scale+mipOffset, 0.5 * rcpPowScale);
-		offset.y = bRes && (offset.y < 2.0*a) ?  0.0 : offset.y;
+		offset.y = bRes && (offset.y < 2.0*a) ? 0.0 : offset.y;
 	}
 	else {
 		r = vec3(direction.z, -direction.x, direction.y);
 		offset = vec2(2.0*scale+mipOffset, 0.5 * rcpPowScale);
-		offset.y = bRes && (offset.y < 2.0*a) ?  0.0 : offset.y;
+		offset.y = bRes && (offset.y < 2.0*a) ? 0.0 : offset.y;
 	}
 	r = normalize(r);
 	float texelOffset = 0.5 * cubeUV_rcpTextureSize;
@@ -99,7 +99,7 @@ vec2 getCubeUV(vec3 direction, float roughnessLevel, float mipLevel) {
 
 #define cubeUV_maxLods3 (log2(cubeUV_textureSize*0.25) - 3.0)
 
-vec4 textureCubeUV(vec3 reflectedDirection, float roughness ) {
+vec4 textureCubeUV( sampler2D envMap, vec3 reflectedDirection, float roughness ) {
 	float roughnessVal = roughness* cubeUV_maxLods3;
 	float r1 = floor(roughnessVal);
 	float r2 = r1 + 1.0;

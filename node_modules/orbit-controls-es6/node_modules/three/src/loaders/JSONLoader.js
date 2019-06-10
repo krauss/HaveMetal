@@ -1,13 +1,14 @@
-import { Loader } from './Loader';
-import { AnimationClip } from '../animation/AnimationClip';
-import { Vector3 } from '../math/Vector3';
-import { Vector4 } from '../math/Vector4';
-import { Color } from '../math/Color';
-import { Vector2 } from '../math/Vector2';
-import { Face3 } from '../core/Face3';
-import { Geometry } from '../core/Geometry';
-import { FileLoader } from './FileLoader';
-import { DefaultLoadingManager } from './LoadingManager';
+import { Loader } from './Loader.js';
+import { LoaderUtils } from './LoaderUtils.js';
+import { AnimationClip } from '../animation/AnimationClip.js';
+import { Vector3 } from '../math/Vector3.js';
+import { Vector4 } from '../math/Vector4.js';
+import { Color } from '../math/Color.js';
+import { Vector2 } from '../math/Vector2.js';
+import { Face3 } from '../core/Face3.js';
+import { Geometry } from '../core/Geometry.js';
+import { FileLoader } from './FileLoader.js';
+import { DefaultLoadingManager } from './LoadingManager.js';
 
 /**
  * @author mrdoob / http://mrdoob.com/
@@ -31,13 +32,16 @@ function JSONLoader( manager ) {
 
 Object.assign( JSONLoader.prototype, {
 
-	load: function( url, onLoad, onProgress, onError ) {
+	crossOrigin: 'anonymous',
+
+	load: function ( url, onLoad, onProgress, onError ) {
 
 		var scope = this;
 
-		var texturePath = this.texturePath && ( typeof this.texturePath === "string" ) ? this.texturePath : Loader.prototype.extractUrlBase( url );
+		var path = ( this.path === undefined ) ? LoaderUtils.extractUrlBase( url ) : this.path;
 
 		var loader = new FileLoader( this.manager );
+		loader.setPath( this.path );
 		loader.setWithCredentials( this.withCredentials );
 		loader.load( url, function ( text ) {
 
@@ -57,45 +61,41 @@ Object.assign( JSONLoader.prototype, {
 
 					}
 
-					if ( type.toLowerCase() === 'scene' ) {
-
-						console.error( 'THREE.JSONLoader: ' + url + ' should be loaded with THREE.SceneLoader instead.' );
-						return;
-
-					}
-
 				}
 
 			}
 
-			var object = scope.parse( json, texturePath );
+			var object = scope.parse( json, path );
 			onLoad( object.geometry, object.materials );
 
 		}, onProgress, onError );
 
 	},
 
-	setTexturePath: function ( value ) {
+	setPath: function ( value ) {
 
-		this.texturePath = value;
+		this.path = value;
+		return this;
 
 	},
 
-	parse: function ( json, texturePath ) {
+	setResourcePath: function ( value ) {
 
-		var geometry = new Geometry(),
-		scale = ( json.scale !== undefined ) ? 1.0 / json.scale : 1.0;
+		this.resourcePath = value;
+		return this;
 
-		parseModel( scale );
+	},
 
-		parseSkin();
-		parseMorphing( scale );
-		parseAnimations();
+	setCrossOrigin: function ( value ) {
 
-		geometry.computeFaceNormals();
-		geometry.computeBoundingSphere();
+		this.crossOrigin = value;
+		return this;
 
-		function parseModel( scale ) {
+	},
+
+	parse: ( function () {
+
+		function parseModel( json, geometry ) {
 
 			function isBitSet( value, position ) {
 
@@ -105,27 +105,30 @@ Object.assign( JSONLoader.prototype, {
 
 			var i, j, fi,
 
-			offset, zLength,
+				offset, zLength,
 
-		colorIndex, normalIndex, uvIndex, materialIndex,
+				colorIndex, normalIndex, uvIndex, materialIndex,
 
-			type,
-			isQuad,
-			hasMaterial,
-			hasFaceVertexUv,
-			hasFaceNormal, hasFaceVertexNormal,
-			hasFaceColor, hasFaceVertexColor,
+				type,
+				isQuad,
+				hasMaterial,
+				hasFaceVertexUv,
+				hasFaceNormal, hasFaceVertexNormal,
+				hasFaceColor, hasFaceVertexColor,
 
-		vertex, face, faceA, faceB, hex, normal,
+				vertex, face, faceA, faceB, hex, normal,
 
-			uvLayer, uv, u, v,
+				uvLayer, uv, u, v,
 
-			faces = json.faces,
-			vertices = json.vertices,
-			normals = json.normals,
-			colors = json.colors,
+				faces = json.faces,
+				vertices = json.vertices,
+				normals = json.normals,
+				colors = json.colors,
 
-			nUvLayers = 0;
+				scale = json.scale,
+
+				nUvLayers = 0;
+
 
 			if ( json.uvs !== undefined ) {
 
@@ -167,14 +170,13 @@ Object.assign( JSONLoader.prototype, {
 
 				type = faces[ offset ++ ];
 
-
-				isQuad              = isBitSet( type, 0 );
-				hasMaterial         = isBitSet( type, 1 );
-				hasFaceVertexUv     = isBitSet( type, 3 );
-				hasFaceNormal       = isBitSet( type, 4 );
+				isQuad = isBitSet( type, 0 );
+				hasMaterial = isBitSet( type, 1 );
+				hasFaceVertexUv = isBitSet( type, 3 );
+				hasFaceNormal = isBitSet( type, 4 );
 				hasFaceVertexNormal = isBitSet( type, 5 );
-				hasFaceColor	     = isBitSet( type, 6 );
-				hasFaceVertexColor  = isBitSet( type, 7 );
+				hasFaceColor = isBitSet( type, 6 );
+				hasFaceVertexColor = isBitSet( type, 7 );
 
 				// console.log("type", type, "bits", isQuad, hasMaterial, hasFaceVertexUv, hasFaceNormal, hasFaceVertexNormal, hasFaceColor, hasFaceVertexColor);
 
@@ -395,7 +397,7 @@ Object.assign( JSONLoader.prototype, {
 
 		}
 
-		function parseSkin() {
+		function parseSkin( json, geometry ) {
 
 			var influencesPerVertex = ( json.influencesPerVertex !== undefined ) ? json.influencesPerVertex : 2;
 
@@ -403,7 +405,7 @@ Object.assign( JSONLoader.prototype, {
 
 				for ( var i = 0, l = json.skinWeights.length; i < l; i += influencesPerVertex ) {
 
-					var x =                               json.skinWeights[ i ];
+					var x = json.skinWeights[ i ];
 					var y = ( influencesPerVertex > 1 ) ? json.skinWeights[ i + 1 ] : 0;
 					var z = ( influencesPerVertex > 2 ) ? json.skinWeights[ i + 2 ] : 0;
 					var w = ( influencesPerVertex > 3 ) ? json.skinWeights[ i + 3 ] : 0;
@@ -418,7 +420,7 @@ Object.assign( JSONLoader.prototype, {
 
 				for ( var i = 0, l = json.skinIndices.length; i < l; i += influencesPerVertex ) {
 
-					var a =                               json.skinIndices[ i ];
+					var a = json.skinIndices[ i ];
 					var b = ( influencesPerVertex > 1 ) ? json.skinIndices[ i + 1 ] : 0;
 					var c = ( influencesPerVertex > 2 ) ? json.skinIndices[ i + 2 ] : 0;
 					var d = ( influencesPerVertex > 3 ) ? json.skinIndices[ i + 3 ] : 0;
@@ -440,7 +442,9 @@ Object.assign( JSONLoader.prototype, {
 
 		}
 
-		function parseMorphing( scale ) {
+		function parseMorphing( json, geometry ) {
+
+			var scale = json.scale;
 
 			if ( json.morphTargets !== undefined ) {
 
@@ -485,7 +489,7 @@ Object.assign( JSONLoader.prototype, {
 
 		}
 
-		function parseAnimations() {
+		function parseAnimations( json, geometry ) {
 
 			var outputAnimations = [];
 
@@ -532,19 +536,50 @@ Object.assign( JSONLoader.prototype, {
 
 		}
 
-		if ( json.materials === undefined || json.materials.length === 0 ) {
+		return function parse( json, path ) {
 
-			return { geometry: geometry };
+			if ( json.data !== undefined ) {
 
-		} else {
+				// Geometry 4.0 spec
+				json = json.data;
 
-			var materials = Loader.prototype.initMaterials( json.materials, texturePath, this.crossOrigin );
+			}
 
-			return { geometry: geometry, materials: materials };
+			if ( json.scale !== undefined ) {
 
-		}
+				json.scale = 1.0 / json.scale;
 
-	}
+			} else {
+
+				json.scale = 1.0;
+
+			}
+
+			var geometry = new Geometry();
+
+			parseModel( json, geometry );
+			parseSkin( json, geometry );
+			parseMorphing( json, geometry );
+			parseAnimations( json, geometry );
+
+			geometry.computeFaceNormals();
+			geometry.computeBoundingSphere();
+
+			if ( json.materials === undefined || json.materials.length === 0 ) {
+
+				return { geometry: geometry };
+
+			} else {
+
+				var materials = Loader.prototype.initMaterials( json.materials, this.resourcePath || path, this.crossOrigin );
+
+				return { geometry: geometry, materials: materials };
+
+			}
+
+		};
+
+	} )()
 
 } );
 

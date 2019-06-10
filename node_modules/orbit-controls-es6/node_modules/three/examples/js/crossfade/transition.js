@@ -5,8 +5,11 @@ function Transition ( sceneA, sceneB ) {
 	this.cameraOrtho = new THREE.OrthographicCamera( window.innerWidth / - 2, window.innerWidth / 2, window.innerHeight / 2, window.innerHeight / - 2, - 10, 10 );
 
 	this.textures = [];
+
+	var loader = new THREE.TextureLoader();
+
 	for ( var i = 0; i < 6; i ++ )
-		this.textures[ i ] = new THREE.TextureLoader().load( 'textures/transition/transition' + ( i + 1 ) + '.png' );
+		this.textures[ i ] = loader.load( 'textures/transition/transition' + ( i + 1 ) + '.png' );
 
 	this.quadmaterial = new THREE.ShaderMaterial( {
 
@@ -58,28 +61,30 @@ function Transition ( sceneA, sceneB ) {
 
 			"void main() {",
 
-			"vec4 texel1 = texture2D( tDiffuse1, vUv );",
-			"vec4 texel2 = texture2D( tDiffuse2, vUv );",
+			"	vec4 texel1 = texture2D( tDiffuse1, vUv );",
+			"	vec4 texel2 = texture2D( tDiffuse2, vUv );",
 
-			"if (useTexture==1) {",
+			"	if (useTexture==1) {",
 
-				"vec4 transitionTexel = texture2D( tMixTexture, vUv );",
-				"float r = mixRatio * (1.0 + threshold * 2.0) - threshold;",
-				"float mixf=clamp((transitionTexel.r - r)*(1.0/threshold), 0.0, 1.0);",
+			"		vec4 transitionTexel = texture2D( tMixTexture, vUv );",
+			"		float r = mixRatio * (1.0 + threshold * 2.0) - threshold;",
+			"		float mixf=clamp((transitionTexel.r - r)*(1.0/threshold), 0.0, 1.0);",
 
-				"gl_FragColor = mix( texel1, texel2, mixf );",
-			"} else {",
+			"		gl_FragColor = mix( texel1, texel2, mixf );",
 
-				"gl_FragColor = mix( texel2, texel1, mixRatio );",
+			"	} else {",
 
-			"}",
-		"}"
+			"		gl_FragColor = mix( texel2, texel1, mixRatio );",
+
+			"	}",
+
+			"}"
 
 		].join( "\n" )
 
 	} );
 
-	quadgeometry = new THREE.PlaneBufferGeometry( window.innerWidth, window.innerHeight );
+	var quadgeometry = new THREE.PlaneBufferGeometry( window.innerWidth, window.innerHeight );
 
 	this.quad = new THREE.Mesh( quadgeometry, this.quadmaterial );
 	this.scene.add( this.quad );
@@ -111,7 +116,7 @@ function Transition ( sceneA, sceneB ) {
 
 	};
 
-	this.render = function( delta ) {
+	this.render = function ( delta ) {
 
 		// Transition animation
 		if ( transitionParams.animateTransition ) {
@@ -156,6 +161,6 @@ function Transition ( sceneA, sceneB ) {
 
 		}
 
-	}
+	};
 
 }

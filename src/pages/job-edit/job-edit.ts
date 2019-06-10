@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
 import { Subscription } from 'rxjs/Subscription';
 
 import { Job } from '../../models/interfaces/job.interface';
@@ -20,7 +20,7 @@ import { Job } from '../../models/interfaces/job.interface';
 export class JobEditPage {
 
   jobSubscription: Subscription;
-  jobRef: FirebaseObjectObservable<Job>;
+  jobRef: AngularFireObject<Job>;
   job = {} as Job;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private db: AngularFireDatabase, private toast: ToastController) {
@@ -31,7 +31,7 @@ export class JobEditPage {
       this.jobRef = this.db.object(`job-list/${jobID}`);
 
       //Subscribe the object and assign the result to this
-      this.jobSubscription = this.jobRef.subscribe(job => this.job = job);
+      this.jobSubscription = this.jobRef.valueChanges().subscribe(job => this.job = job);
   }
 
 

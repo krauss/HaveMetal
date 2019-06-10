@@ -15,6 +15,7 @@ import { DuctCreationComponent } from '../components/duct-creation/duct-creation
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MomentModule } from 'angular2-moment';
+import { JobListService } from '../models/services/firebase.service';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { MomentModule } from 'angular2-moment';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    JobListService
   ]
 })
 export class AppModule {}

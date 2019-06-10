@@ -1,6 +1,6 @@
 webpackJsonp([9],{
 
-/***/ 110:
+/***/ 150:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,7 +14,7 @@ var Direction = ['LEFT', 'RIGHT', 'UP', 'DOWN'];
 
 /***/ }),
 
-/***/ 148:
+/***/ 213:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -27,48 +27,48 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 148;
+webpackEmptyAsyncContext.id = 213;
 
 /***/ }),
 
-/***/ 189:
+/***/ 255:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/dashboard/dashboard.module": [
-		547,
+		760,
 		8
 	],
 	"../pages/duct-list/duct-list.module": [
-		548,
+		761,
 		1
 	],
 	"../pages/job-creation/job-creation.module": [
-		549,
+		762,
 		7
 	],
 	"../pages/job-edit/job-edit.module": [
-		550,
+		763,
 		6
 	],
 	"../pages/jobs/jobs-list.module": [
-		551,
+		764,
 		0
 	],
 	"../pages/login/login.module": [
-		552,
+		765,
 		5
 	],
 	"../pages/samples/samples.module": [
-		553,
+		766,
 		4
 	],
 	"../pages/scanner/scanner.module": [
-		554,
+		767,
 		3
 	],
 	"../pages/sign-in/sign-in.module": [
-		555,
+		768,
 		2
 	]
 };
@@ -83,22 +83,22 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 189;
+webpackAsyncContext.id = 255;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 190:
+/***/ 256:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctFactory; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__segment__ = __webpack_require__(449);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reduction__ = __webpack_require__(450);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transiction__ = __webpack_require__(451);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__offset__ = __webpack_require__(452);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cap__ = __webpack_require__(453);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__segment__ = __webpack_require__(639);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reduction__ = __webpack_require__(640);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transiction__ = __webpack_require__(641);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__offset__ = __webpack_require__(642);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cap__ = __webpack_require__(643);
 
 
 
@@ -107,7 +107,7 @@ module.exports = webpackAsyncContext;
 
 
 // ductfactory.ts
-var DuctFactory = (function () {
+var DuctFactory = /** @class */ (function () {
     function DuctFactory() {
     }
     DuctFactory.createDuct = function (duct_type) {
@@ -126,7 +126,7 @@ var DuctFactory = (function () {
 
 /***/ }),
 
-/***/ 29:
+/***/ 41:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -136,7 +136,7 @@ var DuctFactory = (function () {
 /*
   The most basic entity in which everything else derives from.
 */
-var Duct = (function () {
+var Duct = /** @class */ (function () {
     function Duct(width, height) {
         this._width = width;
         this._height = height;
@@ -162,17 +162,18 @@ var Direction;
 
 /***/ }),
 
-/***/ 405:
+/***/ 486:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctCreationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_objects_factory__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_three__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__ = __webpack_require__(406);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_objects_factory__ = __webpack_require__(256);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__ = __webpack_require__(487);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -194,7 +195,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * See https://angular.io/api/core/Component for more info on Angular
  * Components.
  */
-var DuctCreationComponent = (function () {
+var DuctCreationComponent = /** @class */ (function () {
     function DuctCreationComponent(viewCtrl, params) {
         this.viewCtrl = viewCtrl;
         this.type_list = __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__["b" /* TYPES */];
@@ -231,10 +232,10 @@ var DuctCreationComponent = (function () {
         // will be assigned to
         this._ELEMENT = this.canvasEl.nativeElement;
         // Define a new ThreeJS scene
-        this._SCENE = new __WEBPACK_IMPORTED_MODULE_4_three__["n" /* Scene */]();
+        this._SCENE = new __WEBPACK_IMPORTED_MODULE_4_three__["Scene"]();
         //DuctCreationComponent._CAMERA = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
         // Define an object to manage display of ThreeJS scene
-        this._RENDERER = new __WEBPACK_IMPORTED_MODULE_4_three__["r" /* WebGLRenderer */]({ antialias: true });
+        this._RENDERER = new __WEBPACK_IMPORTED_MODULE_4_three__["WebGLRenderer"]({ antialias: true });
         //It sets the background color
         this._RENDERER.setClearColor(0xF5F5F5, 1);
         // Resizes the output canvas to match the supplied width/height parameters
@@ -242,9 +243,9 @@ var DuctCreationComponent = (function () {
         //DuctCreationComponent._RENDERER.setSize( this.modal_div_panel.nativeElement.domElement.width, this.modal_div_panel.nativeElement.domElement.height );
         // Attach the canvas, where the renderer draws the scene, to the specified DOM element
         this._ELEMENT.appendChild(this._RENDERER.domElement);
-        this._GRID = new __WEBPACK_IMPORTED_MODULE_4_three__["g" /* GridHelper */](70, 70, 0xE0E0E0, 0xE0E0E0);
-        this._AXIS = new __WEBPACK_IMPORTED_MODULE_4_three__["a" /* AxesHelper */](30);
-        var pointLight = new __WEBPACK_IMPORTED_MODULE_4_three__["l" /* PointLight */](0xf2f2f2, 1, 100);
+        this._GRID = new __WEBPACK_IMPORTED_MODULE_4_three__["GridHelper"](70, 70, 0xE0E0E0, 0xE0E0E0);
+        this._AXIS = new __WEBPACK_IMPORTED_MODULE_4_three__["AxesHelper"](30);
+        var pointLight = new __WEBPACK_IMPORTED_MODULE_4_three__["PointLight"](0xf2f2f2, 1, 100);
         pointLight.position.set(0, 30, 0);
         this._SCENE.add(pointLight);
         // Add the object to the scene
@@ -252,8 +253,8 @@ var DuctCreationComponent = (function () {
         this._SCENE.add(this._AXIS);
         this._SCENE.add(this._LIGHT);
         //Add the mouse controlls into the scene
-        this._CAMERA = new __WEBPACK_IMPORTED_MODULE_4_three__["k" /* PerspectiveCamera */](45, 300 / 200, 0.1, 1000);
-        this._CONTROLS = new __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__["a" /* default */](this._CAMERA, this._RENDERER.domElement);
+        this._CAMERA = new __WEBPACK_IMPORTED_MODULE_4_three__["PerspectiveCamera"](45, 300 / 200, 0.1, 1000);
+        this._CONTROLS = new __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6___default.a(this._CAMERA, this._RENDERER.domElement);
         this._CONTROLS.enabled = true;
         this._CONTROLS.maxDistance = 1500;
         this._CONTROLS.minDistance = 0;
@@ -277,24 +278,65 @@ var DuctCreationComponent = (function () {
     DuctCreationComponent.prototype.renderAnimation = function () {
         this._animate();
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('domObj'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+    ], DuctCreationComponent.prototype, "canvasEl", void 0);
+    DuctCreationComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'duct-creation',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/duct-creation/duct-creation.component.html"*/'<!-- Generated template for the DuctCreationComponent component -->\n\n<div class="modal-panel">\n  <div class="modal-panel-div">\n      <ion-content padding>\n        <ion-title>New Duct</ion-title>\n\n        <ion-col align-self-start>\n          <ion-row nowrap padding>\n            <ion-list>\n              <ion-item>\n                <ion-label>Type:</ion-label>\n                <ion-select [(ngModel)]="type" (ionChange)="selectDuctType($event)">\n                  <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n                </ion-select>\n              </ion-item>\n\n              <!-- Three.js DOM object -->\n              <ion-item>\n                <div class="modal-panel-div-canvas" #domObj></div>\n              </ion-item>\n\n              <ion-card *ngIf="_DUCT != undefined">\n                <ion-card-content>\n                  <!-- Parameters list for Segment duct selection -->\n                  <ion-list padding *ngIf="_DUCT._mesh.name === \'segment\'">\n                    <ion-item>\n                      <ion-label float-left>Width:</ion-label>\n                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._width" (ionChange)="_DUCT.setWidth()"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-label>Height:</ion-label>\n                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._height" (ionChange)="_DUCT.setHeigth()"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-label>Length:</ion-label>\n                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._length" (ionChange)="_DUCT.setLength()"></ion-input>\n                    </ion-item>\n                  </ion-list>\n                  <!-- Parameters list for Transiction duct selection -->\n                  <ion-list padding *ngIf="_DUCT._mesh.name === \'transiction\'">\n                      <ion-item>\n                        <ion-label>Flat Sides:</ion-label>\n                        <!-- <ion-select [(ngModel)]="_DUCT._flat" interface="popover" (ionChange)="_DUCT.setFlatSide()">\n                          <ion-option *ngFor="let s of _DUCT.sides">{{s}}</ion-option>\n                        </ion-select> -->\n                        <ion-list radio-group [(ngModel)]="topBottom">\n                          <ion-item>\n                            <ion-label>Top</ion-label>\n                            <ion-radio value="top" checked></ion-radio>\n                          </ion-item>\n                          <ion-item>\n                            <ion-label>Bottom</ion-label>\n                            <ion-radio value="bottom"></ion-radio>\n                          </ion-item>\n                        </ion-list>\n\n                        <ion-list radio-group [(ngModel)]="rightLeft">\n                          <ion-item>\n                            <ion-label>Right</ion-label>\n                            <ion-radio value="right" checked></ion-radio>\n                          </ion-item>\n                          <ion-item>\n                            <ion-label>Left</ion-label>\n                            <ion-radio value="left"></ion-radio>\n                          </ion-item>\n                        </ion-list>\n                      </ion-item>\n\n                      <ion-item>\n                        <ion-label>Back Width:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._width" (ionChange)="_DUCT.setBackWidth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Back Height:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._height" (ionChange)="_DUCT.setBackHeigth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Front Width:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._frontWidth" (ionChange)="_DUCT.setFrontWidth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Front Height:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._frontHeight" (ionChange)="_DUCT.setFrontHeigth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Length:</ion-label>\n                        <ion-input type="number" min="1" max="20" [(ngModel)]="_DUCT._length" (ionChange)="_DUCT.setLength()"></ion-input>\n                      </ion-item>\n                  </ion-list>\n                </ion-card-content>\n              </ion-card>\n\n              <ion-card *ngIf="_DUCT != undefined">\n                <ion-card-content>\n                  <ion-list>\n                    <ion-item>\n                      <ion-input type="number" placeholder="Quantity"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-checkbox [(ngModel)]="others.insulated"></ion-checkbox>\n                      <ion-label>Insulated</ion-label>\n                    </ion-item>\n                    <ion-item>\n                      <ion-checkbox [(ngModel)]="others.fire"></ion-checkbox>\n                      <ion-label>Fire Rated</ion-label>\n                    </ion-item>\n                  </ion-list>\n                </ion-card-content>\n              </ion-card>\n\n            </ion-list>\n          </ion-row>\n          <ion-row justify-content-center>\n            <button ion-button disabled color="primary" (click)="addDuct()">Add</button>\n            <button ion-button color="secondary" (click)="dismiss()">Cancel</button>\n          </ion-row>\n        </ion-col>\n      </ion-content>\n  </div>\n</div>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/duct-creation/duct-creation.component.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+    ], DuctCreationComponent);
     return DuctCreationComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('domObj'),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-], DuctCreationComponent.prototype, "canvasEl", void 0);
-DuctCreationComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'duct-creation',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/duct-creation/duct-creation.component.html"*/'<!-- Generated template for the DuctCreationComponent component -->\n\n<div class="modal-panel">\n  <div class="modal-panel-div">\n      <ion-content padding>\n        <ion-title>New Duct</ion-title>\n\n        <ion-col align-self-start>\n          <ion-row nowrap padding>\n            <ion-list>\n              <ion-item>\n                <ion-label>Type:</ion-label>\n                <ion-select [(ngModel)]="type" (ionChange)="selectDuctType($event)">\n                  <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n                </ion-select>\n              </ion-item>\n\n              <!-- Three.js DOM object -->\n              <ion-item>\n                <div class="modal-panel-div-canvas" #domObj></div>\n              </ion-item>\n\n              <ion-card *ngIf="_DUCT != undefined">\n                <ion-card-content>\n                  <!-- Parameters list for Segment duct selection -->\n                  <ion-list padding *ngIf="_DUCT._mesh.name === \'segment\'">\n                    <ion-item>\n                      <ion-label float-left>Width:</ion-label>\n                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._width" (ionChange)="_DUCT.setWidth()"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-label>Height:</ion-label>\n                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._height" (ionChange)="_DUCT.setHeigth()"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-label>Length:</ion-label>\n                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._length" (ionChange)="_DUCT.setLength()"></ion-input>\n                    </ion-item>\n                  </ion-list>\n                  <!-- Parameters list for Transiction duct selection -->\n                  <ion-list padding *ngIf="_DUCT._mesh.name === \'transiction\'">\n                      <ion-item>\n                        <ion-label>Flat Sides:</ion-label>\n                        <!-- <ion-select [(ngModel)]="_DUCT._flat" interface="popover" (ionChange)="_DUCT.setFlatSide()">\n                          <ion-option *ngFor="let s of _DUCT.sides">{{s}}</ion-option>\n                        </ion-select> -->\n                        <ion-list radio-group [(ngModel)]="topBottom">\n                          <ion-item>\n                            <ion-label>Top</ion-label>\n                            <ion-radio value="top" checked></ion-radio>\n                          </ion-item>\n                          <ion-item>\n                            <ion-label>Bottom</ion-label>\n                            <ion-radio value="bottom"></ion-radio>\n                          </ion-item>\n                        </ion-list>\n\n                        <ion-list radio-group [(ngModel)]="rightLeft">\n                          <ion-item>\n                            <ion-label>Right</ion-label>\n                            <ion-radio value="right" checked></ion-radio>\n                          </ion-item>\n                          <ion-item>\n                            <ion-label>Left</ion-label>\n                            <ion-radio value="left"></ion-radio>\n                          </ion-item>\n                        </ion-list>\n                      </ion-item>\n\n                      <ion-item>\n                        <ion-label>Back Width:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._width" (ionChange)="_DUCT.setBackWidth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Back Height:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._height" (ionChange)="_DUCT.setBackHeigth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Front Width:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._frontWidth" (ionChange)="_DUCT.setFrontWidth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Front Height:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._frontHeight" (ionChange)="_DUCT.setFrontHeigth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Length:</ion-label>\n                        <ion-input type="number" min="1" max="20" [(ngModel)]="_DUCT._length" (ionChange)="_DUCT.setLength()"></ion-input>\n                      </ion-item>\n                  </ion-list>\n                </ion-card-content>\n              </ion-card>\n\n              <ion-card *ngIf="_DUCT != undefined">\n                <ion-card-content>\n                  <ion-list>\n                    <ion-item>\n                      <ion-input type="number" placeholder="Quantity"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-checkbox [(ngModel)]="others.insulated"></ion-checkbox>\n                      <ion-label>Insulated</ion-label>\n                    </ion-item>\n                    <ion-item>\n                      <ion-checkbox [(ngModel)]="others.fire"></ion-checkbox>\n                      <ion-label>Fire Rated</ion-label>\n                    </ion-item>\n                  </ion-list>\n                </ion-card-content>\n              </ion-card>\n\n            </ion-list>\n          </ion-row>\n          <ion-row justify-content-center>\n            <button ion-button disabled color="primary" (click)="addDuct()">Add</button>\n            <button ion-button color="secondary" (click)="dismiss()">Cancel</button>\n          </ion-row>\n        </ion-col>\n      </ion-content>\n  </div>\n</div>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/duct-creation/duct-creation.component.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
-], DuctCreationComponent);
 
 //# sourceMappingURL=duct-creation.component.js.map
 
 /***/ }),
 
-/***/ 407:
+/***/ 488:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JobListService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(182);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var JobListService = /** @class */ (function () {
+    function JobListService(db) {
+        this.db = db;
+        this.jobListRef = this.db.list('job-list');
+    }
+    JobListService.prototype.getJobList = function () {
+        return this.jobListRef;
+    };
+    JobListService.prototype.addItem = function (job) {
+        return this.jobListRef.push(job);
+    };
+    var _a;
+    JobListService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" ? _a : Object])
+    ], JobListService);
+    return JobListService;
+}());
+
+//# sourceMappingURL=firebase.service.js.map
+
+/***/ }),
+
+/***/ 489:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -307,34 +349,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var TabsPage = (function () {
+var TabsPage = /** @class */ (function () {
     function TabsPage() {
         this.tab1Root = 'DashboardPage';
         this.tab2Root = 'JobsListPage';
         this.tab3Root = 'ScannerPage';
         this.tab4Root = 'SamplesPage';
     }
+    TabsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/tabs/tabs.html"*/'<ion-tabs color="s_light">\n  <ion-tab [root]="tab1Root" tabTitle="Dashboard" tabIcon="stats"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Jobs" tabIcon="construct"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Scanner" tabIcon="barcode"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Samples" tabIcon="cube"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/tabs/tabs.html"*/
+        })
+    ], TabsPage);
     return TabsPage;
 }());
-TabsPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/tabs/tabs.html"*/'<ion-tabs color="s_light">\n  <ion-tab [root]="tab1Root" tabTitle="Dashboard" tabIcon="stats"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Jobs" tabIcon="construct"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Scanner" tabIcon="barcode"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Samples" tabIcon="cube"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/tabs/tabs.html"*/
-    })
-], TabsPage);
 
 //# sourceMappingURL=tabs.js.map
 
 /***/ }),
 
-/***/ 408:
+/***/ 490:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PopoverComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__ = __webpack_require__(256);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -355,11 +397,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * See https://angular.io/api/core/Component for more info on Angular
  * Components.
  */
-var PopoverComponent = PopoverComponent_1 = (function () {
+var PopoverComponent = /** @class */ (function () {
     function PopoverComponent(navParams) {
         this.navParams = navParams;
         this.type_list = __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__["b" /* TYPES */];
     }
+    PopoverComponent_1 = PopoverComponent;
     PopoverComponent.prototype.ngOnInit = function () {
         if (this.navParams.data) {
             PopoverComponent_1._scene = this.navParams.data.scene;
@@ -382,7 +425,7 @@ var PopoverComponent = PopoverComponent_1 = (function () {
     //   }
     // }
     PopoverComponent.prototype.changeBackground = function (color) {
-        PopoverComponent_1.duct._material.color = new __WEBPACK_IMPORTED_MODULE_2_three__["b" /* Color */](color);
+        PopoverComponent_1.duct._material.color = new __WEBPACK_IMPORTED_MODULE_2_three__["Color"](color);
     };
     PopoverComponent.prototype.changeDuctType = function ($event) {
         if ($event) {
@@ -396,31 +439,31 @@ var PopoverComponent = PopoverComponent_1 = (function () {
             PopoverComponent_1._scene.add(PopoverComponent_1.duct._mesh);
         }
     };
+    var PopoverComponent_1;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fuckList'),
+        __metadata("design:type", Object)
+    ], PopoverComponent.prototype, "something", void 0);
+    PopoverComponent = PopoverComponent_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'popover',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/popover/popover.html"*/'<!-- Generated template for the PopoverComponent component -->\n<ion-list #fuckList radio-group [(ngModel)]="dtype" (ionChange)="changeDuctType($event)">\n  <ion-row padding>\n    <ion-col>\n      <button (click)="changeBackground(\'#c4c4c4\')" ion-button small color="popover_gray">gray</button>\n    </ion-col>\n    <ion-col>\n      <button (click)="changeBackground(\'#000080\')" ion-button small color="popover_blue">blue</button>\n    </ion-col>\n    <ion-col>\n      <button (click)="changeBackground(\'#000000\')" ion-button small color="popover_black">black</button>\n    </ion-col>\n  </ion-row>\n  <ion-item *ngFor="let type of type_list">\n    <ion-label>{{type}}</ion-label>\n    <ion-radio value={{type}}></ion-radio>\n  </ion-item>\n</ion-list>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/popover/popover.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+    ], PopoverComponent);
     return PopoverComponent;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('fuckList'),
-    __metadata("design:type", Object)
-], PopoverComponent.prototype, "something", void 0);
-PopoverComponent = PopoverComponent_1 = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-        selector: 'popover',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/popover/popover.html"*/'<!-- Generated template for the PopoverComponent component -->\n<ion-list #fuckList radio-group [(ngModel)]="dtype" (ionChange)="changeDuctType($event)">\n  <ion-row padding>\n    <ion-col>\n      <button (click)="changeBackground(\'#c4c4c4\')" ion-button small color="popover_gray">gray</button>\n    </ion-col>\n    <ion-col>\n      <button (click)="changeBackground(\'#000080\')" ion-button small color="popover_blue">blue</button>\n    </ion-col>\n    <ion-col>\n      <button (click)="changeBackground(\'#000000\')" ion-button small color="popover_black">black</button>\n    </ion-col>\n  </ion-row>\n  <ion-item *ngFor="let type of type_list">\n    <ion-label>{{type}}</ion-label>\n    <ion-radio value={{type}}></ion-radio>\n  </ion-item>\n</ion-list>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/popover/popover.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
-], PopoverComponent);
 
-var PopoverComponent_1;
 //# sourceMappingURL=popover.js.map
 
 /***/ }),
 
-/***/ 409:
+/***/ 491:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(410);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(426);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(492);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(614);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -428,26 +471,27 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 426:
+/***/ 614:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(537);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__ = __webpack_require__(404);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__firebase_credentials__ = __webpack_require__(546);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__ = __webpack_require__(408);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_moment__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(751);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(489);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__ = __webpack_require__(485);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__(182);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__firebase_credentials__ = __webpack_require__(759);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__ = __webpack_require__(490);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__ = __webpack_require__(486);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(480);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(483);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_moment__ = __webpack_require__(484);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_angular2_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__models_services_firebase_service__ = __webpack_require__(488);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -470,72 +514,77 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AppModule = (function () {
+
+var AppModule = /** @class */ (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__["a" /* PopoverComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__["a" /* DuctCreationComponent */]
+                //SegmentComponent
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
+                    links: [
+                        { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/duct-list/duct-list.module#DuctCreationPageModule', name: 'DuctListPage', segment: 'duct-list', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/job-creation/job-creation.module#JobCreationPageModule', name: 'JobCreationPage', segment: 'job-creation', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/job-edit/job-edit.module#JobEditPageModule', name: 'JobEditPage', segment: 'job-edit', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/jobs/jobs-list.module#JobsPageModule', name: 'JobsListPage', segment: 'jobs-list', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/samples/samples.module#SamplesPageModule', name: 'SamplesPage', segment: 'samples', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/scanner/scanner.module#ScannerPageModule', name: 'ScannerPage', segment: 'scanner', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sign-in/sign-in.module#SignInPageModule', name: 'SignInPage', segment: 'sign-in', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                // Firebase initialization
+                __WEBPACK_IMPORTED_MODULE_5_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_8__firebase_credentials__["a" /* FB_HAVEMETAL_CREDENTIALS */]),
+                __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["b" /* AngularFireAuthModule */],
+                __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__["b" /* AngularFireDatabaseModule */],
+                __WEBPACK_IMPORTED_MODULE_13_angular2_moment__["MomentModule"]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */],
+                __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__["a" /* PopoverComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__["a" /* DuctCreationComponent */]
+                //SegmentComponent
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_14__models_services_firebase_service__["a" /* JobListService */]
+            ]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */],
-            __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__["a" /* PopoverComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__["a" /* DuctCreationComponent */]
-            //SegmentComponent
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
-                links: [
-                    { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/duct-list/duct-list.module#DuctCreationPageModule', name: 'DuctListPage', segment: 'duct-list', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/job-creation/job-creation.module#JobCreationPageModule', name: 'JobCreationPage', segment: 'job-creation', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/job-edit/job-edit.module#JobEditPageModule', name: 'JobEditPage', segment: 'job-edit', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/jobs/jobs-list.module#JobsPageModule', name: 'JobsListPage', segment: 'jobs-list', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/samples/samples.module#SamplesPageModule', name: 'SamplesPage', segment: 'samples', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/scanner/scanner.module#ScannerPageModule', name: 'ScannerPage', segment: 'scanner', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/sign-in/sign-in.module#SignInPageModule', name: 'SignInPage', segment: 'sign-in', priority: 'low', defaultHistory: [] }
-                ]
-            }),
-            // Firebase initialization
-            __WEBPACK_IMPORTED_MODULE_5_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_8__firebase_credentials__["a" /* FB_HAVEMETAL_CREDENTIALS */]),
-            __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["b" /* AngularFireAuthModule */],
-            __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__["b" /* AngularFireDatabaseModule */],
-            __WEBPACK_IMPORTED_MODULE_13_angular2_moment__["MomentModule"]
-        ],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
-        entryComponents: [
-            __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
-            __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */],
-            __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__["a" /* PopoverComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__["a" /* DuctCreationComponent */]
-            //SegmentComponent
-        ],
-        providers: [
-            __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
-            { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicErrorHandler */] },
-        ]
-    })
-], AppModule);
 
 //# sourceMappingURL=app.module.js.map
 
 /***/ }),
 
-/***/ 449:
+/***/ 639:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Segment; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -544,7 +593,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 
 
-var Segment = (function (_super) {
+var Segment = /** @class */ (function (_super) {
     __extends(Segment, _super);
     function Segment(w, h) {
         var _this = _super.call(this, w, h) || this;
@@ -553,24 +602,24 @@ var Segment = (function (_super) {
     }
     Segment.prototype.draw = function () {
         //It crates the geometry
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
-        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, 0), //Vertex 0
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, this._length), //Vertex 2
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, 0), //Vertex 3
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, 0), //Vertex 4
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["Geometry"]();
+        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, 0, this._length) //Vertex 7
         );
-        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 0, 3));
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](2, 0, 3));
         this._geometry.computeFaceNormals();
         //It crates the material
-        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["c" /* DoubleSide */] });
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["MeshStandardMaterial"]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["DoubleSide"] });
         this._material.castShadow = true;
         this._material.receiveShadow = true;
         //It crates the mesh to join everything together
-        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["i" /* Mesh */](this._geometry, this._material);
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["Mesh"](this._geometry, this._material);
         this._mesh.name = "segment";
     };
     Segment.prototype.setWidth = function () {
@@ -607,17 +656,20 @@ var Segment = (function (_super) {
 
 /***/ }),
 
-/***/ 450:
+/***/ 640:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Reduction; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -627,7 +679,7 @@ var __extends = (this && this.__extends) || (function () {
 
 
 
-var Reduction = (function (_super) {
+var Reduction = /** @class */ (function (_super) {
     __extends(Reduction, _super);
     /**
     * Parameters:
@@ -653,15 +705,15 @@ var Reduction = (function (_super) {
         return _this;
     }
     Reduction.prototype.draw = function () {
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
-        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, 0), //Vertex 0
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, this._length), //Vertex 2
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, 0), //Vertex 3
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, 0), //Vertex 4
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["Geometry"]();
+        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, 0, this._length) //Vertex 7
         );
         //add the reduction difference on the width or height, depending on the parameters
         if (this._horizonDiff === 0) {
@@ -684,12 +736,12 @@ var Reduction = (function (_super) {
                 this._geometry.vertices[7].x -= this._horizonDiff;
             }
         }
-        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 0, 3));
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](2, 0, 3));
         this._geometry.computeFaceNormals();
-        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["c" /* DoubleSide */] });
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["MeshStandardMaterial"]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["DoubleSide"] });
         this._material.castShadow = true;
         this._material.receiveShadow = true;
-        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["i" /* Mesh */](this._geometry, this._material);
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["Mesh"](this._geometry, this._material);
         this._mesh.name = "reduction";
     };
     return Reduction;
@@ -699,18 +751,21 @@ var Reduction = (function (_super) {
 
 /***/ }),
 
-/***/ 451:
+/***/ 641:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Transiction; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_duct_properties__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_duct_properties__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(42);
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -720,7 +775,7 @@ var __extends = (this && this.__extends) || (function () {
 
 
 
-var Transiction = (function (_super) {
+var Transiction = /** @class */ (function (_super) {
     __extends(Transiction, _super);
     function Transiction(backWidth, backHeight, frontWidth, frontHeight, flat) {
         var _this = _super.call(this, backWidth, backHeight) || this;
@@ -740,15 +795,15 @@ var Transiction = (function (_super) {
         this._vertDiff = this._height - this._frontHeight;
     };
     Transiction.prototype.draw = function () {
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_2_three__["f" /* Geometry */]();
-        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_2_three__["q" /* Vector3 */](0, 0, 0), //Vertex 0
-        new __WEBPACK_IMPORTED_MODULE_2_three__["q" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_2_three__["q" /* Vector3 */](0, 0, this._length), //Vertex 2
-        new __WEBPACK_IMPORTED_MODULE_2_three__["q" /* Vector3 */](0, this._height, 0), //Vertex 3
-        new __WEBPACK_IMPORTED_MODULE_2_three__["q" /* Vector3 */](this._width, this._height, 0), //Vertex 4
-        new __WEBPACK_IMPORTED_MODULE_2_three__["q" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_2_three__["q" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_2_three__["q" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_2_three__["Geometry"]();
+        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_2_three__["Vector3"](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_2_three__["Vector3"](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_2_three__["Vector3"](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_2_three__["Vector3"](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_2_three__["Vector3"](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_2_three__["Vector3"](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_2_three__["Vector3"](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_2_three__["Vector3"](this._width, 0, this._length) //Vertex 7
         );
         //add the reduction difference on the width or height, depending on the parameters
         switch (this._flat) {
@@ -764,12 +819,12 @@ var Transiction = (function (_super) {
         ;
         this._vertDiff != 0 ? this._geometry.vertices[7].y += this._vertDiff : null;
         this._vertDiff != 0 ? this._geometry.vertices[2].y += this._vertDiff : null;
-        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_2_three__["e" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_2_three__["e" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_2_three__["e" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_2_three__["e" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_2_three__["e" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_2_three__["e" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_2_three__["e" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_2_three__["e" /* Face3 */](2, 0, 3));
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_2_three__["Face3"](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_2_three__["Face3"](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_2_three__["Face3"](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_2_three__["Face3"](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_2_three__["Face3"](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_2_three__["Face3"](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_2_three__["Face3"](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_2_three__["Face3"](2, 0, 3));
         this._geometry.computeFaceNormals();
-        this._material = new __WEBPACK_IMPORTED_MODULE_2_three__["j" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_2_three__["c" /* DoubleSide */] });
+        this._material = new __WEBPACK_IMPORTED_MODULE_2_three__["MeshStandardMaterial"]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_2_three__["DoubleSide"] });
         this._material.castShadow = true;
         this._material.receiveShadow = true;
-        this._mesh = new __WEBPACK_IMPORTED_MODULE_2_three__["i" /* Mesh */](this._geometry, this._material);
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_2_three__["Mesh"](this._geometry, this._material);
         this._mesh.name = "transiction";
     };
     Transiction.prototype.setFlatSide = function () {
@@ -838,17 +893,20 @@ var Transiction = (function (_super) {
 
 /***/ }),
 
-/***/ 452:
+/***/ 642:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Offset; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -858,7 +916,7 @@ var __extends = (this && this.__extends) || (function () {
 
 
 
-var Offset = (function (_super) {
+var Offset = /** @class */ (function (_super) {
     __extends(Offset, _super);
     function Offset(w, h, os, direct) {
         var _this = _super.call(this, w, h) || this;
@@ -868,17 +926,17 @@ var Offset = (function (_super) {
         return _this;
     }
     Offset.prototype.draw = function () {
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["Geometry"]();
         //It crates the geometry
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
-        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, 0), //Vertex 0
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, this._length), //Vertex 2
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, 0), //Vertex 3
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, 0), //Vertex 4
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["Geometry"]();
+        this._geometry.vertices.push(new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, 0, this._length) //Vertex 7
         );
         //add the reduction difference on the width or height, depending on the parameters
         switch (this._direct) {
@@ -908,12 +966,12 @@ var Offset = (function (_super) {
                 break;
         }
         ;
-        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 0, 3));
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](2, 0, 3));
         this._geometry.computeFaceNormals();
-        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["c" /* DoubleSide */] });
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["MeshStandardMaterial"]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["DoubleSide"] });
         this._material.castShadow = true;
         this._material.receiveShadow = true;
-        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["i" /* Mesh */](this._geometry, this._material);
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["Mesh"](this._geometry, this._material);
         this._mesh.name = "offset";
     };
     return Offset;
@@ -923,17 +981,20 @@ var Offset = (function (_super) {
 
 /***/ }),
 
-/***/ 453:
+/***/ 643:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Cap; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -942,7 +1003,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 
 
-var Cap = (function (_super) {
+var Cap = /** @class */ (function (_super) {
     __extends(Cap, _super);
     function Cap(w, h) {
         var _this = _super.call(this, w, h) || this;
@@ -950,24 +1011,24 @@ var Cap = (function (_super) {
         return _this;
     }
     Cap.prototype.draw = function () {
-        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["f" /* Geometry */]();
+        this._geometry = new __WEBPACK_IMPORTED_MODULE_1_three__["Geometry"]();
         this._geometry.vertices.push(
         //               ( X            Y             Z )
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, 0), //Vertex 0
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, 0), //Vertex 1
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, 0, this._length), //Vertex 2
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, 0), //Vertex 3
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, 0), //Vertex 4
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](0, this._height, this._length), //Vertex 5
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, this._height, this._length), //Vertex 6
-        new __WEBPACK_IMPORTED_MODULE_1_three__["q" /* Vector3 */](this._width, 0, this._length) //Vertex 7
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, 0, 0), //Vertex 0
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, 0, 0), //Vertex 1
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, 0, this._length), //Vertex 2
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, this._height, 0), //Vertex 3
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, this._height, 0), //Vertex 4
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](0, this._height, this._length), //Vertex 5
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, this._height, this._length), //Vertex 6
+        new __WEBPACK_IMPORTED_MODULE_1_three__["Vector3"](this._width, 0, this._length) //Vertex 7
         );
-        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](2, 0, 3), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](0, 1, 3), new __WEBPACK_IMPORTED_MODULE_1_three__["e" /* Face3 */](1, 3, 4));
+        this._geometry.faces.push(new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](0, 1, 2), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](1, 2, 7), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](1, 7, 4), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](7, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](3, 4, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](5, 3, 6), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](2, 3, 5), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](2, 0, 3), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](0, 1, 3), new __WEBPACK_IMPORTED_MODULE_1_three__["Face3"](1, 3, 4));
         this._geometry.computeFaceNormals();
-        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["j" /* MeshStandardMaterial */]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["c" /* DoubleSide */] });
+        this._material = new __WEBPACK_IMPORTED_MODULE_1_three__["MeshStandardMaterial"]({ color: 0xc4c4c4, emissive: 0x313131, roughness: 0.62, metalness: 0.88, side: __WEBPACK_IMPORTED_MODULE_1_three__["DoubleSide"] });
         this._material.castShadow = true;
         this._material.receiveShadow = true;
-        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["i" /* Mesh */](this._geometry, this._material);
+        this._mesh = new __WEBPACK_IMPORTED_MODULE_1_three__["Mesh"](this._geometry, this._material);
         this._mesh.name = "cap";
     };
     return Cap;
@@ -977,246 +1038,264 @@ var Cap = (function (_super) {
 
 /***/ }),
 
-/***/ 455:
+/***/ 645:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 192,
-	"./af.js": 192,
-	"./ar": 193,
-	"./ar-dz": 194,
-	"./ar-dz.js": 194,
-	"./ar-kw": 195,
-	"./ar-kw.js": 195,
-	"./ar-ly": 196,
-	"./ar-ly.js": 196,
-	"./ar-ma": 197,
-	"./ar-ma.js": 197,
-	"./ar-sa": 198,
-	"./ar-sa.js": 198,
-	"./ar-tn": 199,
-	"./ar-tn.js": 199,
-	"./ar.js": 193,
-	"./az": 200,
-	"./az.js": 200,
-	"./be": 201,
-	"./be.js": 201,
-	"./bg": 202,
-	"./bg.js": 202,
-	"./bm": 203,
-	"./bm.js": 203,
-	"./bn": 204,
-	"./bn.js": 204,
-	"./bo": 205,
-	"./bo.js": 205,
-	"./br": 206,
-	"./br.js": 206,
-	"./bs": 207,
-	"./bs.js": 207,
-	"./ca": 208,
-	"./ca.js": 208,
-	"./cs": 209,
-	"./cs.js": 209,
-	"./cv": 210,
-	"./cv.js": 210,
-	"./cy": 211,
-	"./cy.js": 211,
-	"./da": 212,
-	"./da.js": 212,
-	"./de": 213,
-	"./de-at": 214,
-	"./de-at.js": 214,
-	"./de-ch": 215,
-	"./de-ch.js": 215,
-	"./de.js": 213,
-	"./dv": 216,
-	"./dv.js": 216,
-	"./el": 217,
-	"./el.js": 217,
-	"./en-au": 218,
-	"./en-au.js": 218,
-	"./en-ca": 219,
-	"./en-ca.js": 219,
-	"./en-gb": 220,
-	"./en-gb.js": 220,
-	"./en-ie": 221,
-	"./en-ie.js": 221,
-	"./en-nz": 222,
-	"./en-nz.js": 222,
-	"./eo": 223,
-	"./eo.js": 223,
-	"./es": 224,
-	"./es-do": 225,
-	"./es-do.js": 225,
-	"./es-us": 226,
-	"./es-us.js": 226,
-	"./es.js": 224,
-	"./et": 227,
-	"./et.js": 227,
-	"./eu": 228,
-	"./eu.js": 228,
-	"./fa": 229,
-	"./fa.js": 229,
-	"./fi": 230,
-	"./fi.js": 230,
-	"./fo": 231,
-	"./fo.js": 231,
-	"./fr": 232,
-	"./fr-ca": 233,
-	"./fr-ca.js": 233,
-	"./fr-ch": 234,
-	"./fr-ch.js": 234,
-	"./fr.js": 232,
-	"./fy": 235,
-	"./fy.js": 235,
-	"./gd": 236,
-	"./gd.js": 236,
-	"./gl": 237,
-	"./gl.js": 237,
-	"./gom-latn": 238,
-	"./gom-latn.js": 238,
-	"./gu": 239,
-	"./gu.js": 239,
-	"./he": 240,
-	"./he.js": 240,
-	"./hi": 241,
-	"./hi.js": 241,
-	"./hr": 242,
-	"./hr.js": 242,
-	"./hu": 243,
-	"./hu.js": 243,
-	"./hy-am": 244,
-	"./hy-am.js": 244,
-	"./id": 245,
-	"./id.js": 245,
-	"./is": 246,
-	"./is.js": 246,
-	"./it": 247,
-	"./it.js": 247,
-	"./ja": 248,
-	"./ja.js": 248,
-	"./jv": 249,
-	"./jv.js": 249,
-	"./ka": 250,
-	"./ka.js": 250,
-	"./kk": 251,
-	"./kk.js": 251,
-	"./km": 252,
-	"./km.js": 252,
-	"./kn": 253,
-	"./kn.js": 253,
-	"./ko": 254,
-	"./ko.js": 254,
-	"./ky": 255,
-	"./ky.js": 255,
-	"./lb": 256,
-	"./lb.js": 256,
-	"./lo": 257,
-	"./lo.js": 257,
-	"./lt": 258,
-	"./lt.js": 258,
-	"./lv": 259,
-	"./lv.js": 259,
-	"./me": 260,
-	"./me.js": 260,
-	"./mi": 261,
-	"./mi.js": 261,
-	"./mk": 262,
-	"./mk.js": 262,
-	"./ml": 263,
-	"./ml.js": 263,
-	"./mr": 264,
-	"./mr.js": 264,
-	"./ms": 265,
-	"./ms-my": 266,
-	"./ms-my.js": 266,
-	"./ms.js": 265,
-	"./my": 267,
-	"./my.js": 267,
-	"./nb": 268,
-	"./nb.js": 268,
-	"./ne": 269,
-	"./ne.js": 269,
-	"./nl": 270,
-	"./nl-be": 271,
-	"./nl-be.js": 271,
-	"./nl.js": 270,
-	"./nn": 272,
-	"./nn.js": 272,
-	"./pa-in": 273,
-	"./pa-in.js": 273,
-	"./pl": 274,
-	"./pl.js": 274,
-	"./pt": 275,
-	"./pt-br": 276,
-	"./pt-br.js": 276,
-	"./pt.js": 275,
-	"./ro": 277,
-	"./ro.js": 277,
-	"./ru": 278,
-	"./ru.js": 278,
-	"./sd": 279,
-	"./sd.js": 279,
-	"./se": 280,
-	"./se.js": 280,
-	"./si": 281,
-	"./si.js": 281,
-	"./sk": 282,
-	"./sk.js": 282,
-	"./sl": 283,
-	"./sl.js": 283,
-	"./sq": 284,
-	"./sq.js": 284,
-	"./sr": 285,
-	"./sr-cyrl": 286,
-	"./sr-cyrl.js": 286,
-	"./sr.js": 285,
-	"./ss": 287,
-	"./ss.js": 287,
-	"./sv": 288,
-	"./sv.js": 288,
-	"./sw": 289,
-	"./sw.js": 289,
-	"./ta": 290,
-	"./ta.js": 290,
-	"./te": 291,
-	"./te.js": 291,
-	"./tet": 292,
-	"./tet.js": 292,
-	"./th": 293,
-	"./th.js": 293,
-	"./tl-ph": 294,
-	"./tl-ph.js": 294,
-	"./tlh": 295,
-	"./tlh.js": 295,
-	"./tr": 296,
-	"./tr.js": 296,
-	"./tzl": 297,
-	"./tzl.js": 297,
-	"./tzm": 298,
-	"./tzm-latn": 299,
-	"./tzm-latn.js": 299,
-	"./tzm.js": 298,
-	"./uk": 300,
-	"./uk.js": 300,
-	"./ur": 301,
-	"./ur.js": 301,
-	"./uz": 302,
-	"./uz-latn": 303,
-	"./uz-latn.js": 303,
-	"./uz.js": 302,
-	"./vi": 304,
-	"./vi.js": 304,
-	"./x-pseudo": 305,
-	"./x-pseudo.js": 305,
-	"./yo": 306,
-	"./yo.js": 306,
-	"./zh-cn": 307,
-	"./zh-cn.js": 307,
-	"./zh-hk": 308,
-	"./zh-hk.js": 308,
-	"./zh-tw": 309,
-	"./zh-tw.js": 309
+	"./af": 258,
+	"./af.js": 258,
+	"./ar": 259,
+	"./ar-dz": 260,
+	"./ar-dz.js": 260,
+	"./ar-kw": 261,
+	"./ar-kw.js": 261,
+	"./ar-ly": 262,
+	"./ar-ly.js": 262,
+	"./ar-ma": 263,
+	"./ar-ma.js": 263,
+	"./ar-sa": 264,
+	"./ar-sa.js": 264,
+	"./ar-tn": 265,
+	"./ar-tn.js": 265,
+	"./ar.js": 259,
+	"./az": 266,
+	"./az.js": 266,
+	"./be": 267,
+	"./be.js": 267,
+	"./bg": 268,
+	"./bg.js": 268,
+	"./bm": 269,
+	"./bm.js": 269,
+	"./bn": 270,
+	"./bn.js": 270,
+	"./bo": 271,
+	"./bo.js": 271,
+	"./br": 272,
+	"./br.js": 272,
+	"./bs": 273,
+	"./bs.js": 273,
+	"./ca": 274,
+	"./ca.js": 274,
+	"./cs": 275,
+	"./cs.js": 275,
+	"./cv": 276,
+	"./cv.js": 276,
+	"./cy": 277,
+	"./cy.js": 277,
+	"./da": 278,
+	"./da.js": 278,
+	"./de": 279,
+	"./de-at": 280,
+	"./de-at.js": 280,
+	"./de-ch": 281,
+	"./de-ch.js": 281,
+	"./de.js": 279,
+	"./dv": 282,
+	"./dv.js": 282,
+	"./el": 283,
+	"./el.js": 283,
+	"./en-SG": 284,
+	"./en-SG.js": 284,
+	"./en-au": 285,
+	"./en-au.js": 285,
+	"./en-ca": 286,
+	"./en-ca.js": 286,
+	"./en-gb": 287,
+	"./en-gb.js": 287,
+	"./en-ie": 288,
+	"./en-ie.js": 288,
+	"./en-il": 289,
+	"./en-il.js": 289,
+	"./en-nz": 290,
+	"./en-nz.js": 290,
+	"./eo": 291,
+	"./eo.js": 291,
+	"./es": 292,
+	"./es-do": 293,
+	"./es-do.js": 293,
+	"./es-us": 294,
+	"./es-us.js": 294,
+	"./es.js": 292,
+	"./et": 295,
+	"./et.js": 295,
+	"./eu": 296,
+	"./eu.js": 296,
+	"./fa": 297,
+	"./fa.js": 297,
+	"./fi": 298,
+	"./fi.js": 298,
+	"./fo": 299,
+	"./fo.js": 299,
+	"./fr": 300,
+	"./fr-ca": 301,
+	"./fr-ca.js": 301,
+	"./fr-ch": 302,
+	"./fr-ch.js": 302,
+	"./fr.js": 300,
+	"./fy": 303,
+	"./fy.js": 303,
+	"./ga": 304,
+	"./ga.js": 304,
+	"./gd": 305,
+	"./gd.js": 305,
+	"./gl": 306,
+	"./gl.js": 306,
+	"./gom-latn": 307,
+	"./gom-latn.js": 307,
+	"./gu": 308,
+	"./gu.js": 308,
+	"./he": 309,
+	"./he.js": 309,
+	"./hi": 310,
+	"./hi.js": 310,
+	"./hr": 311,
+	"./hr.js": 311,
+	"./hu": 312,
+	"./hu.js": 312,
+	"./hy-am": 313,
+	"./hy-am.js": 313,
+	"./id": 314,
+	"./id.js": 314,
+	"./is": 315,
+	"./is.js": 315,
+	"./it": 316,
+	"./it-ch": 317,
+	"./it-ch.js": 317,
+	"./it.js": 316,
+	"./ja": 318,
+	"./ja.js": 318,
+	"./jv": 319,
+	"./jv.js": 319,
+	"./ka": 320,
+	"./ka.js": 320,
+	"./kk": 321,
+	"./kk.js": 321,
+	"./km": 322,
+	"./km.js": 322,
+	"./kn": 323,
+	"./kn.js": 323,
+	"./ko": 324,
+	"./ko.js": 324,
+	"./ku": 325,
+	"./ku.js": 325,
+	"./ky": 326,
+	"./ky.js": 326,
+	"./lb": 327,
+	"./lb.js": 327,
+	"./lo": 328,
+	"./lo.js": 328,
+	"./lt": 329,
+	"./lt.js": 329,
+	"./lv": 330,
+	"./lv.js": 330,
+	"./me": 331,
+	"./me.js": 331,
+	"./mi": 332,
+	"./mi.js": 332,
+	"./mk": 333,
+	"./mk.js": 333,
+	"./ml": 334,
+	"./ml.js": 334,
+	"./mn": 335,
+	"./mn.js": 335,
+	"./mr": 336,
+	"./mr.js": 336,
+	"./ms": 337,
+	"./ms-my": 338,
+	"./ms-my.js": 338,
+	"./ms.js": 337,
+	"./mt": 339,
+	"./mt.js": 339,
+	"./my": 340,
+	"./my.js": 340,
+	"./nb": 341,
+	"./nb.js": 341,
+	"./ne": 342,
+	"./ne.js": 342,
+	"./nl": 343,
+	"./nl-be": 344,
+	"./nl-be.js": 344,
+	"./nl.js": 343,
+	"./nn": 345,
+	"./nn.js": 345,
+	"./pa-in": 346,
+	"./pa-in.js": 346,
+	"./pl": 347,
+	"./pl.js": 347,
+	"./pt": 348,
+	"./pt-br": 349,
+	"./pt-br.js": 349,
+	"./pt.js": 348,
+	"./ro": 350,
+	"./ro.js": 350,
+	"./ru": 351,
+	"./ru.js": 351,
+	"./sd": 352,
+	"./sd.js": 352,
+	"./se": 353,
+	"./se.js": 353,
+	"./si": 354,
+	"./si.js": 354,
+	"./sk": 355,
+	"./sk.js": 355,
+	"./sl": 356,
+	"./sl.js": 356,
+	"./sq": 357,
+	"./sq.js": 357,
+	"./sr": 358,
+	"./sr-cyrl": 359,
+	"./sr-cyrl.js": 359,
+	"./sr.js": 358,
+	"./ss": 360,
+	"./ss.js": 360,
+	"./sv": 361,
+	"./sv.js": 361,
+	"./sw": 362,
+	"./sw.js": 362,
+	"./ta": 363,
+	"./ta.js": 363,
+	"./te": 364,
+	"./te.js": 364,
+	"./tet": 365,
+	"./tet.js": 365,
+	"./tg": 366,
+	"./tg.js": 366,
+	"./th": 367,
+	"./th.js": 367,
+	"./tl-ph": 368,
+	"./tl-ph.js": 368,
+	"./tlh": 369,
+	"./tlh.js": 369,
+	"./tr": 370,
+	"./tr.js": 370,
+	"./tzl": 371,
+	"./tzl.js": 371,
+	"./tzm": 372,
+	"./tzm-latn": 373,
+	"./tzm-latn.js": 373,
+	"./tzm.js": 372,
+	"./ug-cn": 374,
+	"./ug-cn.js": 374,
+	"./uk": 375,
+	"./uk.js": 375,
+	"./ur": 376,
+	"./ur.js": 376,
+	"./uz": 377,
+	"./uz-latn": 378,
+	"./uz-latn.js": 378,
+	"./uz.js": 377,
+	"./vi": 379,
+	"./vi.js": 379,
+	"./x-pseudo": 380,
+	"./x-pseudo.js": 380,
+	"./yo": 381,
+	"./yo.js": 381,
+	"./zh-cn": 382,
+	"./zh-cn.js": 382,
+	"./zh-hk": 383,
+	"./zh-hk.js": 383,
+	"./zh-tw": 384,
+	"./zh-tw.js": 384
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -1232,19 +1311,19 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 455;
+webpackContext.id = 645;
 
 /***/ }),
 
-/***/ 537:
+/***/ 751:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(398);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(401);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(480);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(483);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1258,7 +1337,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MyApp = (function () {
+var MyApp = /** @class */ (function () {
     function MyApp(platform, statusBar, splashScreen) {
         this.rootPage = 'LoginPage';
         platform.ready().then(function () {
@@ -1268,19 +1347,19 @@ var MyApp = (function () {
             splashScreen.hide();
         });
     }
+    MyApp = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/app/app.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    ], MyApp);
     return MyApp;
 }());
-MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/app/app.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
-], MyApp);
 
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),
 
-/***/ 546:
+/***/ 759:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1297,5 +1376,5 @@ var FB_HAVEMETAL_CREDENTIALS = {
 
 /***/ })
 
-},[409]);
+},[491]);
 //# sourceMappingURL=main.js.map

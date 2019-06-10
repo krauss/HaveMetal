@@ -4,9 +4,10 @@ import { ToastController } from 'ionic-angular';
 
 // Firebase imports
 import { AngularFireDatabase } from 'angularfire2/database';
-import { FirebaseListObservable } from 'angularfire2/database';
-
+import { AngularFireList } from 'angularfire2/database';
+import { JobListService } from '../../models/services/firebase.service';
 import { Job } from '../../models/interfaces/job.interface';
+import { Observable } from 'rxjs/Observable';
 
 /**
  * Generated class for the JobCreationPage page.
@@ -25,11 +26,9 @@ export class JobCreationPage {
 
   date: string = new Date().toISOString();
   job = {} as Job
-  jobRef$: FirebaseListObservable<Job[]>
   toast: ToastController
 
-  constructor(private navCtrl: NavController, private database: AngularFireDatabase, private _toast: ToastController) {
-    this.jobRef$ = database.list('job-list');
+  constructor(private navCtrl: NavController, private job_list: JobListService, private _toast: ToastController) {
     this.toast = _toast;
   }
 
@@ -37,13 +36,14 @@ export class JobCreationPage {
   //Function that add new Job
   addNewJob(job: Job){
 
-    this.jobRef$.push({
+    this.job_list.addItem({
       //TODO get the next available id from the Firebase db
       //_id: this.job.id,
       name: this.job.name,
       address: this.job.address,
       creationDate: this.date
     });
+    
 
     this.toast.create({
       message: 'Job created successfully!',
