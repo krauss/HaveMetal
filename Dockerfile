@@ -22,9 +22,9 @@ RUN npm uninstall node-sass -g
 
 RUN npm cache clean -f
 
-RUN npm install node-sass
+# RUN npm install node-sass
 
-RUN npm install -g n
+RUN npm install -g node
 
 # Bundle app source
 COPY . .
