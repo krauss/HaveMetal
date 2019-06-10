@@ -7,7 +7,7 @@ FROM node:latest
 ENV NPM_CONFIG_LOGLEVEL warn
 
 # Create app directory
-WORKDIR ./havemetal
+WORKDIR /home/jrkrauss/workspaces/ionic/havemetal/
 
 # Install app dependencies
 COPY package.json .
@@ -18,13 +18,13 @@ RUN npm install -g cordova@latest
 
 RUN npm install -g ionic@latest
 
-RUN npm uninstall node-sass -g
+#RUN npm uninstall node-sass -g
 
 RUN npm cache clean -f
 
 # RUN npm install node-sass
 
-RUN npm install -g node
+#RUN npm install -g node
 
 # Bundle app source
 COPY . .
