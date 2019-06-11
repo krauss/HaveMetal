@@ -2,9 +2,9 @@
 # HaveMetal Project Dockerfile
 #
 
-FROM node:8.12
+FROM node:8
 
-ENV NPM_CONFIG_LOGLEVEL warn
+#ENV NPM_CONFIG_LOGLEVEL warn
 
 # Create app directory
 WORKDIR /home/jrkrauss/workspaces/ionic/havemetal/
@@ -31,4 +31,4 @@ COPY . .
 
 EXPOSE 8100 35729
 
-CMD [ "ionic", "serve", "--no-git", "--no-open", "--no-interactive" ]
+CMD [ "ionic", "serve", "--no-interactive" ]
