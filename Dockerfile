@@ -31,4 +31,4 @@ COPY . .
 
 EXPOSE 8100 35729
 
-CMD [ "ionic", "serve", "--no-interactive" ]
+CMD [ "ionic", "serve", "--all", "--no-interactive" ]
