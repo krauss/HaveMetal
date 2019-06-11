@@ -2,7 +2,7 @@
 # HaveMetal Project Dockerfile
 #
 
-FROM node:latest
+FROM node:8.12
 
 ENV NPM_CONFIG_LOGLEVEL warn
 
@@ -18,13 +18,13 @@ RUN npm install -g cordova@latest
 
 RUN npm install -g ionic@latest
 
-#RUN npm uninstall node-sass -g
+RUN npm uninstall node-sass -g
 
 RUN npm cache clean -f
 
-# RUN npm install node-sass
+RUN npm install node-sass@4.5.3 -f
 
-#RUN npm install -g node
+RUN npm install -g n
 
 # Bundle app source
 COPY . .
