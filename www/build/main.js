@@ -1,6 +1,6 @@
 webpackJsonp([9],{
 
-/***/ 150:
+/***/ 131:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,7 +14,7 @@ var Direction = ['LEFT', 'RIGHT', 'UP', 'DOWN'];
 
 /***/ }),
 
-/***/ 212:
+/***/ 185:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -27,48 +27,48 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 212;
+webpackEmptyAsyncContext.id = 185;
 
 /***/ }),
 
-/***/ 254:
+/***/ 226:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/dashboard/dashboard.module": [
-		760,
+		632,
 		8
 	],
 	"../pages/duct-list/duct-list.module": [
-		761,
+		633,
 		1
 	],
 	"../pages/job-creation/job-creation.module": [
-		762,
+		634,
 		7
 	],
 	"../pages/job-edit/job-edit.module": [
-		763,
+		635,
 		6
 	],
 	"../pages/jobs/jobs-list.module": [
-		764,
+		636,
 		0
 	],
 	"../pages/login/login.module": [
-		765,
+		637,
 		5
 	],
 	"../pages/samples/samples.module": [
-		766,
+		638,
 		4
 	],
 	"../pages/scanner/scanner.module": [
-		767,
+		639,
 		3
 	],
 	"../pages/sign-in/sign-in.module": [
-		768,
+		640,
 		2
 	]
 };
@@ -83,22 +83,22 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 254;
+webpackAsyncContext.id = 226;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 255:
+/***/ 227:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctFactory; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__segment__ = __webpack_require__(639);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reduction__ = __webpack_require__(640);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transiction__ = __webpack_require__(641);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__offset__ = __webpack_require__(642);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cap__ = __webpack_require__(643);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__segment__ = __webpack_require__(578);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reduction__ = __webpack_require__(579);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transiction__ = __webpack_require__(580);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__offset__ = __webpack_require__(581);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__cap__ = __webpack_require__(582);
 
 
 
@@ -126,7 +126,7 @@ var DuctFactory = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 41:
+/***/ 35:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -162,13 +162,14 @@ var Direction;
 
 /***/ }),
 
-/***/ 484:
+/***/ 421:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JobListService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__ = __webpack_require__(368);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -199,7 +200,7 @@ var JobListService = /** @class */ (function () {
     };
     JobListService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["a" /* AngularFireDatabase */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["AngularFireDatabase"]])
     ], JobListService);
     return JobListService;
 }());
@@ -208,17 +209,17 @@ var JobListService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 487:
+/***/ 424:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctCreationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_objects_factory__ = __webpack_require__(255);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_three__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__ = __webpack_require__(488);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_objects_factory__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_three__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__ = __webpack_require__(425);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -332,7 +333,7 @@ var DuctCreationComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'duct-creation',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/duct-creation/duct-creation.component.html"*/'<!-- Generated template for the DuctCreationComponent component -->\n\n<div class="modal-panel">\n  <div class="modal-panel-div">\n      <ion-content padding>\n        <ion-title>New Duct</ion-title>\n\n        <ion-col align-self-start>\n          <ion-row nowrap padding>\n            <ion-list>\n              <ion-item>\n                <ion-label>Type:</ion-label>\n                <ion-select [(ngModel)]="type" (ionChange)="selectDuctType($event)">\n                  <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n                </ion-select>\n              </ion-item>\n\n              <!-- Three.js DOM object -->\n              <ion-item>\n                <div class="modal-panel-div-canvas" #domObj></div>\n              </ion-item>\n\n              <ion-card *ngIf="_DUCT != undefined">\n                <ion-card-content>\n                  <!-- Parameters list for Segment duct selection -->\n                  <ion-list padding *ngIf="_DUCT._mesh.name === \'segment\'">\n                    <ion-item>\n                      <ion-label float-left>Width:</ion-label>\n                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._width" (ionChange)="_DUCT.setWidth()"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-label>Height:</ion-label>\n                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._height" (ionChange)="_DUCT.setHeigth()"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-label>Length:</ion-label>\n                      <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._length" (ionChange)="_DUCT.setLength()"></ion-input>\n                    </ion-item>\n                  </ion-list>\n                  <!-- Parameters list for Transiction duct selection -->\n                  <ion-list padding *ngIf="_DUCT._mesh.name === \'transiction\'">\n                      <ion-item>\n                        <ion-label>Flat Sides:</ion-label>\n                        <!-- <ion-select [(ngModel)]="_DUCT._flat" interface="popover" (ionChange)="_DUCT.setFlatSide()">\n                          <ion-option *ngFor="let s of _DUCT.sides">{{s}}</ion-option>\n                        </ion-select> -->\n                        <ion-list radio-group [(ngModel)]="topBottom">\n                          <ion-item>\n                            <ion-label>Top</ion-label>\n                            <ion-radio value="top" checked></ion-radio>\n                          </ion-item>\n                          <ion-item>\n                            <ion-label>Bottom</ion-label>\n                            <ion-radio value="bottom"></ion-radio>\n                          </ion-item>\n                        </ion-list>\n\n                        <ion-list radio-group [(ngModel)]="rightLeft">\n                          <ion-item>\n                            <ion-label>Right</ion-label>\n                            <ion-radio value="right" checked></ion-radio>\n                          </ion-item>\n                          <ion-item>\n                            <ion-label>Left</ion-label>\n                            <ion-radio value="left"></ion-radio>\n                          </ion-item>\n                        </ion-list>\n                      </ion-item>\n\n                      <ion-item>\n                        <ion-label>Back Width:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._width" (ionChange)="_DUCT.setBackWidth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Back Height:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._height" (ionChange)="_DUCT.setBackHeigth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Front Width:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._frontWidth" (ionChange)="_DUCT.setFrontWidth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Front Height:</ion-label>\n                        <ion-input type="number" min="1" max="25" [(ngModel)]="_DUCT._frontHeight" (ionChange)="_DUCT.setFrontHeigth()"></ion-input>\n                      </ion-item>\n                      <ion-item>\n                        <ion-label>Length:</ion-label>\n                        <ion-input type="number" min="1" max="20" [(ngModel)]="_DUCT._length" (ionChange)="_DUCT.setLength()"></ion-input>\n                      </ion-item>\n                  </ion-list>\n                </ion-card-content>\n              </ion-card>\n\n              <ion-card *ngIf="_DUCT != undefined">\n                <ion-card-content>\n                  <ion-list>\n                    <ion-item>\n                      <ion-input type="number" placeholder="Quantity"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                      <ion-checkbox [(ngModel)]="others.insulated"></ion-checkbox>\n                      <ion-label>Insulated</ion-label>\n                    </ion-item>\n                    <ion-item>\n                      <ion-checkbox [(ngModel)]="others.fire"></ion-checkbox>\n                      <ion-label>Fire Rated</ion-label>\n                    </ion-item>\n                  </ion-list>\n                </ion-card-content>\n              </ion-card>\n\n            </ion-list>\n          </ion-row>\n          <ion-row justify-content-center>\n            <button ion-button disabled color="primary" (click)="addDuct()">Add</button>\n            <button ion-button color="secondary" (click)="dismiss()">Cancel</button>\n          </ion-row>\n        </ion-col>\n      </ion-content>\n  </div>\n</div>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/duct-creation/duct-creation.component.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], DuctCreationComponent);
     return DuctCreationComponent;
 }());
@@ -341,7 +342,7 @@ var DuctCreationComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 489:
+/***/ 426:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -372,16 +373,16 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 490:
+/***/ 427:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PopoverComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__ = __webpack_require__(255);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__ = __webpack_require__(227);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -453,7 +454,7 @@ var PopoverComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'popover',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/popover/popover.html"*/'<!-- Generated template for the PopoverComponent component -->\n<ion-list #fuckList radio-group [(ngModel)]="dtype" (ionChange)="changeDuctType($event)">\n  <ion-row padding>\n    <ion-col>\n      <button (click)="changeBackground(\'#c4c4c4\')" ion-button small color="popover_gray">gray</button>\n    </ion-col>\n    <ion-col>\n      <button (click)="changeBackground(\'#000080\')" ion-button small color="popover_blue">blue</button>\n    </ion-col>\n    <ion-col>\n      <button (click)="changeBackground(\'#000000\')" ion-button small color="popover_black">black</button>\n    </ion-col>\n  </ion-row>\n  <ion-item *ngFor="let type of type_list">\n    <ion-label>{{type}}</ion-label>\n    <ion-radio value={{type}}></ion-radio>\n  </ion-item>\n</ion-list>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/components/popover/popover.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], PopoverComponent);
     return PopoverComponent;
 }());
@@ -462,13 +463,13 @@ var PopoverComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 491:
+/***/ 428:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(492);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(614);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(429);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(552);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -476,27 +477,30 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 614:
+/***/ 552:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(57);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(751);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(489);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__ = __webpack_require__(486);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__(396);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__firebase_credentials__ = __webpack_require__(759);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__ = __webpack_require__(490);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__ = __webpack_require__(487);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(480);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(483);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_moment__ = __webpack_require__(485);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(622);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(426);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2__ = __webpack_require__(630);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angularfire2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angularfire2__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__ = __webpack_require__(423);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__(368);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angularfire2_database__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__firebase_credentials__ = __webpack_require__(631);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_popover_popover__ = __webpack_require__(427);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_duct_creation_duct_creation_component__ = __webpack_require__(424);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(417);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(420);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_moment__ = __webpack_require__(422);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_angular2_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__models_services_firebase_service__ = __webpack_require__(484);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__models_services_firebase_service__ = __webpack_require__(421);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -548,9 +552,9 @@ var AppModule = /** @class */ (function () {
                     ]
                 }),
                 // Firebase initialization
-                __WEBPACK_IMPORTED_MODULE_5_angularfire2__["a" /* AngularFireModule */].initializeApp(__WEBPACK_IMPORTED_MODULE_8__firebase_credentials__["a" /* FB_HAVEMETAL_CREDENTIALS */]),
-                __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["b" /* AngularFireAuthModule */],
-                __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__["b" /* AngularFireDatabaseModule */],
+                __WEBPACK_IMPORTED_MODULE_5_angularfire2__["AngularFireModule"].initializeApp(__WEBPACK_IMPORTED_MODULE_8__firebase_credentials__["a" /* FB_HAVEMETAL_CREDENTIALS */]),
+                __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["AngularFireAuthModule"],
+                __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__["AngularFireDatabaseModule"],
                 __WEBPACK_IMPORTED_MODULE_13_angular2_moment__["MomentModule"]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicApp */]],
@@ -576,13 +580,13 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 639:
+/***/ 578:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Segment; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(36);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -661,13 +665,13 @@ var Segment = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ 640:
+/***/ 579:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Reduction; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(36);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -756,14 +760,14 @@ var Reduction = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ 641:
+/***/ 580:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Transiction; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_duct_properties__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_duct_properties__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(36);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -898,13 +902,13 @@ var Transiction = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ 642:
+/***/ 581:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Offset; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(36);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -986,13 +990,13 @@ var Offset = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ 643:
+/***/ 582:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Cap; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_three__ = __webpack_require__(36);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -1043,264 +1047,264 @@ var Cap = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ 645:
+/***/ 584:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 257,
-	"./af.js": 257,
-	"./ar": 258,
-	"./ar-dz": 259,
-	"./ar-dz.js": 259,
-	"./ar-kw": 260,
-	"./ar-kw.js": 260,
-	"./ar-ly": 261,
-	"./ar-ly.js": 261,
-	"./ar-ma": 262,
-	"./ar-ma.js": 262,
-	"./ar-sa": 263,
-	"./ar-sa.js": 263,
-	"./ar-tn": 264,
-	"./ar-tn.js": 264,
-	"./ar.js": 258,
-	"./az": 265,
-	"./az.js": 265,
-	"./be": 266,
-	"./be.js": 266,
-	"./bg": 267,
-	"./bg.js": 267,
-	"./bm": 268,
-	"./bm.js": 268,
-	"./bn": 269,
-	"./bn.js": 269,
-	"./bo": 270,
-	"./bo.js": 270,
-	"./br": 271,
-	"./br.js": 271,
-	"./bs": 272,
-	"./bs.js": 272,
-	"./ca": 273,
-	"./ca.js": 273,
-	"./cs": 274,
-	"./cs.js": 274,
-	"./cv": 275,
-	"./cv.js": 275,
-	"./cy": 276,
-	"./cy.js": 276,
-	"./da": 277,
-	"./da.js": 277,
-	"./de": 278,
-	"./de-at": 279,
-	"./de-at.js": 279,
-	"./de-ch": 280,
-	"./de-ch.js": 280,
-	"./de.js": 278,
-	"./dv": 281,
-	"./dv.js": 281,
-	"./el": 282,
-	"./el.js": 282,
-	"./en-SG": 283,
-	"./en-SG.js": 283,
-	"./en-au": 284,
-	"./en-au.js": 284,
-	"./en-ca": 285,
-	"./en-ca.js": 285,
-	"./en-gb": 286,
-	"./en-gb.js": 286,
-	"./en-ie": 287,
-	"./en-ie.js": 287,
-	"./en-il": 288,
-	"./en-il.js": 288,
-	"./en-nz": 289,
-	"./en-nz.js": 289,
-	"./eo": 290,
-	"./eo.js": 290,
-	"./es": 291,
-	"./es-do": 292,
-	"./es-do.js": 292,
-	"./es-us": 293,
-	"./es-us.js": 293,
-	"./es.js": 291,
-	"./et": 294,
-	"./et.js": 294,
-	"./eu": 295,
-	"./eu.js": 295,
-	"./fa": 296,
-	"./fa.js": 296,
-	"./fi": 297,
-	"./fi.js": 297,
-	"./fo": 298,
-	"./fo.js": 298,
-	"./fr": 299,
-	"./fr-ca": 300,
-	"./fr-ca.js": 300,
-	"./fr-ch": 301,
-	"./fr-ch.js": 301,
-	"./fr.js": 299,
-	"./fy": 302,
-	"./fy.js": 302,
-	"./ga": 303,
-	"./ga.js": 303,
-	"./gd": 304,
-	"./gd.js": 304,
-	"./gl": 305,
-	"./gl.js": 305,
-	"./gom-latn": 306,
-	"./gom-latn.js": 306,
-	"./gu": 307,
-	"./gu.js": 307,
-	"./he": 308,
-	"./he.js": 308,
-	"./hi": 309,
-	"./hi.js": 309,
-	"./hr": 310,
-	"./hr.js": 310,
-	"./hu": 311,
-	"./hu.js": 311,
-	"./hy-am": 312,
-	"./hy-am.js": 312,
-	"./id": 313,
-	"./id.js": 313,
-	"./is": 314,
-	"./is.js": 314,
-	"./it": 315,
-	"./it-ch": 316,
-	"./it-ch.js": 316,
-	"./it.js": 315,
-	"./ja": 317,
-	"./ja.js": 317,
-	"./jv": 318,
-	"./jv.js": 318,
-	"./ka": 319,
-	"./ka.js": 319,
-	"./kk": 320,
-	"./kk.js": 320,
-	"./km": 321,
-	"./km.js": 321,
-	"./kn": 322,
-	"./kn.js": 322,
-	"./ko": 323,
-	"./ko.js": 323,
-	"./ku": 324,
-	"./ku.js": 324,
-	"./ky": 325,
-	"./ky.js": 325,
-	"./lb": 326,
-	"./lb.js": 326,
-	"./lo": 327,
-	"./lo.js": 327,
-	"./lt": 328,
-	"./lt.js": 328,
-	"./lv": 329,
-	"./lv.js": 329,
-	"./me": 330,
-	"./me.js": 330,
-	"./mi": 331,
-	"./mi.js": 331,
-	"./mk": 332,
-	"./mk.js": 332,
-	"./ml": 333,
-	"./ml.js": 333,
-	"./mn": 334,
-	"./mn.js": 334,
-	"./mr": 335,
-	"./mr.js": 335,
-	"./ms": 336,
-	"./ms-my": 337,
-	"./ms-my.js": 337,
-	"./ms.js": 336,
-	"./mt": 338,
-	"./mt.js": 338,
-	"./my": 339,
-	"./my.js": 339,
-	"./nb": 340,
-	"./nb.js": 340,
-	"./ne": 341,
-	"./ne.js": 341,
-	"./nl": 342,
-	"./nl-be": 343,
-	"./nl-be.js": 343,
-	"./nl.js": 342,
-	"./nn": 344,
-	"./nn.js": 344,
-	"./pa-in": 345,
-	"./pa-in.js": 345,
-	"./pl": 346,
-	"./pl.js": 346,
-	"./pt": 347,
-	"./pt-br": 348,
-	"./pt-br.js": 348,
-	"./pt.js": 347,
-	"./ro": 349,
-	"./ro.js": 349,
-	"./ru": 350,
-	"./ru.js": 350,
-	"./sd": 351,
-	"./sd.js": 351,
-	"./se": 352,
-	"./se.js": 352,
-	"./si": 353,
-	"./si.js": 353,
-	"./sk": 354,
-	"./sk.js": 354,
-	"./sl": 355,
-	"./sl.js": 355,
-	"./sq": 356,
-	"./sq.js": 356,
-	"./sr": 357,
-	"./sr-cyrl": 358,
-	"./sr-cyrl.js": 358,
-	"./sr.js": 357,
-	"./ss": 359,
-	"./ss.js": 359,
-	"./sv": 360,
-	"./sv.js": 360,
-	"./sw": 361,
-	"./sw.js": 361,
-	"./ta": 362,
-	"./ta.js": 362,
-	"./te": 363,
-	"./te.js": 363,
-	"./tet": 364,
-	"./tet.js": 364,
-	"./tg": 365,
-	"./tg.js": 365,
-	"./th": 366,
-	"./th.js": 366,
-	"./tl-ph": 367,
-	"./tl-ph.js": 367,
-	"./tlh": 368,
-	"./tlh.js": 368,
-	"./tr": 369,
-	"./tr.js": 369,
-	"./tzl": 370,
-	"./tzl.js": 370,
-	"./tzm": 371,
-	"./tzm-latn": 372,
-	"./tzm-latn.js": 372,
-	"./tzm.js": 371,
-	"./ug-cn": 373,
-	"./ug-cn.js": 373,
-	"./uk": 374,
-	"./uk.js": 374,
-	"./ur": 375,
-	"./ur.js": 375,
-	"./uz": 376,
-	"./uz-latn": 377,
-	"./uz-latn.js": 377,
-	"./uz.js": 376,
-	"./vi": 378,
-	"./vi.js": 378,
-	"./x-pseudo": 379,
-	"./x-pseudo.js": 379,
-	"./yo": 380,
-	"./yo.js": 380,
-	"./zh-cn": 381,
-	"./zh-cn.js": 381,
-	"./zh-hk": 382,
-	"./zh-hk.js": 382,
-	"./zh-tw": 383,
-	"./zh-tw.js": 383
+	"./af": 229,
+	"./af.js": 229,
+	"./ar": 230,
+	"./ar-dz": 231,
+	"./ar-dz.js": 231,
+	"./ar-kw": 232,
+	"./ar-kw.js": 232,
+	"./ar-ly": 233,
+	"./ar-ly.js": 233,
+	"./ar-ma": 234,
+	"./ar-ma.js": 234,
+	"./ar-sa": 235,
+	"./ar-sa.js": 235,
+	"./ar-tn": 236,
+	"./ar-tn.js": 236,
+	"./ar.js": 230,
+	"./az": 237,
+	"./az.js": 237,
+	"./be": 238,
+	"./be.js": 238,
+	"./bg": 239,
+	"./bg.js": 239,
+	"./bm": 240,
+	"./bm.js": 240,
+	"./bn": 241,
+	"./bn.js": 241,
+	"./bo": 242,
+	"./bo.js": 242,
+	"./br": 243,
+	"./br.js": 243,
+	"./bs": 244,
+	"./bs.js": 244,
+	"./ca": 245,
+	"./ca.js": 245,
+	"./cs": 246,
+	"./cs.js": 246,
+	"./cv": 247,
+	"./cv.js": 247,
+	"./cy": 248,
+	"./cy.js": 248,
+	"./da": 249,
+	"./da.js": 249,
+	"./de": 250,
+	"./de-at": 251,
+	"./de-at.js": 251,
+	"./de-ch": 252,
+	"./de-ch.js": 252,
+	"./de.js": 250,
+	"./dv": 253,
+	"./dv.js": 253,
+	"./el": 254,
+	"./el.js": 254,
+	"./en-SG": 255,
+	"./en-SG.js": 255,
+	"./en-au": 256,
+	"./en-au.js": 256,
+	"./en-ca": 257,
+	"./en-ca.js": 257,
+	"./en-gb": 258,
+	"./en-gb.js": 258,
+	"./en-ie": 259,
+	"./en-ie.js": 259,
+	"./en-il": 260,
+	"./en-il.js": 260,
+	"./en-nz": 261,
+	"./en-nz.js": 261,
+	"./eo": 262,
+	"./eo.js": 262,
+	"./es": 263,
+	"./es-do": 264,
+	"./es-do.js": 264,
+	"./es-us": 265,
+	"./es-us.js": 265,
+	"./es.js": 263,
+	"./et": 266,
+	"./et.js": 266,
+	"./eu": 267,
+	"./eu.js": 267,
+	"./fa": 268,
+	"./fa.js": 268,
+	"./fi": 269,
+	"./fi.js": 269,
+	"./fo": 270,
+	"./fo.js": 270,
+	"./fr": 271,
+	"./fr-ca": 272,
+	"./fr-ca.js": 272,
+	"./fr-ch": 273,
+	"./fr-ch.js": 273,
+	"./fr.js": 271,
+	"./fy": 274,
+	"./fy.js": 274,
+	"./ga": 275,
+	"./ga.js": 275,
+	"./gd": 276,
+	"./gd.js": 276,
+	"./gl": 277,
+	"./gl.js": 277,
+	"./gom-latn": 278,
+	"./gom-latn.js": 278,
+	"./gu": 279,
+	"./gu.js": 279,
+	"./he": 280,
+	"./he.js": 280,
+	"./hi": 281,
+	"./hi.js": 281,
+	"./hr": 282,
+	"./hr.js": 282,
+	"./hu": 283,
+	"./hu.js": 283,
+	"./hy-am": 284,
+	"./hy-am.js": 284,
+	"./id": 285,
+	"./id.js": 285,
+	"./is": 286,
+	"./is.js": 286,
+	"./it": 287,
+	"./it-ch": 288,
+	"./it-ch.js": 288,
+	"./it.js": 287,
+	"./ja": 289,
+	"./ja.js": 289,
+	"./jv": 290,
+	"./jv.js": 290,
+	"./ka": 291,
+	"./ka.js": 291,
+	"./kk": 292,
+	"./kk.js": 292,
+	"./km": 293,
+	"./km.js": 293,
+	"./kn": 294,
+	"./kn.js": 294,
+	"./ko": 295,
+	"./ko.js": 295,
+	"./ku": 296,
+	"./ku.js": 296,
+	"./ky": 297,
+	"./ky.js": 297,
+	"./lb": 298,
+	"./lb.js": 298,
+	"./lo": 299,
+	"./lo.js": 299,
+	"./lt": 300,
+	"./lt.js": 300,
+	"./lv": 301,
+	"./lv.js": 301,
+	"./me": 302,
+	"./me.js": 302,
+	"./mi": 303,
+	"./mi.js": 303,
+	"./mk": 304,
+	"./mk.js": 304,
+	"./ml": 305,
+	"./ml.js": 305,
+	"./mn": 306,
+	"./mn.js": 306,
+	"./mr": 307,
+	"./mr.js": 307,
+	"./ms": 308,
+	"./ms-my": 309,
+	"./ms-my.js": 309,
+	"./ms.js": 308,
+	"./mt": 310,
+	"./mt.js": 310,
+	"./my": 311,
+	"./my.js": 311,
+	"./nb": 312,
+	"./nb.js": 312,
+	"./ne": 313,
+	"./ne.js": 313,
+	"./nl": 314,
+	"./nl-be": 315,
+	"./nl-be.js": 315,
+	"./nl.js": 314,
+	"./nn": 316,
+	"./nn.js": 316,
+	"./pa-in": 317,
+	"./pa-in.js": 317,
+	"./pl": 318,
+	"./pl.js": 318,
+	"./pt": 319,
+	"./pt-br": 320,
+	"./pt-br.js": 320,
+	"./pt.js": 319,
+	"./ro": 321,
+	"./ro.js": 321,
+	"./ru": 322,
+	"./ru.js": 322,
+	"./sd": 323,
+	"./sd.js": 323,
+	"./se": 324,
+	"./se.js": 324,
+	"./si": 325,
+	"./si.js": 325,
+	"./sk": 326,
+	"./sk.js": 326,
+	"./sl": 327,
+	"./sl.js": 327,
+	"./sq": 328,
+	"./sq.js": 328,
+	"./sr": 329,
+	"./sr-cyrl": 330,
+	"./sr-cyrl.js": 330,
+	"./sr.js": 329,
+	"./ss": 331,
+	"./ss.js": 331,
+	"./sv": 332,
+	"./sv.js": 332,
+	"./sw": 333,
+	"./sw.js": 333,
+	"./ta": 334,
+	"./ta.js": 334,
+	"./te": 335,
+	"./te.js": 335,
+	"./tet": 336,
+	"./tet.js": 336,
+	"./tg": 337,
+	"./tg.js": 337,
+	"./th": 338,
+	"./th.js": 338,
+	"./tl-ph": 339,
+	"./tl-ph.js": 339,
+	"./tlh": 340,
+	"./tlh.js": 340,
+	"./tr": 341,
+	"./tr.js": 341,
+	"./tzl": 342,
+	"./tzl.js": 342,
+	"./tzm": 343,
+	"./tzm-latn": 344,
+	"./tzm-latn.js": 344,
+	"./tzm.js": 343,
+	"./ug-cn": 345,
+	"./ug-cn.js": 345,
+	"./uk": 346,
+	"./uk.js": 346,
+	"./ur": 347,
+	"./ur.js": 347,
+	"./uz": 348,
+	"./uz-latn": 349,
+	"./uz-latn.js": 349,
+	"./uz.js": 348,
+	"./vi": 350,
+	"./vi.js": 350,
+	"./x-pseudo": 351,
+	"./x-pseudo.js": 351,
+	"./yo": 352,
+	"./yo.js": 352,
+	"./zh-cn": 353,
+	"./zh-cn.js": 353,
+	"./zh-hk": 354,
+	"./zh-hk.js": 354,
+	"./zh-tw": 355,
+	"./zh-tw.js": 355
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -1316,19 +1320,19 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 645;
+webpackContext.id = 584;
 
 /***/ }),
 
-/***/ 751:
+/***/ 622:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(81);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(480);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(483);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(417);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(420);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1355,7 +1359,7 @@ var MyApp = /** @class */ (function () {
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
 }());
@@ -1364,7 +1368,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 759:
+/***/ 631:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1381,5 +1385,5 @@ var FB_HAVEMETAL_CREDENTIALS = {
 
 /***/ })
 
-},[491]);
+},[428]);
 //# sourceMappingURL=main.js.map

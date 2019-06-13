@@ -2,7 +2,7 @@
 # HaveMetal Project Dockerfile
 #
 
-FROM node:8
+FROM node:10
 
 #ENV NPM_CONFIG_LOGLEVEL warn
 
@@ -14,21 +14,19 @@ COPY package.json .
 # For npm@5 or later, copy package-lock.json as well
 COPY package-lock.json .
 
-RUN npm install -g cordova@latest
+RUN npm install -g cordova@latest && npm install -g ionic@latest
 
-RUN npm install -g ionic@latest
+#RUN npm uninstall node-sass -g
 
-RUN npm uninstall node-sass -g
+#RUN npm cache clean -f
 
-RUN npm cache clean -f
+#RUN npm install node-sass@4.5.3 -f 
 
-RUN npm install node-sass@4.5.3 -f
-
-RUN npm install -g n
+RUN npm install
 
 # Bundle app source
 COPY . .
 
 EXPOSE 8100 35729
 
-CMD [ "ionic", "serve", "--all", "--no-interactive" ]
+CMD [ "ionic", "serve" ]

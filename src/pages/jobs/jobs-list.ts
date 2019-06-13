@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ActionSheetController, AlertController } from 'ionic-angular';
 import { Job } from '../../models/interfaces/job.interface';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Rx';
 import { JobListService } from '../../models/services/firebase.service';
 
 @IonicPage()
