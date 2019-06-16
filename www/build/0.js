@@ -132,17 +132,6 @@ var JobsComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_services_firebase_service__ = __webpack_require__(421);
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -161,12 +150,17 @@ var JobsListPage = /** @class */ (function () {
         this.actionSheetCtrl = actionSheetCtrl;
         this.alertCtrl = alertCtrl;
         this.job = job;
-        this.job_list$ = this.job
-            .getJobList()
-            .snapshotChanges()
-            .map(function (changes) {
-            return changes.map(function (c) { return (__assign({ key: c.payload.key }, c.payload.val())); });
-        });
+        this.job_list$ = this.job.getJobList().valueChanges();
+        /*.getJobList()
+        .snapshotChanges()
+        .map(
+          changes => {
+            return changes.map(c => ({
+              key: c.payload.key,
+              ...c.payload.val()
+            }))
+          }
+        )*/
     }
     JobsListPage.prototype.addJob = function () {
         this.navCtrl.push('JobCreationPage');

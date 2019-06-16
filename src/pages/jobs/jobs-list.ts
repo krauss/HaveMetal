@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ActionSheetController, AlertController } from 'ionic-angular';
 import { Job } from '../../models/interfaces/job.interface';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 import { JobListService } from '../../models/services/firebase.service';
 
 @IonicPage()
@@ -14,17 +14,7 @@ export class JobsListPage {
   job_list$: Observable<Job[]>
 
   constructor(private navCtrl: NavController, private actionSheetCtrl: ActionSheetController, public alertCtrl: AlertController, private job: JobListService) {
-    this.job_list$ = this.job
-    .getJobList()
-    .snapshotChanges()
-    .map(
-      changes => {
-        return changes.map(c => ({
-          key: c.payload.key, 
-          ...c.payload.val()
-        }))
-      }
-    )
+    this.job_list$ = this.job.getJobList().valueChanges();
   }
 
   addJob(): void{
