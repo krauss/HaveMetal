@@ -3,10 +3,6 @@ import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-an
 import { PopoverComponent } from "../../components/popover/popover";
 import * as THREE from 'three';
 import OrbitControls from 'orbit-controls-es6';
-//import { Duct } from '../../models/interfaces/duct.interface';
-import { Segment } from '../../models/objects/segment';
-import { Reduction } from '../../models/objects/reduction';
-import { Transiction } from '../../models/objects/transiction';
 
 @IonicPage()
 @Component({

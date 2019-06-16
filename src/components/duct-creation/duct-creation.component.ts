@@ -1,7 +1,6 @@
 import { Component,  ViewChild, ElementRef, ContentChild } from '@angular/core';
 import { ViewController, NavParams } from 'ionic-angular';
-import { TYPES, FLATSIDES }  from '../../models/interfaces/duct.properties';
-import { Duct }  from '../../models/interfaces/duct.interface';
+import { TYPES }  from '../../models/interfaces/duct.properties';
 import { DuctFactory }  from '../../models/objects/factory';
 import * as THREE from 'three';
 import OrbitControls from 'orbit-controls-es6';

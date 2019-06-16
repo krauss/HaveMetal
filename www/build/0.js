@@ -151,16 +151,6 @@ var JobsListPage = /** @class */ (function () {
         this.alertCtrl = alertCtrl;
         this.job = job;
         this.job_list$ = this.job.getJobList().valueChanges();
-        /*.getJobList()
-        .snapshotChanges()
-        .map(
-          changes => {
-            return changes.map(c => ({
-              key: c.payload.key,
-              ...c.payload.val()
-            }))
-          }
-        )*/
     }
     JobsListPage.prototype.addJob = function () {
         this.navCtrl.push('JobCreationPage');

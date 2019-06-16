@@ -16,12 +16,6 @@ COPY package-lock.json .
 
 RUN npm install -g cordova@latest && npm install -g ionic@latest
 
-#RUN npm uninstall node-sass -g
-
-#RUN npm cache clean -f
-
-#RUN npm install node-sass@4.5.3 -f 
-
 RUN npm install
 
 # Bundle app source
@@ -29,4 +23,4 @@ COPY . .
 
 EXPOSE 8100 35729
 
-CMD [ "ionic", "serve" ]
+CMD [ "ionic", "serve", "--all"]

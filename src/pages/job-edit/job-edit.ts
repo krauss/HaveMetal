@@ -20,7 +20,6 @@ export class JobEditPage {
     private job_list: JobListService ) {
 
       this.job = this.navParams.get('job');
-      //console.log(this.job);
   }
 
 

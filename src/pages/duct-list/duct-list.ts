@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, reorderArray, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, reorderArray, ModalController } from 'ionic-angular';
 import { Duct } from '../../models/interfaces/duct.interface';
-import { DuctFactory } from '../../models/objects/factory';
 import { DuctCreationComponent } from '../../components/duct-creation/duct-creation.component';
 
 
