@@ -15,28 +15,21 @@
 
 <ion-content padding>
 
-  <ion-list padding>
-
     <ion-item>
-      <ion-label floating>Job Name</ion-label>
+      <ion-label for="job.name" floating>Job name</ion-label>
       <ion-input type="text" [(ngModel)]="job.name"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Site Address</ion-label>
+      <ion-label for="job.address" floating>Job Address</ion-label>
       <ion-input type="text" [(ngModel)]="job.address"></ion-input>
     </ion-item>
-    <br>
-    <ion-item>
+
+    <ion-item >
       <ion-label stacked>Creation Date</ion-label>
       <ion-datetime disabled [(ngModel)]="date"></ion-datetime>
     </ion-item>
 
-  </ion-list>
-
-  <div padding>
-    <button ion-button block color="light" (click)="addNewJob(job)">Create</button>
-  </div>
-
-
+    <button ion-button block clear color="light" (click)="addNewJob(job)">Create</button>
+  
 </ion-content>

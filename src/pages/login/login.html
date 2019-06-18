@@ -4,43 +4,27 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <!-- <ion-navbar color="primary">
-    <ion-title text-center>Welcome to HaveMetal Inc.</ion-title>
-  </ion-navbar> -->
-
-</ion-header>
 
 
 <ion-content padding>
 
-  <!-- <ion-icon name="ionitron"></ion-icon> -->
-  <ion-item text-center>
+  <ion-item lines="null" padding text-center>
     <h1>Welcome to HaveMetal Inc.</h1>
-    <br>
-    <br>
-    <ion-img class="transparent_bkg" width="100" height="100" src="../../../assets/icon/havemetal_2.png"></ion-img>
+    <ion-img padding class="transparent_bkg"  src="../../../assets/icon/havemetal_2.png"></ion-img>
   </ion-item>
 
-  <ion-list>
 
-    <ion-item>
-      <ion-label floating>E-mail</ion-label>
-      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
-    </ion-item>
+  <ion-item>
+    <ion-label floating>E-mail</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
 
-    <ion-item>
+  <ion-item>
       <ion-label floating>Password</ion-label>
-      <ion-input type="password" [(ngModel)]="user.passwd"></ion-input>
-    </ion-item>
+    <ion-input type="password" [(ngModel)]="user.passwd"></ion-input>
+  </ion-item>
 
-  </ion-list>
-
-  <div padding>
-    <button ion-button block color="primary" (click)="login(user)">Login</button>
-
-    <button ion-button block color="secondary" (click)="signin()">Sig-in</button>
-  </div>
+  <button ion-button block clear color="primary" (click)="login(user)">Login</button>
+  <button ion-button block clear color="secondary" (click)="signin()">Sig-in</button>
 
 </ion-content>

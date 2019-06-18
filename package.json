@@ -29,7 +29,7 @@
     "angular-http": "0.0.0",
     "angular2-moment": "^1.9.0",
     "angularfire2": "^5.2.1",
-    "firebase": "^6.1.1",
+    "firebase": "^6.2.0",
     "ionic": "^5.0.2",
     "ionic-angular": "^3.9.6",
     "ionicons": "^4.5.8",
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "^3.2.4",
-    "typescript": "^3.5.1"
+    "typescript": "^3.5.2"
   },
   "description": "An Ionic project"
 }

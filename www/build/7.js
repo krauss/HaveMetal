@@ -75,33 +75,36 @@ var JobCreationPage = /** @class */ (function () {
         this.job_list = job_list;
         this._toast = _toast;
         this.date = new Date().toISOString();
-        this.job = {};
+        this.job = {
+            name: '',
+            address: '',
+            creationDate: this.date
+        };
         this.toast = _toast;
     }
     //Function that add new Job
     JobCreationPage.prototype.addNewJob = function (job) {
         var _this = this;
-        this.job_list.addJob({
-            //TODO get the next available id from the Firebase db
-            //_id: this.job.id,
-            name: this.job.name,
-            address: this.job.address,
-            creationDate: this.date
-        });
-        this.toast.create({
-            message: 'Job created successfully!',
-            duration: 1200,
-            position: 'bottom'
-        }).present().then(function () {
-            //Reset our job
-            _this.job = {};
-            // Navigate the user back to the Job List
-            _this.navCtrl.pop();
+        this.job_list.addJob(this.job).then(function (ref) {
+            //Receives the key back from the database and updates the same object with that very key
+            _this.job.key = ref.key;
+            _this.job_list.editJob(_this.job);
+            _this.toast.create({
+                message: 'Job created successfully!',
+                duration: 1200,
+                position: 'bottom'
+            }).present().then(function () {
+                //Reset our job
+                _this.job = {};
+                // Navigate the user back to the Job List
+                //this.navCtrl.setRoot('JobsListPage', { key: ref.key })
+                _this.navCtrl.pop();
+            });
         });
     };
     JobCreationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-job-creation',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/job-creation/job-creation.html"*/'<!--\n  Generated template for the JobCreationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-center>New Job</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list padding>\n\n    <ion-item>\n      <ion-label floating>Job Name</ion-label>\n      <ion-input type="text" [(ngModel)]="job.name"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label floating>Site Address</ion-label>\n      <ion-input type="text" [(ngModel)]="job.address"></ion-input>\n    </ion-item>\n    <br>\n    <ion-item>\n      <ion-label stacked>Creation Date</ion-label>\n      <ion-datetime disabled [(ngModel)]="date"></ion-datetime>\n    </ion-item>\n\n  </ion-list>\n\n  <div padding>\n    <button ion-button block color="light" (click)="addNewJob(job)">Create</button>\n  </div>\n\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/job-creation/job-creation.html"*/,
+            selector: 'page-job-creation',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/job-creation/job-creation.html"*/'<!--\n  Generated template for the JobCreationPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-center>New Job</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n    <ion-item>\n      <ion-label for="job.name" floating>Job name</ion-label>\n      <ion-input type="text" [(ngModel)]="job.name"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label for="job.address" floating>Job Address</ion-label>\n      <ion-input type="text" [(ngModel)]="job.address"></ion-input>\n    </ion-item>\n\n    <ion-item >\n      <ion-label stacked>Creation Date</ion-label>\n      <ion-datetime disabled [(ngModel)]="date"></ion-datetime>\n    </ion-item>\n\n    <button ion-button block clear color="light" (click)="addNewJob(job)">Create</button>\n  \n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/job-creation/job-creation.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__models_services_firebase_service__["a" /* JobListService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */]])
     ], JobCreationPage);

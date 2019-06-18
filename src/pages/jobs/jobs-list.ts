@@ -17,13 +17,9 @@ export class JobsListPage {
     this.job_list$ = this.job.getJobList().valueChanges();
   }
 
-  addJob(): void{
-    this.navCtrl.push('JobCreationPage');
-  }
-
-  selectJob(job: Job){
+  selectJob(selected_job: Job){
     this.actionSheetCtrl.create({
-      title: `${job.name}`,
+      title: `${selected_job.name}`,
       buttons: [
         {
           text: 'Upload Mechanical Drawing',
@@ -46,7 +42,7 @@ export class JobsListPage {
           icon: 'add',
           handler: () => {
             //Send the user to the  TaskCreationPage and pass the key as a parameter
-            this.navCtrl.push('DuctListPage', { jobID: job.key });
+            this.navCtrl.push('DuctListPage', { jobID: selected_job.key });
           }
         },
         {
@@ -54,7 +50,7 @@ export class JobsListPage {
           icon: 'create',
           handler: () => {
             //Send the user to the JobEditPage and pass the key as a parameter
-            this.navCtrl.push('JobEditPage', { job: job });
+            this.navCtrl.push('JobEditPage', { job: selected_job });
           }
         },
         {
@@ -63,7 +59,7 @@ export class JobsListPage {
           role: 'destructive',
           handler: () => {
 
-            console.log(job.key);
+            console.log(selected_job.key);
             this.alertCtrl.create({
               title: 'Mate, are you serious?',
               buttons: [
@@ -76,7 +72,7 @@ export class JobsListPage {
                   text: 'Yes',
                   handler: () => {
                     //Delete the current ShoppingItem
-                    this.job.removeJob(job);
+                    this.job.removeJob(selected_job);
                   }
                 }
               ]

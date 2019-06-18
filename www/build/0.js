@@ -152,13 +152,10 @@ var JobsListPage = /** @class */ (function () {
         this.job = job;
         this.job_list$ = this.job.getJobList().valueChanges();
     }
-    JobsListPage.prototype.addJob = function () {
-        this.navCtrl.push('JobCreationPage');
-    };
-    JobsListPage.prototype.selectJob = function (job) {
+    JobsListPage.prototype.selectJob = function (selected_job) {
         var _this = this;
         this.actionSheetCtrl.create({
-            title: "" + job.name,
+            title: "" + selected_job.name,
             buttons: [
                 {
                     text: 'Upload Mechanical Drawing',
@@ -181,7 +178,7 @@ var JobsListPage = /** @class */ (function () {
                     icon: 'add',
                     handler: function () {
                         //Send the user to the  TaskCreationPage and pass the key as a parameter
-                        _this.navCtrl.push('DuctListPage', { jobID: job.key });
+                        _this.navCtrl.push('DuctListPage', { jobID: selected_job.key });
                     }
                 },
                 {
@@ -189,7 +186,7 @@ var JobsListPage = /** @class */ (function () {
                     icon: 'create',
                     handler: function () {
                         //Send the user to the JobEditPage and pass the key as a parameter
-                        _this.navCtrl.push('JobEditPage', { job: job });
+                        _this.navCtrl.push('JobEditPage', { job: selected_job });
                     }
                 },
                 {
@@ -197,7 +194,7 @@ var JobsListPage = /** @class */ (function () {
                     icon: 'trash',
                     role: 'destructive',
                     handler: function () {
-                        console.log(job.key);
+                        console.log(selected_job.key);
                         _this.alertCtrl.create({
                             title: 'Mate, are you serious?',
                             buttons: [
@@ -210,7 +207,7 @@ var JobsListPage = /** @class */ (function () {
                                     text: 'Yes',
                                     handler: function () {
                                         //Delete the current ShoppingItem
-                                        _this.job.removeJob(job);
+                                        _this.job.removeJob(selected_job);
                                     }
                                 }
                             ]
@@ -230,7 +227,7 @@ var JobsListPage = /** @class */ (function () {
     };
     JobsListPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-jobs-list',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/jobs/jobs-list.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center> Jobs </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-fab padding bottom right>\n    <button color="primary" ion-fab (click)="addJob()">\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n\n  <!-- Add the card for each job from the firebase db -->\n  <jobs *ngFor="let job_item of job_list$ | async" [job]="job_item" (click)="selectJob(job_item)" padding></jobs>\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/jobs/jobs-list.html"*/
+            selector: 'page-jobs-list',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/jobs/jobs-list.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center> Jobs </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-fab padding bottom right>\n    <button color="primary" ion-fab navPush="JobCreationPage">\n      <ion-icon name="add"></ion-icon>\n    </button>\n  </ion-fab>\n\n  <!-- Add the card for each job from the firebase db -->\n  <jobs *ngFor="let job_item of job_list$ | async" [job]="job_item"  (click)="selectJob(job_item)" padding></jobs>\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/jobs/jobs-list.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__models_services_firebase_service__["a" /* JobListService */]])
     ], JobsListPage);

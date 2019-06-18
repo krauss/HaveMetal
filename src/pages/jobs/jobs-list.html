@@ -6,11 +6,11 @@
 
 <ion-content padding>
   <ion-fab padding bottom right>
-    <button color="primary" ion-fab (click)="addJob()">
+    <button color="primary" ion-fab navPush="JobCreationPage">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
 
   <!-- Add the card for each job from the firebase db -->
-  <jobs *ngFor="let job_item of job_list$ | async" [job]="job_item" (click)="selectJob(job_item)" padding></jobs>
+  <jobs *ngFor="let job_item of job_list$ | async" [job]="job_item"  (click)="selectJob(job_item)" padding></jobs>
 </ion-content>

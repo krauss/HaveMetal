@@ -19,7 +19,7 @@ export class JobListService {
     }
 
     removeJob(job: Job){
-        this.jobListRef.remove(job.key);
+        return this.jobListRef.remove(job.key);
     }
 
     editJob(job: Job){

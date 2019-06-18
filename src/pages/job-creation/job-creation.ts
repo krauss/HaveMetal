@@ -22,7 +22,11 @@ import { Job } from '../../models/interfaces/job.interface';
 export class JobCreationPage {
 
   date: string = new Date().toISOString();
-  job = {} as Job
+  job: Job = {
+    name: '',
+    address: '',
+    creationDate: this.date
+  }
   toast: ToastController
 
   constructor(private navCtrl: NavController, private job_list: JobListService, private _toast: ToastController) {
@@ -33,27 +37,27 @@ export class JobCreationPage {
   //Function that add new Job
   addNewJob(job: Job){
 
-    this.job_list.addJob({
-      //TODO get the next available id from the Firebase db
-      //_id: this.job.id,
-      name: this.job.name,
-      address: this.job.address,
-      creationDate: this.date
-    });
+    this.job_list.addJob(this.job).then(ref => {
+
+      //Receives the key back from the database and updates the same object with that very key
+      this.job.key = ref.key;
+      this.job_list.editJob(this.job);
+
+      this.toast.create({
+        message: 'Job created successfully!',
+        duration: 1200,
+        position: 'bottom'
+      }).present().then(() => {
+  
+          //Reset our job
+          this.job = {} as Job;
+  
+          // Navigate the user back to the Job List
+          //this.navCtrl.setRoot('JobsListPage', { key: ref.key })
+          this.navCtrl.pop();
+      })
+    });   
     
-
-    this.toast.create({
-      message: 'Job created successfully!',
-      duration: 1200,
-      position: 'bottom'
-    }).present().then(() => {
-
-        //Reset our job
-        this.job = {} as Job;
-
-        // Navigate the user back to the Job List
-        this.navCtrl.pop();
-    })
   }
 
 }
