@@ -25,4 +25,8 @@ export class JobListService {
     editJob(job: Job){
         return this.jobListRef.update(job.key, job);
     }
+
+    getJob(job_key: string){
+        return this.db.object<Job>(job_key);
+    }
 }

@@ -38886,3 +38886,10 @@ duct-creation .radio-param {
 page-login .transparent_bkg {
   background-color: transparent;
 }
+
+page-login .welcome_div {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}

@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 640:
+/***/ 641:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignInPageModule", function() { return SignInPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_in__ = __webpack_require__(651);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sign_in__ = __webpack_require__(653);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,7 +38,7 @@ var SignInPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 651:
+/***/ 653:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -138,7 +138,7 @@ var SignInPage = /** @class */ (function () {
     };
     SignInPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-sign-in',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/sign-in/sign-in.html"*/'<!--\n  Generated template for the SignInPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-center>Sign-In</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-item>\n    <ion-input type="text" [(ngModel)]="user.name" placeholder="Name"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-input type="email" [(ngModel)]="user.email" placeholder="E-mail"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-input type="password" [(ngModel)]="user.passwd" placeholder="Password"></ion-input>\n  </ion-item>\n  \n  <button ion-button block clear color="light" (click)="register(user)">Register</button>\n  \n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/sign-in/sign-in.html"*/,
+            selector: 'page-sign-in',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/sign-in/sign-in.html"*/'<!--\n  Generated template for the SignInPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-center>Sign-In</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-item>\n    <ion-input type="text" [(ngModel)]="user.name" placeholder="Name" required></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-input type="email" [(ngModel)]="user.email" placeholder="E-mail" required></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-input type="password" [(ngModel)]="user.passwd" placeholder="Password" required></ion-input>\n  </ion-item>\n  \n  <button ion-button block clear color="light" (click)="register(user)">Register</button>\n  \n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/sign-in/sign-in.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["AngularFireAuth"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], SignInPage);

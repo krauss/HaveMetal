@@ -26,7 +26,7 @@ export class DuctCreationComponent {
   };
 
   /**
-  ********************* THREE.JS SESSION *****************************
+    ********************* THREE.JS SESSION *****************************
   */
 
   @ViewChild('domObj') canvasEl: ElementRef;

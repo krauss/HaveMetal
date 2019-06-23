@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 636:
+/***/ 637:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JobsPageModule", function() { return JobsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jobs_list__ = __webpack_require__(647);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(641);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jobs_list__ = __webpack_require__(649);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(642);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ var JobsPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 641:
+/***/ 642:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53,7 +53,7 @@ var JobsPageModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_moment__ = __webpack_require__(422);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angular2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angular2_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__job_jobs_component__ = __webpack_require__(642);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__job_jobs_component__ = __webpack_require__(643);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -83,7 +83,7 @@ var ComponentsModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 642:
+/***/ 643:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -124,7 +124,7 @@ var JobsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 647:
+/***/ 649:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -178,7 +178,7 @@ var JobsListPage = /** @class */ (function () {
                     icon: 'add',
                     handler: function () {
                         //Send the user to the  TaskCreationPage and pass the key as a parameter
-                        _this.navCtrl.push('DuctListPage', { jobID: selected_job.key });
+                        _this.navCtrl.push('DuctListPage', { job_key: selected_job.key });
                     }
                 },
                 {

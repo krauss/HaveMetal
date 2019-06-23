@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 638:
+/***/ 639:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(649);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(651);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ var LoginPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 649:
+/***/ 651:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -144,7 +144,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n<ion-content padding>\n\n  <ion-item lines="null" padding text-center>\n    <h1>Welcome to HaveMetal Inc.</h1>\n    <ion-img padding class="transparent_bkg"  src="../../../assets/icon/havemetal_2.png"></ion-img>\n  </ion-item>\n\n\n  <ion-item>\n    <ion-label floating>E-mail</ion-label>\n    <ion-input type="text" [(ngModel)]="user.email"></ion-input>\n  </ion-item>\n\n  <ion-item>\n      <ion-label floating>Password</ion-label>\n    <ion-input type="password" [(ngModel)]="user.passwd"></ion-input>\n  </ion-item>\n\n  <button ion-button block clear color="primary" (click)="login(user)">Login</button>\n  <button ion-button block clear color="secondary" (click)="signin()">Sig-in</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n\n\n<ion-content padding>\n  \n  \n  <h1 text-center>HaveMetal Project</h1>\n  <ion-img padding class="transparent_bkg"  src="../../../assets/icon/havemetal_2.png"></ion-img>\n  \n\n  <ion-item>\n    <ion-label floating>E-mail</ion-label>\n    <ion-input type="text" [(ngModel)]="user.email"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input type="password" [(ngModel)]="user.passwd"></ion-input>\n  </ion-item>\n\n  \n  <button margin-top ion-button block clear color="primary" (click)="login(user)">Login</button>\n  \n  <button ion-button block clear color="secondary" (click)="signin()">Sig-in</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["AngularFireAuth"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], LoginPage);

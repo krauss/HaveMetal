@@ -1,94 +1,6 @@
-webpackJsonp([9],{
+webpackJsonp([10],{
 
-/***/ 131:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TYPES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FLATSIDES; });
-/* unused harmony export Direction */
-var TYPES = ['Segment', 'Transiction', 'Reduction', 'Offset', 'Curve', 'Half-Curve', 'Turn', 'Cap'];
-var FLATSIDES = ['LEFT', 'RIGHT', 'BOTTOM', 'TOP'];
-var Direction = ['LEFT', 'RIGHT', 'UP', 'DOWN'];
-//# sourceMappingURL=duct.properties.js.map
-
-/***/ }),
-
-/***/ 185:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 185;
-
-/***/ }),
-
-/***/ 226:
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"../pages/dashboard/dashboard.module": [
-		632,
-		8
-	],
-	"../pages/duct-list/duct-list.module": [
-		633,
-		1
-	],
-	"../pages/job-creation/job-creation.module": [
-		634,
-		7
-	],
-	"../pages/job-edit/job-edit.module": [
-		635,
-		6
-	],
-	"../pages/jobs/jobs-list.module": [
-		636,
-		0
-	],
-	"../pages/login/login.module": [
-		638,
-		5
-	],
-	"../pages/samples/samples.module": [
-		637,
-		4
-	],
-	"../pages/scanner/scanner.module": [
-		639,
-		3
-	],
-	"../pages/sign-in/sign-in.module": [
-		640,
-		2
-	]
-};
-function webpackAsyncContext(req) {
-	var ids = map[req];
-	if(!ids)
-		return Promise.reject(new Error("Cannot find module '" + req + "'."));
-	return __webpack_require__.e(ids[1]).then(function() {
-		return __webpack_require__(ids[0]);
-	});
-};
-webpackAsyncContext.keys = function webpackAsyncContextKeys() {
-	return Object.keys(map);
-};
-webpackAsyncContext.id = 226;
-module.exports = webpackAsyncContext;
-
-/***/ }),
-
-/***/ 227:
+/***/ 157:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -116,6 +28,9 @@ var DuctFactory = /** @class */ (function () {
             case "Reduction": return new __WEBPACK_IMPORTED_MODULE_2__reduction__["a" /* Reduction */](8, 3, 8, 2, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["c" /* FlatSide */].TOP);
             case "Transiction": return new __WEBPACK_IMPORTED_MODULE_3__transiction__["a" /* Transiction */](8, 5, 5, 3, 'RIGHT');
             case "Offset": return new __WEBPACK_IMPORTED_MODULE_4__offset__["a" /* Offset */](8, 3, 1.5, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Direction */].UP);
+            case "Curve": return new __WEBPACK_IMPORTED_MODULE_4__offset__["a" /* Offset */](8, 3, 1.5, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Direction */].UP);
+            case "Half-Curve": return new __WEBPACK_IMPORTED_MODULE_4__offset__["a" /* Offset */](8, 3, 1.5, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Direction */].UP);
+            case "Turn": return new __WEBPACK_IMPORTED_MODULE_4__offset__["a" /* Offset */](8, 3, 1.5, __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__["a" /* Direction */].UP);
             case "Cap": return new __WEBPACK_IMPORTED_MODULE_5__cap__["a" /* Cap */](7, 4);
         }
     };
@@ -123,6 +38,84 @@ var DuctFactory = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=factory.js.map
+
+/***/ }),
+
+/***/ 186:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 186;
+
+/***/ }),
+
+/***/ 227:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/add-duct/add-duct.module": [
+		632,
+		9
+	],
+	"../pages/dashboard/dashboard.module": [
+		633,
+		8
+	],
+	"../pages/duct-list/duct-list.module": [
+		634,
+		1
+	],
+	"../pages/job-creation/job-creation.module": [
+		635,
+		7
+	],
+	"../pages/job-edit/job-edit.module": [
+		636,
+		6
+	],
+	"../pages/jobs/jobs-list.module": [
+		637,
+		0
+	],
+	"../pages/login/login.module": [
+		639,
+		5
+	],
+	"../pages/samples/samples.module": [
+		638,
+		4
+	],
+	"../pages/scanner/scanner.module": [
+		640,
+		3
+	],
+	"../pages/sign-in/sign-in.module": [
+		641,
+		2
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 227;
+module.exports = webpackAsyncContext;
 
 /***/ }),
 
@@ -198,9 +191,13 @@ var JobListService = /** @class */ (function () {
     JobListService.prototype.editJob = function (job) {
         return this.jobListRef.update(job.key, job);
     };
+    JobListService.prototype.getJob = function (job_key) {
+        return this.db.object(job_key);
+    };
+    var _a;
     JobListService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["AngularFireDatabase"]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["AngularFireDatabase"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["AngularFireDatabase"]) === "function" ? _a : Object])
     ], JobListService);
     return JobListService;
 }());
@@ -216,8 +213,8 @@ var JobListService = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DuctCreationComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_objects_factory__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_objects_factory__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_three__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__ = __webpack_require__(425);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_orbit_controls_es6__);
@@ -350,8 +347,8 @@ var DuctCreationComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_interfaces_duct_properties__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_objects_factory__ = __webpack_require__(157);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -540,6 +537,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
                     links: [
+                        { loadChildren: '../pages/add-duct/add-duct.module#AddDuctPageModule', name: 'AddDuctPage', segment: 'add-duct', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/duct-list/duct-list.module#DuctCreationPageModule', name: 'DuctListPage', segment: 'duct-list', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/job-creation/job-creation.module#JobCreationPageModule', name: 'JobCreationPage', segment: 'job-creation', priority: 'low', defaultHistory: [] },
@@ -766,7 +764,7 @@ var Reduction = /** @class */ (function (_super) {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Transiction; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__interfaces_duct_interface__ = __webpack_require__(35);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_duct_properties__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__interfaces_duct_properties__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_three__ = __webpack_require__(36);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
@@ -1382,6 +1380,20 @@ var FB_HAVEMETAL_CREDENTIALS = {
     messagingSenderId: "1056334326705"
 };
 //# sourceMappingURL=firebase.credentials.js.map
+
+/***/ }),
+
+/***/ 88:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return TYPES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FLATSIDES; });
+/* unused harmony export Direction */
+var TYPES = ['Segment', 'Transiction', 'Reduction', 'Offset', 'Curve', 'Half-Curve', 'Turn', 'Cap'];
+var FLATSIDES = ['LEFT', 'RIGHT', 'BOTTOM', 'TOP'];
+var Direction = ['LEFT', 'RIGHT', 'UP', 'DOWN'];
+//# sourceMappingURL=duct.properties.js.map
 
 /***/ })
 

@@ -42,7 +42,7 @@ export class JobsListPage {
           icon: 'add',
           handler: () => {
             //Send the user to the  TaskCreationPage and pass the key as a parameter
-            this.navCtrl.push('DuctListPage', { jobID: selected_job.key });
+            this.navCtrl.push('DuctListPage', { job_key: selected_job.key });
           }
         },
         {

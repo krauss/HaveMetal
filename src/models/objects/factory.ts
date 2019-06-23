@@ -18,6 +18,9 @@ export class DuctFactory {
       case "Reduction": return new Reduction(8, 3, 8, 2, FlatSide.TOP);
       case "Transiction": return new Transiction(8, 5, 5, 3, 'RIGHT');
       case "Offset": return new Offset(8, 3, 1.5, Direction.UP);
+      case "Curve": return new Offset(8, 3, 1.5, Direction.UP);
+      case "Half-Curve": return new Offset(8, 3, 1.5, Direction.UP);
+      case "Turn": return new Offset(8, 3, 1.5, Direction.UP);
       case "Cap": return new Cap(7, 4);
     }
   }
