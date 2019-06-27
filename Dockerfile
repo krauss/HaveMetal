@@ -4,23 +4,19 @@
 
 FROM node:10
 
-#ENV NPM_CONFIG_LOGLEVEL warn
-
 # Create app directory
 WORKDIR /home/jrkrauss/workspaces/ionic/havemetal/
 
 # Install app dependencies
-COPY package.json .
-# For npm@5 or later, copy package-lock.json as well
-COPY package-lock.json .
-
-RUN npm install -g cordova@latest && npm install -g ionic@latest
+COPY package*.json ./
 
 RUN npm install
+
+RUN npm install -g cordova@latest && npm install -g ionic@latest
 
 # Bundle app source
 COPY . .
 
 EXPOSE 8100 35729
 
-CMD [ "ionic", "serve", "--all"]
+CMD [ "ionic", "serve", "--address=localhost", "--port=8100" ]

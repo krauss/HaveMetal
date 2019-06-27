@@ -96,12 +96,11 @@ var AddDuctPage = /** @class */ (function () {
     AddDuctPage.prototype.addDuct = function () {
         this.tmp_job = this.job_list.getJob(this.job_key);
     };
-    var _a, _b, _c;
     AddDuctPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-add-duct',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/add-duct/add-duct.html"*/'<!--\n  Generated template for the AddDuctPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Add New Duct</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n    <ion-item>\n        <ion-label>Type:</ion-label>\n        <ion-select [(ngModel)]="type" (ionChange)="selectDuctType($event)">\n          <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n        </ion-select>\n    </ion-item> \n    \n\n    <ion-card *ngIf="_DUCT != undefined">\n        <ion-card-content>\n          <ion-item>\n            <ion-input type="number" [(ngModel)]="qty" placeholder="Quantity"></ion-input>\n          </ion-item>\n        </ion-card-content>\n    </ion-card>\n\n    <button margin-top ion-button block clear color="primary" (click)="AddDuct()">Add</button>\n  \n    <button ion-button block clear color="secondary" (click)="cancel()">Cancel</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/add-duct/add-duct.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" ? _b : Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__models_services_firebase_service__["a" /* JobListService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__models_services_firebase_service__["a" /* JobListService */]) === "function" ? _c : Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__models_services_firebase_service__["a" /* JobListService */]])
     ], AddDuctPage);
     return AddDuctPage;
 }());
