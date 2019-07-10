@@ -12,24 +12,21 @@
 
 <ion-content padding>
 
-    <ion-item>
-        <ion-label>Type:</ion-label>
-        <ion-select [(ngModel)]="type" (ionChange)="selectDuctType($event)">
+  <ion-item required>
+    <ion-label>Type</ion-label>
+      <!--<ion-select [(ngModel)]="type" (ionChange)="selectDuctType($event)">-->
+          <ion-select [(ngModel)]="type">
           <ion-option *ngFor="let type of type_list">{{type}}</ion-option>
-        </ion-select>
-    </ion-item> 
+      </ion-select>
+  </ion-item> 
+
+  <ion-item required>
+    <ion-label>Quantity</ion-label>
+    <ion-input type="number" [(ngModel)]="qty"></ion-input>
+  </ion-item>
     
-
-    <ion-card *ngIf="_DUCT != undefined">
-        <ion-card-content>
-          <ion-item>
-            <ion-input type="number" [(ngModel)]="qty" placeholder="Quantity"></ion-input>
-          </ion-item>
-        </ion-card-content>
-    </ion-card>
-
-    <button margin-top ion-button block clear color="primary" (click)="AddDuct()">Add</button>
+  <button margin-top ion-button block clear color="primary" (click)="addDuct(type)">Add</button>
   
-    <button ion-button block clear color="secondary" (click)="cancel()">Cancel</button>
+  <button ion-button block clear color="secondary" (click)="cancel()">Cancel</button>
 
 </ion-content>
