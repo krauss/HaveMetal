@@ -67,7 +67,7 @@ var DashboardPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-dashboard',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/dashboard/dashboard.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title text-center>Dashboard</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/dashboard/dashboard.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
     ], DashboardPage);
     return DashboardPage;
 }());

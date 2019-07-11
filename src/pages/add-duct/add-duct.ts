@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TYPES }  from '../../models/interfaces/duct.properties';
+import { Duct }  from '../../models/interfaces/duct.interface';
 import { DuctFactory }  from '../../models/objects/factory';
-import { Job } from '../../models/interfaces/job.interface';
+import { ToastController } from 'ionic-angular';
 import { JobListService } from '../../models/services/firebase.service';
 
 /**
@@ -21,42 +22,58 @@ export class AddDuctPage {
 
 
   type_list = TYPES;
-  _DUCT: any;
+  type: any;
   job_key: string;
   tmp_job: any;
   qty: number;
+  toast: ToastController;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private job_list: JobListService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private job_list: JobListService, private _toast: ToastController) {
     
     this.job_key = this.navParams.get('job_key');
+
+    this.toast = _toast;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddDuctPage');
-  }
+  addDuct(t: string){
 
-  selectDuctType($event) {
-    if ($event) {
-      //Remove the previously created duct
-      if (this._DUCT != undefined){
-        this._DUCT = undefined;
-      }
-      //Creates the new duct selected on the <ion-select> using DuctFactory class
-      this._DUCT = DuctFactory.createDuct($event);
-      //Calls its method draw() that does the WebGL creation and rendering
-      //this._DUCT.draw();
-      //Adds the duct in the scene
-      //this._SCENE.add( this._DUCT._mesh );
-    }
-  }
+    this.tmp_job = this.job_list.getJob(this.job_key).valueChanges();
 
-  addDuct(){
-
-    this.tmp_job = this.job_list.getJob(this.job_key);
+    this.tmp_job.ductList = new Array<Duct>(this.qty);
     
+
+    for (var i = 0; i < this.qty; i++){
+      
+      this.tmp_job.ductList[i] = DuctFactory.createDuct(t);
+
+    }
+
+    console.log(this.type);
+    console.log(this.tmp_job.ductList);
+    console.log(this.tmp_job.name);
+    console.log(this.tmp_job.address);
+
+    /*this.job_list.editJob(this.tmp_job);/*.then(ref => {
+
+      this.toast.create({
+
+        message: 'Ducts created & added successfully!',
+        duration: 1200,
+        position: 'bottom'
+
+      }).present().then(() => {
+  
+          this.navCtrl.pop();
+
+      })
+    });*/
+
   }
 
+  cancel(){
+    this.navCtrl.pop();
+  }
 
 
 }

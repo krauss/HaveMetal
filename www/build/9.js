@@ -62,6 +62,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 /**
  * Generated class for the AddDuctPage page.
  *
@@ -69,38 +70,49 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var AddDuctPage = /** @class */ (function () {
-    function AddDuctPage(navCtrl, navParams, job_list) {
+    function AddDuctPage(navCtrl, navParams, job_list, _toast) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.job_list = job_list;
+        this._toast = _toast;
         this.type_list = __WEBPACK_IMPORTED_MODULE_2__models_interfaces_duct_properties__["b" /* TYPES */];
         this.job_key = this.navParams.get('job_key');
+        this.toast = _toast;
     }
-    AddDuctPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad AddDuctPage');
-    };
-    AddDuctPage.prototype.selectDuctType = function ($event) {
-        if ($event) {
-            //Remove the previously created duct
-            if (this._DUCT != undefined) {
-                this._DUCT = undefined;
-            }
-            //Creates the new duct selected on the <ion-select> using DuctFactory class
-            this._DUCT = __WEBPACK_IMPORTED_MODULE_3__models_objects_factory__["a" /* DuctFactory */].createDuct($event);
-            //Calls its method draw() that does the WebGL creation and rendering
-            //this._DUCT.draw();
-            //Adds the duct in the scene
-            //this._SCENE.add( this._DUCT._mesh );
+    AddDuctPage.prototype.addDuct = function (t) {
+        this.tmp_job = this.job_list.getJob(this.job_key).valueChanges();
+        this.tmp_job.ductList = new Array(this.qty);
+        for (var i = 0; i < this.qty; i++) {
+            this.tmp_job.ductList[i] = __WEBPACK_IMPORTED_MODULE_3__models_objects_factory__["a" /* DuctFactory */].createDuct(t);
         }
+        console.log(this.type);
+        console.log(this.tmp_job.ductList);
+        console.log(this.tmp_job.name);
+        console.log(this.tmp_job.address);
+        /*this.job_list.editJob(this.tmp_job);/*.then(ref => {
+    
+          this.toast.create({
+    
+            message: 'Ducts created & added successfully!',
+            duration: 1200,
+            position: 'bottom'
+    
+          }).present().then(() => {
+      
+              this.navCtrl.pop();
+    
+          })
+        });*/
     };
-    AddDuctPage.prototype.addDuct = function () {
-        this.tmp_job = this.job_list.getJob(this.job_key);
+    AddDuctPage.prototype.cancel = function () {
+        this.navCtrl.pop();
     };
+    var _a, _b, _c, _d;
     AddDuctPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-add-duct',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/add-duct/add-duct.html"*/'<!--\n  Generated template for the AddDuctPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Add New Duct</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n    <ion-item>\n        <ion-label>Type:</ion-label>\n        <ion-select [(ngModel)]="type" (ionChange)="selectDuctType($event)">\n          <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n        </ion-select>\n    </ion-item> \n    \n\n    <ion-card *ngIf="_DUCT != undefined">\n        <ion-card-content>\n          <ion-item>\n            <ion-input type="number" [(ngModel)]="qty" placeholder="Quantity"></ion-input>\n          </ion-item>\n        </ion-card-content>\n    </ion-card>\n\n    <button margin-top ion-button block clear color="primary" (click)="AddDuct()">Add</button>\n  \n    <button ion-button block clear color="secondary" (click)="cancel()">Cancel</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/add-duct/add-duct.html"*/,
+            selector: 'page-add-duct',template:/*ion-inline-start:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/add-duct/add-duct.html"*/'<!--\n  Generated template for the AddDuctPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>Add New Duct</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-item required>\n    <ion-label>Type</ion-label>\n      <!--<ion-select [(ngModel)]="type" (ionChange)="selectDuctType($event)">-->\n          <ion-select [(ngModel)]="type">\n          <ion-option *ngFor="let type of type_list">{{type}}</ion-option>\n      </ion-select>\n  </ion-item> \n\n  <ion-item required>\n    <ion-label>Quantity</ion-label>\n    <ion-input type="number" [(ngModel)]="qty"></ion-input>\n  </ion-item>\n    \n  <button margin-top ion-button block clear color="primary" (click)="addDuct(type)">Add</button>\n  \n  <button ion-button block clear color="secondary" (click)="cancel()">Cancel</button>\n\n</ion-content>\n'/*ion-inline-end:"/home/jrkrauss/workspaces/ionic/havemetal/src/pages/add-duct/add-duct.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_4__models_services_firebase_service__["a" /* JobListService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" ? _a : Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]) === "function" ? _b : Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__models_services_firebase_service__["a" /* JobListService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__models_services_firebase_service__["a" /* JobListService */]) === "function" ? _c : Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ToastController */]) === "function" ? _d : Object])
     ], AddDuctPage);
     return AddDuctPage;
 }());

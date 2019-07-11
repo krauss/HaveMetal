@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, reorderArray, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { Duct } from '../../models/interfaces/duct.interface';
-import { DuctCreationComponent } from '../../components/duct-creation/duct-creation.component';
 
 
 @IonicPage()
@@ -12,72 +11,17 @@ import { DuctCreationComponent } from '../../components/duct-creation/duct-creat
 export class DuctListPage {
 
   duct_list: Array<Duct> = [];
+  job_key: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {}
+  constructor(public navCtrl: NavController,  public navParams: NavParams) {
 
-  addDuct(){
-      let contactModal = this.modalCtrl.create(DuctCreationComponent);
-      contactModal.present();
-      // let prompt = this.alertCtrl.create({
-      //     title: 'New Duct',
-      //     inputs: [{
-      //         name: 'title'
-      //     }],
-      //     buttons: [
-      //         {
-      //             text: 'Cancel'
-      //         },
-      //         {
-      //             text: 'Add',
-      //             handler: data => {
-      //                 this.duct_list.push(data);
-      //             }
-      //         }
-      //     ]
-      // });
-      //
-      // prompt.present();
+      this.job_key = this.navParams.get('job_key');
+
   }
 
-  // editDuct(duct){
-  //
-  //     let prompt = this.alertCtrl.create({
-  //         title: 'Edit Duct',
-  //         inputs: [{
-  //             name: 'title'
-  //         }],
-  //         buttons: [
-  //             {
-  //                 text: 'Cancel'
-  //             },
-  //             {
-  //                 text: 'Save',
-  //                 handler: data => {
-  //                     let index = this.duct_list.indexOf(duct);
-  //
-  //                     if(index > -1){
-  //                       this.duct_list[index] = data;
-  //                     }
-  //                 }
-  //             }
-  //         ]
-  //     });
-  //
-  //     prompt.present();
-  //
-  // }
-
-  deleteDuct(duct){
-
-      let index = this.duct_list.indexOf(duct);
-
-      if(index > -1){
-          this.duct_list.splice(index, 1);
-      }
+  
+  addDuctList(){
+    this.navCtrl.push('AddDuctPage', { job_key: this.job_key });
   }
-
-  reorderItems(indexes){
-        this.duct_list = reorderArray(this.duct_list, indexes);
-    }
 
 }

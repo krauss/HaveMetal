@@ -23,9 +23,9 @@ export class JobEditPage {
   }
 
 
-  updateJob(job: Job){
+  updateJob(jobe: Job){
     //Update Item
-    this.job_list.editJob(job);
+    this.job_list.editJob(jobe);
 
     this.toast.create({
       message: 'Job updated successfully!',

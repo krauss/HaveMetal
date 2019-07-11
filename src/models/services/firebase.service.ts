@@ -6,9 +6,11 @@ import { Job } from '../../models/interfaces/job.interface';
 @Injectable()
 export class JobListService {
 
-    private jobListRef = this.db.list<Job>('job-list');
+    private jobListRef: any;
 
-    constructor(private db: AngularFireDatabase){ }
+    constructor(private db: AngularFireDatabase){ 
+        this.jobListRef = this.db.list<Job>('job-list');
+    }
 
     getJobList() {
         return this.jobListRef;

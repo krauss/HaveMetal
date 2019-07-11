@@ -35,13 +35,13 @@ export class JobCreationPage {
 
 
   //Function that add new Job
-  addNewJob(job: Job){
+  addNewJob(jobe: Job){
 
-    this.job_list.addJob(this.job).then(ref => {
+    this.job_list.addJob(jobe).then(ref => {
 
       //Receives the key back from the database and updates the same object with that very key
-      this.job.key = ref.key;
-      this.job_list.editJob(this.job);
+      jobe.key = ref.key;
+      this.job_list.editJob(jobe);
 
       this.toast.create({
         message: 'Job created successfully!',
