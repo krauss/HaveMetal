@@ -12,7 +12,7 @@ COPY package*.json ./
 
 RUN npm install
 
-RUN npm install -g cordova@latest && npm install -g ionic@latest
+RUN npm install npm install -g ionic@latest
 
 # Bundle app source
 COPY . .

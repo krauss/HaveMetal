@@ -194,10 +194,9 @@ var JobListService = /** @class */ (function () {
     JobListService.prototype.getJob = function (job_key) {
         return this.db.object(job_key);
     };
-    var _a;
     JobListService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["AngularFireDatabase"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["AngularFireDatabase"]) === "function" ? _a : Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_angularfire2_database__["AngularFireDatabase"]])
     ], JobListService);
     return JobListService;
 }());
