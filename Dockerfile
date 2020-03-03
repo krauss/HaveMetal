@@ -17,6 +17,7 @@ RUN npm install npm install -g ionic@latest
 # Bundle app source
 COPY . .
 
-EXPOSE 8100 35729
+EXPOSE 8100/tcp
+EXPOSE 35729/tcp
 
-CMD [ "ionic", "serve", "--address localhost", "--port 8100"]
+CMD [ "ionic", "serve"]
