@@ -21,4 +21,4 @@ Inside the project's root directory, run `docker build --tag havemetal:v1 .` to 
 
 Then, to create and run the docker container:
 
-`docker run -it -p 8100:8100 -p 35729:35729 -d havemetal:v1`
+`docker run -it -p 8100:8100 --expose 8100 -d havemetal:v1`

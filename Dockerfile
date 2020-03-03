@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 8100/tcp
 EXPOSE 35729/tcp
 
-CMD [ "ionic", "serve"]
+CMD [ "ionic", "serve", "--prod", "--external"]
