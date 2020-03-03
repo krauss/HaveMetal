@@ -1,10 +1,16 @@
 ## Welcome the HaveMetal Project (Ionic 3)
 
-## This project no longer works due to its old ionic version
+You'll need Node 8+ and the package node-sass 4+
 
 HaveMetal project was initially nothing but a concept idea that eventually came across with a real life application.
 The main goal of this project is to teach machines how to read engineer drawings the same way humans beings do, using deep learning models and a specific device with scan capabilities.
 
-After downloading the image, the following command will crate and run a container with the image:
+Make sure to make your local user a member of the docker group, so you can run without `sudo`
 
-`sudo docker run -it -p 80:8100 -p 35729:35729 -d jrkrauss/havemetal`
+To building the image:
+
+`docker build . --tag [username]/havemetal`
+
+ To run the container:
+
+`docker run -it -p 80:8100 -p 35729:35729 -d jrkrauss/havemetal`

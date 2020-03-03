@@ -93,7 +93,7 @@ function importAndEnableProdMode(filePath, fileContent) {
     }
     return modifiedFileContent;
 }
-function replaceBootstrapImpl(filePath, fileContent, appNgModulePath, appNgModuleClassName) {
+function replaceBootstrap(filePath, fileContent, appNgModulePath, appNgModuleClassName) {
     if (!fileContent.match(/\bbootstrapModule\b/)) {
         throw new Error("Could not find bootstrapModule in " + filePath);
     }
@@ -117,4 +117,4 @@ function replaceBootstrapImpl(filePath, fileContent, appNgModulePath, appNgModul
     modifiedFileContent = importAndEnableProdMode(filePath, modifiedFileContent);
     return modifiedFileContent;
 }
-exports.replaceBootstrapImpl = replaceBootstrapImpl;
+exports.replaceBootstrap = replaceBootstrap;

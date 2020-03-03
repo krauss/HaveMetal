@@ -10,8 +10,7 @@ process.on('message', function (incomingMsg) {
         writeInMemory: false,
         sourceMaps: false,
         cache: false,
-        inlineTemplate: false,
-        useTransforms: false
+        inlineTemplate: false
     };
     transpile_1.transpileWorker(context, workerConfig)
         .then(function () {

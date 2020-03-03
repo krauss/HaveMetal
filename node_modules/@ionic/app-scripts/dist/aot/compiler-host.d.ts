@@ -3,10 +3,11 @@ import { VirtualFileSystem } from '../util/interfaces';
 export interface OnErrorFn {
     (message: string): void;
 }
-export declare class FileSystemCompilerHost implements CompilerHost {
+export declare class NgcCompilerHost implements CompilerHost {
     private options;
     private fileSystem;
     private setParentNodes;
+    private sourceFileMap;
     private diskCompilerHost;
     constructor(options: CompilerOptions, fileSystem: VirtualFileSystem, setParentNodes?: boolean);
     fileExists(filePath: string): boolean;

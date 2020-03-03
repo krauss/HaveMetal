@@ -22,7 +22,7 @@ function createNotificationServer(config) {
         if (options.hasOwnProperty('broadcast') && options.broadcast) {
             sendMethod = wss.broadcast;
         }
-        if (sendMethod && wss.clients.size > 0) {
+        if (sendMethod && wss.clients.length > 0) {
             var msg = void 0;
             while (msg = msgToClient.shift()) {
                 try {
@@ -63,7 +63,7 @@ function createNotificationServer(config) {
         queueMessageSend(msg);
     });
     // create web socket server
-    var wss = new ws_1.Server({ host: config.host, port: config.notificationPort });
+    var wss = new ws_1.Server({ port: config.notificationPort });
     wss.broadcast = function broadcast(data) {
         wss.clients.forEach(function each(client) {
             client.send(data);
@@ -79,7 +79,6 @@ function createNotificationServer(config) {
             }
             catch (e) {
                 logger_1.Logger.error("error opening ws message: " + incomingMessage);
-                logger_1.Logger.error(e.stack ? e.stack : e);
             }
         });
         // now that we're connected, send off any messages
@@ -101,19 +100,18 @@ function createNotificationServer(config) {
     function printConsole(msg) {
         var args = msg.data;
         args[0] = "console." + msg.type + ": " + args[0];
-        var log = args.join(' ');
         switch (msg.type) {
             case 'error':
-                logger_1.Logger.error(log);
+                logger_1.Logger.error.apply(this, args);
                 break;
             case 'warn':
-                logger_1.Logger.warn(log);
+                logger_1.Logger.warn.apply(this, args);
                 break;
             case 'debug':
-                logger_1.Logger.debug(log);
+                logger_1.Logger.debug.apply(this, args);
                 break;
             default:
-                logger_1.Logger.info(log);
+                logger_1.Logger.info.apply(this, args);
                 break;
         }
     }

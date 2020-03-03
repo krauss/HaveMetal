@@ -26,7 +26,7 @@ function loadDiagnostic(context, tsDiagnostic) {
         absFileName: null,
         lines: []
     };
-    if (tsDiagnostic.file && tsDiagnostic.file.getText) {
+    if (tsDiagnostic.file) {
         d.absFileName = tsDiagnostic.file.fileName;
         d.relFileName = logger_1.Logger.formatFileName(context.rootDir, d.absFileName);
         var sourceText = tsDiagnostic.file.getText();

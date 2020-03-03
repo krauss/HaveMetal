@@ -7,7 +7,6 @@ export interface IonicProject {
         proxyUrl: string;
         proxyNoAgent: boolean;
         rejectUnauthorized: boolean;
-        cookieRewrite: string | boolean;
     }[];
 }
 export declare function getProjectJson(): Promise<IonicProject>;
