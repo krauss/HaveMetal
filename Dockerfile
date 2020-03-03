@@ -2,13 +2,13 @@
 # HaveMetal Project Dockerfile
 #
 
-FROM node:8
+FROM node:12
 
 # Create app directory
 WORKDIR /home/jrkrauss/workspaces/ionic/havemetal/
 
 # Install app dependencies
-COPY package*.json ./
+COPY package.json ./
 
 RUN npm install
 
@@ -19,4 +19,4 @@ COPY . .
 
 EXPOSE 8100 35729
 
-CMD [ "ionic", "serve", "--address=localhost", "--port=8100" ]
+CMD [ "ionic", "serve", "--address localhost", "--port 8100"]
