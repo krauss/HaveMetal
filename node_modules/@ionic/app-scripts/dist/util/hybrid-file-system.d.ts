@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { FileSystem, VirtualFileSystem } from './interfaces';
 import { FileCache } from './file-cache';
 import { VirtualDirStats, VirtualFileStats } from './virtual-file-utils';

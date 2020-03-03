@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { EventEmitter } from 'events';
 export declare function on(eventType: string, listener: {
     (data?: any): void;

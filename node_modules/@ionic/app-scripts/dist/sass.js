@@ -232,7 +232,8 @@ function renderSassSuccess(context, sassResult, sassConfig) {
         }
         var postcssOptions = {
             to: path_1.basename(sassConfig.outFile),
-            map: autoPrefixerMapOptions
+            map: autoPrefixerMapOptions,
+            from: void 0
         };
         logger_1.Logger.debug("sass, start postcss/autoprefixer");
         var postCssPlugins = [autoprefixer(sassConfig.autoprefixer)];

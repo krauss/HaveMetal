@@ -2,7 +2,7 @@
 # HaveMetal Project Dockerfile
 #
 
-FROM node:10
+FROM node:8
 
 # Create app directory
 WORKDIR /home/jrkrauss/workspaces/ionic/havemetal/
