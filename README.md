@@ -15,20 +15,24 @@ Make sure to make your local user a member of the docker group, so you can run w
 
 **Running locally:**
 
-After cloning the project from GitHub, enter the project's root directory and run `npm install` to install all of its dependencies. Then run: `ionic serve` to start it.
+After cloning the project from [GitHub](https://github.com/krauss/HaveMetal), enter the project's root directory and run `npm install` to install all of its dependencies. Then run: `ionic serve` to start it.
 
 **Building a docker container from the Dockerfile:**
 
-Inside the project's root directory, run `docker build --tag havemetal:v1 .` to build the docker image.
+After cloning the project from GitHub, go to the project's root directory, run `docker build --tag havemetal:latest .` to build the docker image.
 
 Then, to create and run the docker container:
 
-`docker run -it -p 8100:8100 --expose 8100 -d havemetal:v1`
+`docker run -it -p 80:8100 -d havemetal:latest`
 
-**Downloading the image from the Docker Hub:**
+**Downloading the image from Docker Hub:**
 
-Simply run `docker pull jrkrauss/havemetal` to download the docker image.
+In your terminal, simply run `docker pull jrkrauss/havemetal:latest` to download the docker image.
 
 Then, to create and run the docker container:
 
-`docker run -it -p 8100:8100 --expose 8100 -d havemetal:v1`
+`docker run -it -p 80:8100 -d jrkrauss/havemetal:latest`
+
+**Access the app:**
+
+Wait for a moment until Ionic CLI finishes run your app inside the container, then open you browser and type: `http://localhost/`
