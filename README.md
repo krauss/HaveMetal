@@ -15,7 +15,10 @@ Make sure to make your local user a member of the docker group, so you can run w
 
 **Running locally:**
 
-After cloning the project from [GitHub](https://github.com/krauss/HaveMetal), enter the project's root directory and run `npm install` to install all of its dependencies. Then run: `ionic serve` to start it.
+* Clone the project to a local directory `git clone https://github.com/krauss/HaveMetal.git`
+* `cd` into the directory then run `npm install` to install all the dependencies. 
+* If you have problems with node-sass, run `npm rebuild node-sass`
+* Then run `ionic serve` to start it.
 
 **Building a docker container from the Dockerfile:**
 
@@ -27,7 +30,7 @@ Then, to create and run the docker container:
 
 **Downloading the image from Docker Hub:**
 
-In your terminal, simply run `docker pull jrkrauss/havemetal:latest` to download the docker image.
+Optionally in your terminal, simply run `docker pull jrkrauss/havemetal:latest` to download the docker image.
 
 Then, to create and run the docker container:
 
